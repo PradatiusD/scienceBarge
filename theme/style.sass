@@ -1,0 +1,212 @@
+/*
+ * Theme Name: Science Barge Child Theme
+ * Theme URI: http://github.com/PradatiusD/scienceBarge/ 
+ * Author: https://github.com/PradatiusD/
+ * Author URI: http://pradadesigners.com
+ * Description: Genesis Child Theme Theme for Science Barge
+ * Version: 1.0
+ * Template: genesis  
+ * License: GPL-2.0+
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Tags: Photos, white, one-column, two-columns, three-columns, left-sidebar, right-sidebar, responsive-layout, custom-menu, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+ * Text Domain: scienceBarge
+ * This theme, like WordPress, is licensed under the GPL.
+ * Use it to make something cool, have fun, and share what you've learned with others.
+ */
+
+// Colors
+$scienceBargeGreen: #238C63
+$darkText: #333
+$whiteGray: #F5F5F5
+
+
+$body-bg: $whiteGray
+
+$font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif
+$headings-font-weight: 400
+
+$font-size-base: 18px
+$text-color: #333
+$link-color: $scienceBargeGreen
+
+$font-size-h1: floor($font-size-base * 2)
+$font-size-h2: floor($font-size-base * 1.50)
+$font-size-h3: ceil($font-size-base * 1.25)
+$font-size-h4: ceil($font-size-base * 1.12)
+$font-size-h5: $font-size-base
+$font-size-h6: ceil($font-size-base * 0.85)
+
+$navbar-height: 70px
+
+@import "../bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/bootstrap"
+@import "../bower_components/bourbon/dist/bourbon"
+
+body
+	font-weight: 300
+
+/* Layout Classes */
+
+.site-inner, .site-header
+	@extend .container
+
+.content-sidebar-wrap
+	@extend .row
+
+	.content-sidebar &, .sidebar-content &
+		.content
+			@extend .col-md-9
+		.sidebar
+			@extend .col-md-3
+
+	.sidebar-content &
+		.content
+			@extend .col-md-push-3
+		.sidebar
+			@extend .col-md-pull-9
+
+
+	.content-sidebar-sidebar &, .sidebar-sidebar-content &, .sidebar-content-sidebar &
+		.content
+			@extend .col-md-6
+		.sidebar
+			@extend .col-md-3
+
+	.sidebar-sidebar-content &
+		.content
+			@extend .col-md-push-6
+		.sidebar
+			@extend .col-md-pull-6
+
+	.sidebar-content-sidebar &
+		.content
+			@extend .col-md-push-3
+		.sidebar-primary
+			@extend .col-md-pull-6
+
+	.full-width-content &
+		.content
+			@extend .col-md-12
+
+/* Anchor type */
+a
+	+transition(color 0.3s ease-out)
+	&:hover
+		text-decoration: none
+
+h1, h2, h3, h4, h5, h6
+	a
+		color: $darkText
+		&:hover
+			text-decoration: none
+
+/* Meta */
+
+.entry-meta
+	@extend .small
+
+.site-title
+	font-size: 1.7em
+	margin-bottom: 0.25em
+
+.site-description
+	@extend .small
+	margin-top: 0
+	font-weight: 300
+
+/* Menus */
+
+.nav-primary, .nav-secondary
+	@extend .navbar
+	border-radius: 0
+
+	.wrap
+		@extend .container
+
+		li
+			@extend .small
+			a
+				font-weight: 400
+
+.nav-primary
+	margin-bottom: 0
+
+.nav-secondary
+	@extend .navbar-inverse
+
+.genesis-nav-menu
+	@extend .nav
+	@extend .navbar-nav
+	margin-left: -12px
+
+.menu-item-has-children
+	@extend .dropdown
+
+.sub-menu
+	@extend .dropdown-menu
+
+// For menu on hover
+ul.nav > li.menu-item-has-children:hover > ul.sub-menu
+	display: block
+
+.sub-menu
+	margin-top: -1px !important
+	> li > a
+		padding: 1em
+
+	
+/* Image Alignment Classes */
+
+.aligncenter img
+	display: block
+	margin: 0 auto
+
+.alignnone
+	display: inline-block
+
+.alignleft
+	float: left
+	text-align: left
+
+.alignleft, img.alignleft, .wp-caption.alignleft
+	margin: 0 24px 24px 0
+
+.alignright
+	float: right
+	text-align: right
+
+.alignright, img.alignright, .wp-caption.alignright
+	margin: 0 0 24px 24px
+
+.alignleft, .alignnone, .alignright
+	max-width: 100%
+
+img.centered, .aligncenter
+	display: block
+	margin: 0 auto 24px
+
+img.alignnone, .alignnone
+	margin-bottom: 12px
+
+.wp-caption-text
+	@extend .h6
+
+.entry-content p.wp-caption-text
+	margin-bottom: 0
+
+
+/* Post */
+
+article
+	background: #FFF
+	padding: 1em 2em 1.5em 2em
+	@extend .col-md-12
+	margin: 1em 0
+
+	img
+		@extend .img-responsive
+
+/* Footer */
+.site-footer
+	@extend .text-center
+	background: #FFF
+	padding: 1em 0em 0.5em 0

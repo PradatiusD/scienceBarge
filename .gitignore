@@ -1,0 +1,9 @@
+*.DS_Store
+assets/*.jpg
+assets/*.png
+bower_components
+node_modules
+.sass-cache
+/vendor/
+.ftppass
+theme/config.php
