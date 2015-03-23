@@ -5280,4 +5280,16 @@ article {
   background: #FFF;
   padding: 1em 0em 0.5em 0; }
 
+/* Begin Customizations */
+.title-area {
+  text-indent: -9999px; }
+  .title-area .site-title {
+    background: url("images/logo.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    margin: 0.5em 0 0 0;
+    padding: 1em; }
+  .title-area .site-description {
+    margin-bottom: 0; }
+
 /*# sourceMappingURL=style.css.map */

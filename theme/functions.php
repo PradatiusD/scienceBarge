@@ -3,8 +3,8 @@
 include_once( get_template_directory() . '/lib/init.php' );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'Carolina Prada Child Theme' );
-define( 'CHILD_THEME_URL', 'http://github.com/PradatiusD/cprada' );
+define( 'CHILD_THEME_NAME', 'Miami Science Barge Child Theme' );
+define( 'CHILD_THEME_URL', 'http://github.com/PradatiusD/scienceBarge' );
 define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 //* Enqueue Google Fonts
