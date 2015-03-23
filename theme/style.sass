@@ -22,10 +22,10 @@ $whiteGray: #F5F5F5
 
 $body-bg: $whiteGray
 
-$font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif
+$font-family-sans-serif: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 $headings-font-weight: 400
 
-$font-size-base: 18px
+$font-size-base: 17px
 $text-color: #333
 $link-color: $scienceBargeGreen
 
@@ -42,7 +42,7 @@ $navbar-height: 70px
 @import "../bower_components/bourbon/dist/bourbon"
 
 body
-	font-weight: 300
+	font-weight: 400
 
 /* Layout Classes */
 
@@ -216,12 +216,13 @@ article
 .title-area
 	text-indent: -9999px
 
-	.site-title
+	.site-title a
 		background: url("images/logo.png")
 		background-size: auto 100%
 		background-repeat: no-repeat
 		margin: 0.5em 0 0 0
 		padding: 1em
+		display: block
 
 	.site-description
 		margin-bottom: 0
