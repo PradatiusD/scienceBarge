@@ -42,6 +42,7 @@ $navbar-inverse-link-color: lighten($scienceBargeGreen, 66%)
 $navbar-inverse-link-hover-bg: darken($scienceBargeGreen, 10%)
 
 @import "../bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/bootstrap"
+@import "../bower_components/8406309/gravity form style fixing"
 @import "../bower_components/bourbon/dist/bourbon"
 
 body
@@ -247,5 +248,28 @@ article
 		@extend .navbar-right
 		@extend .navbar-inverse
 		border: 0
-		// .wrap
-		// 	width: auto
+
+/* Gravity forms */
+
+.gform_body
+
+	.ginput_full
+		@extend .row
+
+	.ginput_left, .ginput_right
+		@extend .col-md-6
+		padding-left: 0
+		padding-right: 0
+
+	.medium
+		@extend .col-md-12
+
+	.gform_validation_container
+		display: none
+
+.gform_button
+	@extend .btn-lg
+
+#input_1_2_6_container
+	margin-left: 0
+	padding-left: 0
