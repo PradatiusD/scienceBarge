@@ -29,11 +29,11 @@
 	<key>guidesAreVisible</key>
 	<true/>
 	<key>lastCheckDate</key>
-	<date>2015-03-25T20:38:21Z</date>
+	<date>2015-03-25T20:45:26Z</date>
 	<key>layout</key>
 	<dict>
 		<key>currentInspectorPane</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>customizableLayout</key>
 		<dict>
 			<key>frame</key>
@@ -213,7 +213,7 @@
 	<key>mobileStatusBarStyle</key>
 	<integer>0</integer>
 	<key>oidCounter</key>
-	<integer>48</integer>
+	<integer>52</integer>
 	<key>resourcesInfo</key>
 	<dict>
 		<key>groups</key>
@@ -228,6 +228,18 @@
 				<key>resources</key>
 				<array>
 					<string>sci-barge-outline.png</string>
+				</array>
+			</dict>
+			<dict>
+				<key>expanded</key>
+				<true/>
+				<key>name</key>
+				<string>seahorse-green</string>
+				<key>oid</key>
+				<string>49</string>
+				<key>resources</key>
+				<array>
+					<string>seahorse-green.png</string>
 				</array>
 			</dict>
 		</array>
@@ -281,6 +293,54 @@
 				<key>type</key>
 				<string>FileResource</string>
 			</dict>
+			<dict>
+				<key>fileModificationDate</key>
+				<date>2015-03-25T20:41:41Z</date>
+				<key>fileSize</key>
+				<integer>2796</integer>
+				<key>md5</key>
+				<string>BAE66805361DA244E6800B149741148C</string>
+				<key>notifyOnBookmarkChange</key>
+				<true/>
+				<key>originalPath</key>
+				<string>/Users/PradaDesigners/Downloads/seahorse-green.png</string>
+				<key>resourceName</key>
+				<string>seahorse-green.png</string>
+				<key>securityScopedBookmark</key>
+				<data>
+				Ym9va7ACAAAAAAQQMAAAAFi0OSCRjwy2YRlbfJFuq+dB
+				mly8TUXvIBD5+/EUGLtNuAEAAAUAAAABAQAAVXNlcnMA
+				AAAOAAAAAQEAAFByYWRhRGVzaWduZXJzAAAJAAAAAQEA
+				AERvd25sb2FkcwAAABIAAAABAQAAc2VhaG9yc2UtZ3Jl
+				ZW4ucG5nAAAQAAAAAQYAAAQAAAAUAAAALAAAAEAAAAAI
+				AAAABAMAAKCYAAAAAAAACAAAAAQDAABm7z4AAAAAAAgA
+				AAAEAwAAdu8+AAAAAAAIAAAABAMAABWjWQIAAAAAEAAA
+				AAEGAAB0AAAAhAAAAJQAAACkAAAACAAAAAAEAABBusNV
+				BQAAABgAAAABAgAAAQAAAAAAAAAPAAAAAAAAAAAAAAAA
+				AAAACAAAAAQDAAACAAAAAAAAAAQAAAADAwAA9gEAAAwA
+				AAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAgJZSSgAA
+				AAgAAAAABAAAQbNyBiQAAAAkAAAAAQEAADYwMjgzNDQ3
+				LTU1M0UtM0QwNi04Mzc0LTFDQkIxRTgwMTE4MxgAAAAB
+				AgAAgQAAAAEACADvFwAAAQAIAAAAAAAAAAAAAQAAAAEB
+				AAAvAAAAAAAAAAEFAAAEAAAAAwMAAAAJACjAAAAA/v//
+				/wEAAAAAAAAADwAAAAQQAABcAAAAAAAAAAUQAAC0AAAA
+				AAAAABAQAADcAAAAAAAAAEAQAADMAAAAAAAAAAIgAACY
+				AQAAAAAAABAgAAAYAQAAAAAAABEgAABMAQAAAAAAABIg
+				AAAsAQAAAAAAABMgAAA8AQAAAAAAACAgAAB4AQAAAAAA
+				ADAgAACkAQAAAAAAAAHAAAD8AAAAAAAAABHAAAAUAAAA
+				AAAAABLAAAAMAQAAAAAAABDQAACsAQAAAAAAAA==
+				</data>
+				<key>shouldAutoResize</key>
+				<true/>
+				<key>shouldIncludeInDocumentHeadHTML</key>
+				<false/>
+				<key>shouldPreload</key>
+				<true/>
+				<key>shouldRemoveWhenNoLongerReferenced</key>
+				<true/>
+				<key>type</key>
+				<string>FileResource</string>
+			</dict>
 		</array>
 	</dict>
 	<key>sceneContainers</key>
@@ -302,7 +362,7 @@
 						<key>timeCursors</key>
 						<dict>
 							<key>kTimelineDefaultIdentifier</key>
-							<real>2.2999999523162842</real>
+							<real>4.5666666030883789</real>
 						</dict>
 						<key>timescale</key>
 						<integer>60</integer>
@@ -1862,6 +1922,135 @@
 							<string>OriginalWidth</string>
 							<key>objectValue</key>
 							<string>334px</string>
+						</dict>
+					</array>
+					<key>50</key>
+					<array>
+						<dict>
+							<key>identifier</key>
+							<string>TagName</string>
+							<key>objectValue</key>
+							<string>div</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ExplicitDimensions</string>
+							<key>objectValue</key>
+							<string>YES</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ConstrainProportions</string>
+							<key>objectValue</key>
+							<string>YES</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Display</string>
+							<key>objectValue</key>
+							<string>inline</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>RotationAngleY</string>
+							<key>objectValue</key>
+							<string>0deg</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ClassType</string>
+							<key>objectValue</key>
+							<string>Image</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Top</string>
+							<key>objectValue</key>
+							<string>172px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BackgroundRepeat</string>
+							<key>objectValue</key>
+							<string>no-repeat</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Position</string>
+							<key>objectValue</key>
+							<string>absolute</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Height</string>
+							<key>objectValue</key>
+							<string>56px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BackgroundImageResourceGroupOid</string>
+							<key>objectValue</key>
+							<string>49</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Left</string>
+							<key>objectValue</key>
+							<string>128px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>SizeRatio</string>
+							<key>objectValue</key>
+							<string>0.572222</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>RotationAngleX</string>
+							<key>objectValue</key>
+							<string>0deg</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ZIndex</string>
+							<key>objectValue</key>
+							<string>8</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Width</string>
+							<key>objectValue</key>
+							<string>32px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BackgroundSize</string>
+							<key>objectValue</key>
+							<string>100% 100%</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Overflow</string>
+							<key>objectValue</key>
+							<string>visible</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>DisplayName</string>
+							<key>objectValue</key>
+							<string>seahorse-green</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>OriginalHeight</string>
+							<key>objectValue</key>
+							<string>180px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>OriginalWidth</string>
+							<key>objectValue</key>
+							<string>103px</string>
 						</dict>
 					</array>
 				</dict>
