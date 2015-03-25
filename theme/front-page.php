@@ -12,7 +12,10 @@ function do_custom_front_page () {
 
 	ob_start(); ?>
 
+	<iframe src="<?php echo get_stylesheet_directory_uri()."/hype.html";?>" frameborder="0" style="width:100%; height: 425px; overflow:hidden;"></iframe>
+
 	<?php 
+
 		// include('google-map.php');
 		// instafeed();
 		echo do_shortcode('[gravityform id="1" title="true" description="true"]');
