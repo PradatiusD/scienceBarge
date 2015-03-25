@@ -337,7 +337,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6, .wp-caption-text {
-  font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Arvo", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.1;
   color: inherit; }
@@ -5265,6 +5265,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   border-radius: 0; }
   .nav-primary li a, .nav-secondary li a {
     font-weight: 400;
+    font-family: "Arvo", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-transition: all 0.15s ease-out;
     -moz-transition: all 0.15s ease-out;
     transition: all 0.15s ease-out; }
@@ -5377,7 +5378,7 @@ article {
   width: 98%;
   margin: 0 auto;
   height: 100%;
-  background: rgba(255, 0, 0, 0.9);
+  background: rgba(51, 145, 38, 0.3);
   background-size: cover;
   background-position: center;
   border-radius: 1em; }

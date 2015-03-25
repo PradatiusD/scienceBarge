@@ -21,9 +21,11 @@ $whiteGray: #FDFFFD
 
 
 $body-bg: $whiteGray
+$helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif
 
-$font-family-sans-serif: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+$font-family-sans-serif: "PT Sans", $helvetica
 $headings-font-weight: 400
+$headings-font-family: "Arvo", $helvetica
 
 $font-size-base: 17px
 $text-color: #333
@@ -126,6 +128,7 @@ h1, h2, h3, h4, h5, h6
 	li
 		a
 			font-weight: 400
+			font-family: $headings-font-family
 			+transition(all 0.15s ease-out)
 
 .nav-primary
@@ -290,7 +293,7 @@ article
 		width: 98%
 		margin: 0 auto
 		height: 100%
-		background: rgba(red, 0.9)
+		background: rgba($scienceBargeGreen, 0.3)
 		background-size: cover
 		background-position: center
 		border-radius: 1em
