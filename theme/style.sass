@@ -15,9 +15,9 @@
  */
 
 // Colors
-$scienceBargeGreen: #238C63
+$scienceBargeGreen: #339126
 $darkText: #333
-$whiteGray: #F5F5F5
+$whiteGray: #FDFFFD
 
 
 $body-bg: $whiteGray
@@ -36,7 +36,10 @@ $font-size-h4: ceil($font-size-base * 1.12)
 $font-size-h5: $font-size-base
 $font-size-h6: ceil($font-size-base * 0.85)
 
-$navbar-height: 70px
+$navbar-height: 118px
+$navbar-inverse-bg: $scienceBargeGreen
+$navbar-inverse-link-color: lighten($scienceBargeGreen, 66%)
+$navbar-inverse-link-hover-bg: darken($scienceBargeGreen, 10%)
 
 @import "../bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/bootstrap"
 @import "../bower_components/bourbon/dist/bourbon"
@@ -46,7 +49,7 @@ body
 
 /* Layout Classes */
 
-.site-inner, .site-header
+.site-inner
 	@extend .container
 
 .content-sidebar-wrap
@@ -119,13 +122,10 @@ h1, h2, h3, h4, h5, h6
 	@extend .navbar
 	border-radius: 0
 
-	.wrap
-		@extend .container
-
-		li
-			@extend .small
-			a
-				font-weight: 400
+	li
+		a
+			font-weight: 400
+			+transition(all 0.15s ease-out)
 
 .nav-primary
 	margin-bottom: 0
@@ -215,14 +215,37 @@ article
 /* Begin Customizations */
 .title-area
 	text-indent: -9999px
+	@extend .col-md-3
 
-	.site-title a
-		background: url("images/logo.png")
-		background-size: auto 100%
-		background-repeat: no-repeat
-		margin: 0.5em 0 0 0
-		padding: 1em
-		display: block
+	.site-title 
+		margin: 0
+		a
+			background: url("images/logo.png")
+			background-size: auto 100%
+			background-repeat: no-repeat
+			padding: 1.1em
+			margin: 0.25em 0 0 0
+			display: block
+			position: relative
+			top: 5px
 
 	.site-description
 		margin-bottom: 0
+
+.site-header
+	background: $scienceBargeGreen
+	border-bottom: 3px solid darken($scienceBargeGreen, 10%)
+	margin-bottom: 1em
+
+	& > .wrap
+		@extend .container
+
+	.header-widget-area
+		@extend .col-md-9
+
+	.nav-primary
+		@extend .navbar-right
+		@extend .navbar-inverse
+		border: 0
+		// .wrap
+		// 	width: auto

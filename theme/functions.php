@@ -44,6 +44,6 @@ if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
 remove_action('genesis_after_content_sidebar_wrap','genesis_get_sidebar_alt');
 add_action('genesis_after_content','genesis_get_sidebar_alt' );
 
-// $hook_name = 'genesis_after_content_sidebar_wrap';
-// global $wp_filter;
-// var_dump( $wp_filter[$hook_name] );
+//* Reposition the primary navigation menu
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+add_action( 'genesis_header_right', 'genesis_do_nav' );

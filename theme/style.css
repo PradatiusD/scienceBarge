@@ -271,7 +271,7 @@ body {
   font-size: 17px;
   line-height: 1.42857;
   color: #333;
-  background-color: #F5F5F5; }
+  background-color: #FDFFFD; }
 
 input,
 button,
@@ -282,10 +282,10 @@ textarea {
   line-height: inherit; }
 
 a {
-  color: #238C63;
+  color: #339126;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #144f38;
+    color: #1e5416;
     text-decoration: underline; }
   a:focus {
     outline: thin dotted;
@@ -306,7 +306,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: #F5F5F5;
+  background-color: #FDFFFD;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -343,96 +343,44 @@ h1, h2, h3, h4, h5, h6,
   h1 small,
   h1 .small,
   h1 .entry-meta,
-  h1 .site-description,
-  h1 .nav-primary .wrap li,
-  .nav-primary .wrap h1 li,
-  h1 .nav-secondary .wrap li,
-  .nav-secondary .wrap h1 li, h2 small,
+  h1 .site-description, h2 small,
   h2 .small,
   h2 .entry-meta,
-  h2 .site-description,
-  h2 .nav-primary .wrap li,
-  .nav-primary .wrap h2 li,
-  h2 .nav-secondary .wrap li,
-  .nav-secondary .wrap h2 li, h3 small,
+  h2 .site-description, h3 small,
   h3 .small,
   h3 .entry-meta,
-  h3 .site-description,
-  h3 .nav-primary .wrap li,
-  .nav-primary .wrap h3 li,
-  h3 .nav-secondary .wrap li,
-  .nav-secondary .wrap h3 li, h4 small,
+  h3 .site-description, h4 small,
   h4 .small,
   h4 .entry-meta,
-  h4 .site-description,
-  h4 .nav-primary .wrap li,
-  .nav-primary .wrap h4 li,
-  h4 .nav-secondary .wrap li,
-  .nav-secondary .wrap h4 li, h5 small,
+  h4 .site-description, h5 small,
   h5 .small,
   h5 .entry-meta,
-  h5 .site-description,
-  h5 .nav-primary .wrap li,
-  .nav-primary .wrap h5 li,
-  h5 .nav-secondary .wrap li,
-  .nav-secondary .wrap h5 li, h6 small,
+  h5 .site-description, h6 small,
   h6 .small,
   h6 .entry-meta,
   h6 .site-description,
-  h6 .nav-primary .wrap li,
-  .nav-primary .wrap h6 li,
-  h6 .nav-secondary .wrap li,
-  .nav-secondary .wrap h6 li,
   .h1 small,
   .h1 .small,
   .h1 .entry-meta,
-  .h1 .site-description,
-  .h1 .nav-primary .wrap li,
-  .nav-primary .wrap .h1 li,
-  .h1 .nav-secondary .wrap li,
-  .nav-secondary .wrap .h1 li, .h2 small,
+  .h1 .site-description, .h2 small,
   .h2 .small,
   .h2 .entry-meta,
-  .h2 .site-description,
-  .h2 .nav-primary .wrap li,
-  .nav-primary .wrap .h2 li,
-  .h2 .nav-secondary .wrap li,
-  .nav-secondary .wrap .h2 li, .h3 small,
+  .h2 .site-description, .h3 small,
   .h3 .small,
   .h3 .entry-meta,
-  .h3 .site-description,
-  .h3 .nav-primary .wrap li,
-  .nav-primary .wrap .h3 li,
-  .h3 .nav-secondary .wrap li,
-  .nav-secondary .wrap .h3 li, .h4 small,
+  .h3 .site-description, .h4 small,
   .h4 .small,
   .h4 .entry-meta,
-  .h4 .site-description,
-  .h4 .nav-primary .wrap li,
-  .nav-primary .wrap .h4 li,
-  .h4 .nav-secondary .wrap li,
-  .nav-secondary .wrap .h4 li, .h5 small,
+  .h4 .site-description, .h5 small,
   .h5 .small,
   .h5 .entry-meta,
-  .h5 .site-description,
-  .h5 .nav-primary .wrap li,
-  .nav-primary .wrap .h5 li,
-  .h5 .nav-secondary .wrap li,
-  .nav-secondary .wrap .h5 li, .h6 small, .wp-caption-text small,
+  .h5 .site-description, .h6 small, .wp-caption-text small,
   .h6 .small,
   .wp-caption-text .small,
   .h6 .entry-meta,
   .wp-caption-text .entry-meta,
   .h6 .site-description,
-  .wp-caption-text .site-description,
-  .h6 .nav-primary .wrap li,
-  .nav-primary .wrap .h6 li,
-  .wp-caption-text .nav-primary .wrap li,
-  .nav-primary .wrap .wp-caption-text li,
-  .h6 .nav-secondary .wrap li,
-  .nav-secondary .wrap .h6 li,
-  .wp-caption-text .nav-secondary .wrap li,
-  .nav-secondary .wrap .wp-caption-text li {
+  .wp-caption-text .site-description {
     font-weight: normal;
     line-height: 1;
     color: #999999; }
@@ -446,26 +394,14 @@ h3 {
   h1 .small,
   h1 .entry-meta,
   h1 .site-description,
-  h1 .nav-primary .wrap li,
-  .nav-primary .wrap h1 li,
-  h1 .nav-secondary .wrap li,
-  .nav-secondary .wrap h1 li,
   h2 small,
   h2 .small,
   h2 .entry-meta,
   h2 .site-description,
-  h2 .nav-primary .wrap li,
-  .nav-primary .wrap h2 li,
-  h2 .nav-secondary .wrap li,
-  .nav-secondary .wrap h2 li,
   h3 small,
   h3 .small,
   h3 .entry-meta,
-  h3 .site-description,
-  h3 .nav-primary .wrap li,
-  .nav-primary .wrap h3 li,
-  h3 .nav-secondary .wrap li,
-  .nav-secondary .wrap h3 li {
+  h3 .site-description {
     font-size: 65%; }
 
 h4,
@@ -477,26 +413,14 @@ h6 {
   h4 .small,
   h4 .entry-meta,
   h4 .site-description,
-  h4 .nav-primary .wrap li,
-  .nav-primary .wrap h4 li,
-  h4 .nav-secondary .wrap li,
-  .nav-secondary .wrap h4 li,
   h5 small,
   h5 .small,
   h5 .entry-meta,
   h5 .site-description,
-  h5 .nav-primary .wrap li,
-  .nav-primary .wrap h5 li,
-  h5 .nav-secondary .wrap li,
-  .nav-secondary .wrap h5 li,
   h6 small,
   h6 .small,
   h6 .entry-meta,
-  h6 .site-description,
-  h6 .nav-primary .wrap li,
-  .nav-primary .wrap h6 li,
-  h6 .nav-secondary .wrap li,
-  .nav-secondary .wrap h6 li {
+  h6 .site-description {
     font-size: 75%; }
 
 h1, .h1 {
@@ -532,9 +456,7 @@ p {
 small,
 .small,
 .entry-meta,
-.site-description,
-.nav-primary .wrap li,
-.nav-secondary .wrap li {
+.site-description {
   font-size: 85%; }
 
 cite {
@@ -655,22 +577,14 @@ blockquote {
   blockquote small,
   blockquote .small,
   blockquote .entry-meta,
-  blockquote .site-description,
-  blockquote .nav-primary .wrap li,
-  .nav-primary .wrap blockquote li,
-  blockquote .nav-secondary .wrap li,
-  .nav-secondary .wrap blockquote li {
+  blockquote .site-description {
     display: block;
     line-height: 1.42857;
     color: #999999; }
     blockquote small:before,
     blockquote .small:before,
     blockquote .entry-meta:before,
-    blockquote .site-description:before,
-    blockquote .nav-primary .wrap li:before,
-    .nav-primary .wrap blockquote li:before,
-    blockquote .nav-secondary .wrap li:before,
-    .nav-secondary .wrap blockquote li:before {
+    blockquote .site-description:before {
       content: '\2014 \00A0'; }
   blockquote.pull-right {
     padding-right: 15px;
@@ -681,29 +595,17 @@ blockquote {
     blockquote.pull-right small,
     blockquote.pull-right .small,
     blockquote.pull-right .entry-meta,
-    blockquote.pull-right .site-description,
-    blockquote.pull-right .nav-primary .wrap li,
-    .nav-primary .wrap blockquote.pull-right li,
-    blockquote.pull-right .nav-secondary .wrap li,
-    .nav-secondary .wrap blockquote.pull-right li {
+    blockquote.pull-right .site-description {
       text-align: right; }
     blockquote.pull-right small:before,
     blockquote.pull-right .small:before,
     blockquote.pull-right .entry-meta:before,
-    blockquote.pull-right .site-description:before,
-    blockquote.pull-right .nav-primary .wrap li:before,
-    .nav-primary .wrap blockquote.pull-right li:before,
-    blockquote.pull-right .nav-secondary .wrap li:before,
-    .nav-secondary .wrap blockquote.pull-right li:before {
+    blockquote.pull-right .site-description:before {
       content: ''; }
     blockquote.pull-right small:after,
     blockquote.pull-right .small:after,
     blockquote.pull-right .entry-meta:after,
-    blockquote.pull-right .site-description:after,
-    blockquote.pull-right .nav-primary .wrap li:after,
-    .nav-primary .wrap blockquote.pull-right li:after,
-    blockquote.pull-right .nav-secondary .wrap li:after,
-    .nav-secondary .wrap blockquote.pull-right li:after {
+    blockquote.pull-right .site-description:after {
       content: '\00A0 \2014'; }
 
 blockquote:before,
@@ -753,24 +655,24 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container, .site-inner, .site-header, .nav-primary .wrap, .nav-secondary .wrap {
+.container, .site-inner, .site-header > .wrap {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container:before, .site-inner:before, .site-header:before, .nav-primary .wrap:before, .nav-secondary .wrap:before, .container:after, .site-inner:after, .site-header:after, .nav-primary .wrap:after, .nav-secondary .wrap:after {
+  .container:before, .site-inner:before, .site-header > .wrap:before, .container:after, .site-inner:after, .site-header > .wrap:after {
     content: " ";
     display: table; }
-  .container:after, .site-inner:after, .site-header:after, .nav-primary .wrap:after, .nav-secondary .wrap:after {
+  .container:after, .site-inner:after, .site-header > .wrap:after {
     clear: both; }
   @media (min-width: 768px) {
-    .container, .site-inner, .site-header, .nav-primary .wrap, .nav-secondary .wrap {
+    .container, .site-inner, .site-header > .wrap {
       width: 750px; } }
   @media (min-width: 992px) {
-    .container, .site-inner, .site-header, .nav-primary .wrap, .nav-secondary .wrap {
+    .container, .site-inner, .site-header > .wrap {
       width: 970px; } }
   @media (min-width: 1200px) {
-    .container, .site-inner, .site-header, .nav-primary .wrap, .nav-secondary .wrap {
+    .container, .site-inner, .site-header > .wrap {
       width: 1170px; } }
 
 .row, .content-sidebar-wrap {
@@ -782,7 +684,7 @@ pre {
   .row:after, .content-sidebar-wrap:after {
     clear: both; }
 
-.col-xs-12, .col-sm-12, .col-md-12, .full-width-content .content-sidebar-wrap .content, article, .col-lg-12, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-9, .col-sm-9, .col-md-9, .content-sidebar .content-sidebar-wrap .content, .sidebar-content .content-sidebar-wrap .content, .col-lg-9, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-6, .col-sm-6, .col-md-6, .content-sidebar-sidebar .content-sidebar-wrap .content, .sidebar-sidebar-content .content-sidebar-wrap .content, .sidebar-content-sidebar .content-sidebar-wrap .content, .col-lg-6, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-3, .col-sm-3, .col-md-3, .content-sidebar .content-sidebar-wrap .sidebar, .sidebar-content .content-sidebar-wrap .sidebar, .content-sidebar-sidebar .content-sidebar-wrap .sidebar, .sidebar-sidebar-content .content-sidebar-wrap .sidebar, .sidebar-content-sidebar .content-sidebar-wrap .sidebar, .col-lg-3, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 {
+.col-xs-12, .col-sm-12, .col-md-12, .full-width-content .content-sidebar-wrap .content, article, .col-lg-12, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-9, .col-sm-9, .col-md-9, .content-sidebar .content-sidebar-wrap .content, .sidebar-content .content-sidebar-wrap .content, .site-header .header-widget-area, .col-lg-9, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-6, .col-sm-6, .col-md-6, .content-sidebar-sidebar .content-sidebar-wrap .content, .sidebar-sidebar-content .content-sidebar-wrap .content, .sidebar-content-sidebar .content-sidebar-wrap .content, .col-lg-6, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-3, .col-sm-3, .col-md-3, .content-sidebar .content-sidebar-wrap .sidebar, .sidebar-content .content-sidebar-wrap .sidebar, .content-sidebar-sidebar .content-sidebar-wrap .sidebar, .sidebar-sidebar-content .content-sidebar-wrap .sidebar, .sidebar-content-sidebar .content-sidebar-wrap .sidebar, .title-area, .col-lg-3, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1101,7 +1003,7 @@ pre {
   .col-sm-offset-12 {
     margin-left: 100%; } }
 @media (min-width: 992px) {
-  .col-md-12, .full-width-content .content-sidebar-wrap .content, article, .col-md-11, .col-md-10, .col-md-9, .content-sidebar .content-sidebar-wrap .content, .sidebar-content .content-sidebar-wrap .content, .col-md-8, .col-md-7, .col-md-6, .content-sidebar-sidebar .content-sidebar-wrap .content, .sidebar-sidebar-content .content-sidebar-wrap .content, .sidebar-content-sidebar .content-sidebar-wrap .content, .col-md-5, .col-md-4, .col-md-3, .content-sidebar .content-sidebar-wrap .sidebar, .sidebar-content .content-sidebar-wrap .sidebar, .content-sidebar-sidebar .content-sidebar-wrap .sidebar, .sidebar-sidebar-content .content-sidebar-wrap .sidebar, .sidebar-content-sidebar .content-sidebar-wrap .sidebar, .col-md-2, .col-md-1 {
+  .col-md-12, .full-width-content .content-sidebar-wrap .content, article, .col-md-11, .col-md-10, .col-md-9, .content-sidebar .content-sidebar-wrap .content, .sidebar-content .content-sidebar-wrap .content, .site-header .header-widget-area, .col-md-8, .col-md-7, .col-md-6, .content-sidebar-sidebar .content-sidebar-wrap .content, .sidebar-sidebar-content .content-sidebar-wrap .content, .sidebar-content-sidebar .content-sidebar-wrap .content, .col-md-5, .col-md-4, .col-md-3, .content-sidebar .content-sidebar-wrap .sidebar, .sidebar-content .content-sidebar-wrap .sidebar, .content-sidebar-sidebar .content-sidebar-wrap .sidebar, .sidebar-sidebar-content .content-sidebar-wrap .sidebar, .sidebar-content-sidebar .content-sidebar-wrap .sidebar, .title-area, .col-md-2, .col-md-1 {
     float: left; }
 
   .col-md-1 {
@@ -1110,7 +1012,7 @@ pre {
   .col-md-2 {
     width: 16.66667%; }
 
-  .col-md-3, .content-sidebar .content-sidebar-wrap .sidebar, .sidebar-content .content-sidebar-wrap .sidebar, .content-sidebar-sidebar .content-sidebar-wrap .sidebar, .sidebar-sidebar-content .content-sidebar-wrap .sidebar, .sidebar-content-sidebar .content-sidebar-wrap .sidebar {
+  .col-md-3, .content-sidebar .content-sidebar-wrap .sidebar, .sidebar-content .content-sidebar-wrap .sidebar, .content-sidebar-sidebar .content-sidebar-wrap .sidebar, .sidebar-sidebar-content .content-sidebar-wrap .sidebar, .sidebar-content-sidebar .content-sidebar-wrap .sidebar, .title-area {
     width: 25%; }
 
   .col-md-4 {
@@ -1128,7 +1030,7 @@ pre {
   .col-md-8 {
     width: 66.66667%; }
 
-  .col-md-9, .content-sidebar .content-sidebar-wrap .content, .sidebar-content .content-sidebar-wrap .content {
+  .col-md-9, .content-sidebar .content-sidebar-wrap .content, .sidebar-content .content-sidebar-wrap .content, .site-header .header-widget-area {
     width: 75%; }
 
   .col-md-10 {
@@ -1445,7 +1347,7 @@ th {
   .table > tbody + tbody {
     border-top: 2px solid #ddd; }
   .table .table {
-    background-color: #F5F5F5; }
+    background-color: #FDFFFD; }
 
 .table-condensed > thead > tr > th,
 .table-condensed > thead > tr > td,
@@ -2080,7 +1982,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
     background-color: #fff; }
 
 .btn-link {
-  color: #238C63;
+  color: #339126;
   font-weight: normal;
   cursor: pointer;
   border-radius: 0; }
@@ -2091,7 +1993,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
   .btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
     border-color: transparent; }
   .btn-link:hover, .btn-link:focus {
-    color: #144f38;
+    color: #1e5416;
     text-decoration: underline;
     background-color: transparent; }
   .btn-link[disabled]:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus {
@@ -2879,7 +2781,7 @@ input[type="button"].btn-block {
   margin-bottom: 1px; }
 
 @media (min-width: 768px) {
-  .navbar-right .dropdown-menu, .navbar-right .sub-menu {
+  .navbar-right .dropdown-menu, .site-header .nav-primary .dropdown-menu, .navbar-right .sub-menu, .site-header .nav-primary .sub-menu {
     right: 0;
     left: auto; } }
 .btn-group,
@@ -3157,7 +3059,7 @@ input[type="button"].btn-block {
         cursor: not-allowed; }
   .nav .open > a, .genesis-nav-menu .open > a, .nav .open > a:hover, .genesis-nav-menu .open > a:hover, .nav .open > a:focus, .genesis-nav-menu .open > a:focus {
     background-color: #eeeeee;
-    border-color: #238C63; }
+    border-color: #339126; }
   .nav .nav-divider, .genesis-nav-menu .nav-divider {
     height: 1px;
     margin: 11px 0;
@@ -3180,7 +3082,7 @@ input[type="button"].btn-block {
         border-color: #eeeeee #eeeeee #ddd; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       color: #555555;
-      background-color: #F5F5F5;
+      background-color: #FDFFFD;
       border: 1px solid #ddd;
       border-bottom-color: transparent;
       cursor: default; }
@@ -3238,7 +3140,7 @@ input[type="button"].btn-block {
     .nav-tabs.nav-justified > .active > a:hover,
     .nav-tabs-justified > .active > a:focus,
     .nav-tabs.nav-justified > .active > a:focus {
-      border-bottom-color: #F5F5F5; } }
+      border-bottom-color: #FDFFFD; } }
 
 .tab-content > .tab-pane {
   display: none; }
@@ -3252,7 +3154,7 @@ input[type="button"].btn-block {
 
 .navbar, .nav-primary, .nav-secondary {
   position: relative;
-  min-height: 70px;
+  min-height: 118px;
   margin-bottom: 24px;
   border: 1px solid transparent; }
   .navbar:before, .nav-primary:before, .nav-secondary:before, .navbar:after, .nav-primary:after, .nav-secondary:after {
@@ -3304,21 +3206,17 @@ input[type="button"].btn-block {
         padding-left: 0;
         padding-right: 0; } }
 
-.container > .navbar-header, .site-inner > .navbar-header, .site-header > .navbar-header, .nav-primary .wrap > .navbar-header, .nav-secondary .wrap > .navbar-header,
+.container > .navbar-header, .site-inner > .navbar-header, .site-header > .wrap > .navbar-header,
 .container > .navbar-collapse,
 .site-inner > .navbar-collapse,
-.site-header > .navbar-collapse,
-.nav-primary .wrap > .navbar-collapse,
-.nav-secondary .wrap > .navbar-collapse {
+.site-header > .wrap > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px; }
   @media (min-width: 768px) {
-    .container > .navbar-header, .site-inner > .navbar-header, .site-header > .navbar-header, .nav-primary .wrap > .navbar-header, .nav-secondary .wrap > .navbar-header,
+    .container > .navbar-header, .site-inner > .navbar-header, .site-header > .wrap > .navbar-header,
     .container > .navbar-collapse,
     .site-inner > .navbar-collapse,
-    .site-header > .navbar-collapse,
-    .nav-primary .wrap > .navbar-collapse,
-    .nav-secondary .wrap > .navbar-collapse {
+    .site-header > .wrap > .navbar-collapse {
       margin-right: 0;
       margin-left: 0; } }
 
@@ -3351,13 +3249,13 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   float: left;
-  padding: 23px 15px;
+  padding: 47px 15px;
   font-size: 22px;
   line-height: 24px; }
   .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none; }
   @media (min-width: 768px) {
-    .navbar > .container .navbar-brand, .nav-primary > .container .navbar-brand, .nav-secondary > .container .navbar-brand, .navbar > .site-inner .navbar-brand, .nav-primary > .site-inner .navbar-brand, .nav-secondary > .site-inner .navbar-brand, .navbar > .site-header .navbar-brand, .nav-primary > .site-header .navbar-brand, .nav-secondary > .site-header .navbar-brand, .nav-primary .navbar > .wrap .navbar-brand, .nav-primary > .wrap .navbar-brand, .nav-secondary .navbar > .wrap .navbar-brand, .nav-secondary > .wrap .navbar-brand {
+    .navbar > .container .navbar-brand, .nav-primary > .container .navbar-brand, .nav-secondary > .container .navbar-brand, .navbar > .site-inner .navbar-brand, .nav-primary > .site-inner .navbar-brand, .nav-secondary > .site-inner .navbar-brand, .site-header.navbar > .wrap .navbar-brand, .site-header.nav-primary > .wrap .navbar-brand, .site-header.nav-secondary > .wrap .navbar-brand {
       margin-left: -15px; } }
 
 .navbar-toggle {
@@ -3365,8 +3263,8 @@ input[type="button"].btn-block {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 18px;
-  margin-bottom: 18px;
+  margin-top: 42px;
+  margin-bottom: 42px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -3383,7 +3281,7 @@ input[type="button"].btn-block {
       display: none; } }
 
 .navbar-nav, .genesis-nav-menu {
-  margin: 11.5px -15px; }
+  margin: 23.5px -15px; }
   .navbar-nav > li > a, .genesis-nav-menu > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -3414,16 +3312,16 @@ input[type="button"].btn-block {
       .navbar-nav > li, .genesis-nav-menu > li {
         float: left; }
         .navbar-nav > li > a, .genesis-nav-menu > li > a {
-          padding-top: 23px;
-          padding-bottom: 23px; }
-      .navbar-nav.navbar-right:last-child, .navbar-right.genesis-nav-menu:last-child {
+          padding-top: 47px;
+          padding-bottom: 47px; }
+      .navbar-nav.navbar-right:last-child, .navbar-right.genesis-nav-menu:last-child, .site-header .genesis-nav-menu.nav-primary:last-child, .site-header .navbar-nav.nav-primary:last-child {
         margin-right: -15px; } }
 
 @media (min-width: 768px) {
   .navbar-left {
     float: left !important; }
 
-  .navbar-right {
+  .navbar-right, .site-header .nav-primary {
     float: right !important; } }
 .navbar-form {
   margin-left: -15px;
@@ -3433,8 +3331,8 @@ input[type="button"].btn-block {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 16px;
-  margin-bottom: 16px; }
+  margin-top: 40px;
+  margin-bottom: 40px; }
   @media (max-width: 767px) {
     .navbar-form .form-group {
       margin-bottom: 5px; } }
@@ -3448,7 +3346,7 @@ input[type="button"].btn-block {
       padding-bottom: 0;
       -webkit-box-shadow: none;
       box-shadow: none; }
-      .navbar-form.navbar-right:last-child {
+      .navbar-form.navbar-right:last-child, .site-header .navbar-form.nav-primary:last-child {
         margin-right: -15px; } }
 
 .navbar-nav > li > .dropdown-menu, .genesis-nav-menu > li > .dropdown-menu, .navbar-nav > li > .sub-menu, .genesis-nav-menu > li > .sub-menu {
@@ -3469,24 +3367,24 @@ input[type="button"].btn-block {
   right: 0; }
 
 .navbar-btn {
-  margin-top: 16px;
-  margin-bottom: 16px; }
+  margin-top: 40px;
+  margin-bottom: 40px; }
   .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
-    margin-top: 18px;
-    margin-bottom: 18px; }
+    margin-top: 42px;
+    margin-bottom: 42px; }
   .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
-    margin-top: 24px;
-    margin-bottom: 24px; }
+    margin-top: 48px;
+    margin-bottom: 48px; }
 
 .navbar-text {
-  margin-top: 23px;
-  margin-bottom: 23px; }
+  margin-top: 47px;
+  margin-bottom: 47px; }
   @media (min-width: 768px) {
     .navbar-text {
       float: left;
       margin-left: 15px;
       margin-right: 15px; }
-      .navbar-text.navbar-right:last-child {
+      .navbar-text.navbar-right:last-child, .site-header .navbar-text.nav-primary:last-child {
         margin-right: 0; } }
 
 .navbar-default {
@@ -3539,59 +3437,60 @@ input[type="button"].btn-block {
     .navbar-default .navbar-link:hover {
       color: #333; }
 
-.navbar-inverse, .nav-secondary {
-  background-color: #222;
-  border-color: #090909; }
-  .navbar-inverse .navbar-brand, .nav-secondary .navbar-brand {
-    color: #999999; }
-    .navbar-inverse .navbar-brand:hover, .nav-secondary .navbar-brand:hover, .navbar-inverse .navbar-brand:focus, .nav-secondary .navbar-brand:focus {
+.navbar-inverse, .nav-secondary, .site-header .nav-primary {
+  background-color: #339126;
+  border-color: #25691b; }
+  .navbar-inverse .navbar-brand, .nav-secondary .navbar-brand, .site-header .nav-primary .navbar-brand {
+    color: white; }
+    .navbar-inverse .navbar-brand:hover, .nav-secondary .navbar-brand:hover, .site-header .nav-primary .navbar-brand:hover, .navbar-inverse .navbar-brand:focus, .nav-secondary .navbar-brand:focus, .site-header .nav-primary .navbar-brand:focus {
       color: #fff;
       background-color: transparent; }
-  .navbar-inverse .navbar-text, .nav-secondary .navbar-text {
+  .navbar-inverse .navbar-text, .nav-secondary .navbar-text, .site-header .nav-primary .navbar-text {
     color: #999999; }
-  .navbar-inverse .navbar-nav > li > a, .nav-secondary .navbar-nav > li > a, .navbar-inverse .genesis-nav-menu > li > a, .nav-secondary .genesis-nav-menu > li > a {
-    color: #999999; }
-    .navbar-inverse .navbar-nav > li > a:hover, .nav-secondary .navbar-nav > li > a:hover, .navbar-inverse .genesis-nav-menu > li > a:hover, .nav-secondary .genesis-nav-menu > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .nav-secondary .navbar-nav > li > a:focus, .navbar-inverse .genesis-nav-menu > li > a:focus, .nav-secondary .genesis-nav-menu > li > a:focus {
+  .navbar-inverse .navbar-nav > li > a, .nav-secondary .navbar-nav > li > a, .site-header .nav-primary .navbar-nav > li > a, .navbar-inverse .genesis-nav-menu > li > a, .nav-secondary .genesis-nav-menu > li > a, .site-header .nav-primary .genesis-nav-menu > li > a {
+    color: white; }
+    .navbar-inverse .navbar-nav > li > a:hover, .nav-secondary .navbar-nav > li > a:hover, .site-header .nav-primary .navbar-nav > li > a:hover, .navbar-inverse .genesis-nav-menu > li > a:hover, .nav-secondary .genesis-nav-menu > li > a:hover, .site-header .nav-primary .genesis-nav-menu > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .nav-secondary .navbar-nav > li > a:focus, .site-header .nav-primary .navbar-nav > li > a:focus, .navbar-inverse .genesis-nav-menu > li > a:focus, .nav-secondary .genesis-nav-menu > li > a:focus, .site-header .nav-primary .genesis-nav-menu > li > a:focus {
       color: #fff;
-      background-color: transparent; }
-  .navbar-inverse .navbar-nav > .active > a, .nav-secondary .navbar-nav > .active > a, .navbar-inverse .genesis-nav-menu > .active > a, .nav-secondary .genesis-nav-menu > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .nav-secondary .navbar-nav > .active > a:hover, .navbar-inverse .genesis-nav-menu > .active > a:hover, .nav-secondary .genesis-nav-menu > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus, .nav-secondary .navbar-nav > .active > a:focus, .navbar-inverse .genesis-nav-menu > .active > a:focus, .nav-secondary .genesis-nav-menu > .active > a:focus {
+      background-color: #25691b; }
+  .navbar-inverse .navbar-nav > .active > a, .nav-secondary .navbar-nav > .active > a, .site-header .nav-primary .navbar-nav > .active > a, .navbar-inverse .genesis-nav-menu > .active > a, .nav-secondary .genesis-nav-menu > .active > a, .site-header .nav-primary .genesis-nav-menu > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .nav-secondary .navbar-nav > .active > a:hover, .site-header .nav-primary .navbar-nav > .active > a:hover, .navbar-inverse .genesis-nav-menu > .active > a:hover, .nav-secondary .genesis-nav-menu > .active > a:hover, .site-header .nav-primary .genesis-nav-menu > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus, .nav-secondary .navbar-nav > .active > a:focus, .site-header .nav-primary .navbar-nav > .active > a:focus, .navbar-inverse .genesis-nav-menu > .active > a:focus, .nav-secondary .genesis-nav-menu > .active > a:focus, .site-header .nav-primary .genesis-nav-menu > .active > a:focus {
     color: #fff;
-    background-color: #090909; }
-  .navbar-inverse .navbar-nav > .disabled > a, .nav-secondary .navbar-nav > .disabled > a, .navbar-inverse .genesis-nav-menu > .disabled > a, .nav-secondary .genesis-nav-menu > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .nav-secondary .navbar-nav > .disabled > a:hover, .navbar-inverse .genesis-nav-menu > .disabled > a:hover, .nav-secondary .genesis-nav-menu > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus, .nav-secondary .navbar-nav > .disabled > a:focus, .navbar-inverse .genesis-nav-menu > .disabled > a:focus, .nav-secondary .genesis-nav-menu > .disabled > a:focus {
+    background-color: #25691b; }
+  .navbar-inverse .navbar-nav > .disabled > a, .nav-secondary .navbar-nav > .disabled > a, .site-header .nav-primary .navbar-nav > .disabled > a, .navbar-inverse .genesis-nav-menu > .disabled > a, .nav-secondary .genesis-nav-menu > .disabled > a, .site-header .nav-primary .genesis-nav-menu > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .nav-secondary .navbar-nav > .disabled > a:hover, .site-header .nav-primary .navbar-nav > .disabled > a:hover, .navbar-inverse .genesis-nav-menu > .disabled > a:hover, .nav-secondary .genesis-nav-menu > .disabled > a:hover, .site-header .nav-primary .genesis-nav-menu > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus, .nav-secondary .navbar-nav > .disabled > a:focus, .site-header .nav-primary .navbar-nav > .disabled > a:focus, .navbar-inverse .genesis-nav-menu > .disabled > a:focus, .nav-secondary .genesis-nav-menu > .disabled > a:focus, .site-header .nav-primary .genesis-nav-menu > .disabled > a:focus {
     color: #444;
     background-color: transparent; }
-  .navbar-inverse .navbar-toggle, .nav-secondary .navbar-toggle {
+  .navbar-inverse .navbar-toggle, .nav-secondary .navbar-toggle, .site-header .nav-primary .navbar-toggle {
     border-color: #333; }
-    .navbar-inverse .navbar-toggle:hover, .nav-secondary .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus, .nav-secondary .navbar-toggle:focus {
+    .navbar-inverse .navbar-toggle:hover, .nav-secondary .navbar-toggle:hover, .site-header .nav-primary .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus, .nav-secondary .navbar-toggle:focus, .site-header .nav-primary .navbar-toggle:focus {
       background-color: #333; }
-    .navbar-inverse .navbar-toggle .icon-bar, .nav-secondary .navbar-toggle .icon-bar {
+    .navbar-inverse .navbar-toggle .icon-bar, .nav-secondary .navbar-toggle .icon-bar, .site-header .nav-primary .navbar-toggle .icon-bar {
       background-color: #fff; }
-  .navbar-inverse .navbar-collapse, .nav-secondary .navbar-collapse,
+  .navbar-inverse .navbar-collapse, .nav-secondary .navbar-collapse, .site-header .nav-primary .navbar-collapse,
   .navbar-inverse .navbar-form,
-  .nav-secondary .navbar-form {
-    border-color: #101010; }
-  .navbar-inverse .navbar-nav > .open > a, .nav-secondary .navbar-nav > .open > a, .navbar-inverse .genesis-nav-menu > .open > a, .nav-secondary .genesis-nav-menu > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .nav-secondary .navbar-nav > .open > a:hover, .navbar-inverse .genesis-nav-menu > .open > a:hover, .nav-secondary .genesis-nav-menu > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus, .nav-secondary .navbar-nav > .open > a:focus, .navbar-inverse .genesis-nav-menu > .open > a:focus, .nav-secondary .genesis-nav-menu > .open > a:focus {
-    background-color: #090909;
+  .nav-secondary .navbar-form,
+  .site-header .nav-primary .navbar-form {
+    border-color: #29751f; }
+  .navbar-inverse .navbar-nav > .open > a, .nav-secondary .navbar-nav > .open > a, .site-header .nav-primary .navbar-nav > .open > a, .navbar-inverse .genesis-nav-menu > .open > a, .nav-secondary .genesis-nav-menu > .open > a, .site-header .nav-primary .genesis-nav-menu > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .nav-secondary .navbar-nav > .open > a:hover, .site-header .nav-primary .navbar-nav > .open > a:hover, .navbar-inverse .genesis-nav-menu > .open > a:hover, .nav-secondary .genesis-nav-menu > .open > a:hover, .site-header .nav-primary .genesis-nav-menu > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus, .nav-secondary .navbar-nav > .open > a:focus, .site-header .nav-primary .navbar-nav > .open > a:focus, .navbar-inverse .genesis-nav-menu > .open > a:focus, .nav-secondary .genesis-nav-menu > .open > a:focus, .site-header .nav-primary .genesis-nav-menu > .open > a:focus {
+    background-color: #25691b;
     color: #fff; }
   @media (max-width: 767px) {
-    .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header, .nav-secondary .navbar-nav .open .dropdown-menu > .dropdown-header, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > .dropdown-header, .nav-secondary .genesis-nav-menu .open .dropdown-menu > .dropdown-header, .navbar-inverse .navbar-nav .open .sub-menu > .dropdown-header, .nav-secondary .navbar-nav .open .sub-menu > .dropdown-header, .navbar-inverse .genesis-nav-menu .open .sub-menu > .dropdown-header, .nav-secondary .genesis-nav-menu .open .sub-menu > .dropdown-header {
-      border-color: #090909; }
-    .navbar-inverse .navbar-nav .open .dropdown-menu .divider, .nav-secondary .navbar-nav .open .dropdown-menu .divider, .navbar-inverse .genesis-nav-menu .open .dropdown-menu .divider, .nav-secondary .genesis-nav-menu .open .dropdown-menu .divider, .navbar-inverse .navbar-nav .open .sub-menu .divider, .nav-secondary .navbar-nav .open .sub-menu .divider, .navbar-inverse .genesis-nav-menu .open .sub-menu .divider, .nav-secondary .genesis-nav-menu .open .sub-menu .divider {
-      background-color: #090909; }
-    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a, .nav-secondary .navbar-nav .open .dropdown-menu > li > a, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > li > a, .nav-secondary .genesis-nav-menu .open .dropdown-menu > li > a, .navbar-inverse .navbar-nav .open .sub-menu > li > a, .nav-secondary .navbar-nav .open .sub-menu > li > a, .navbar-inverse .genesis-nav-menu .open .sub-menu > li > a, .nav-secondary .genesis-nav-menu .open .sub-menu > li > a {
-      color: #999999; }
-      .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .nav-secondary .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > li > a:hover, .nav-secondary .genesis-nav-menu .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .sub-menu > li > a:hover, .nav-secondary .navbar-nav .open .sub-menu > li > a:hover, .navbar-inverse .genesis-nav-menu .open .sub-menu > li > a:hover, .nav-secondary .genesis-nav-menu .open .sub-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus, .nav-secondary .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > li > a:focus, .nav-secondary .genesis-nav-menu .open .dropdown-menu > li > a:focus, .navbar-inverse .navbar-nav .open .sub-menu > li > a:focus, .nav-secondary .navbar-nav .open .sub-menu > li > a:focus, .navbar-inverse .genesis-nav-menu .open .sub-menu > li > a:focus, .nav-secondary .genesis-nav-menu .open .sub-menu > li > a:focus {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header, .nav-secondary .navbar-nav .open .dropdown-menu > .dropdown-header, .site-header .nav-primary .navbar-nav .open .dropdown-menu > .dropdown-header, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > .dropdown-header, .nav-secondary .genesis-nav-menu .open .dropdown-menu > .dropdown-header, .site-header .nav-primary .genesis-nav-menu .open .dropdown-menu > .dropdown-header, .navbar-inverse .navbar-nav .open .sub-menu > .dropdown-header, .nav-secondary .navbar-nav .open .sub-menu > .dropdown-header, .site-header .nav-primary .navbar-nav .open .sub-menu > .dropdown-header, .navbar-inverse .genesis-nav-menu .open .sub-menu > .dropdown-header, .nav-secondary .genesis-nav-menu .open .sub-menu > .dropdown-header, .site-header .nav-primary .genesis-nav-menu .open .sub-menu > .dropdown-header {
+      border-color: #25691b; }
+    .navbar-inverse .navbar-nav .open .dropdown-menu .divider, .nav-secondary .navbar-nav .open .dropdown-menu .divider, .site-header .nav-primary .navbar-nav .open .dropdown-menu .divider, .navbar-inverse .genesis-nav-menu .open .dropdown-menu .divider, .nav-secondary .genesis-nav-menu .open .dropdown-menu .divider, .site-header .nav-primary .genesis-nav-menu .open .dropdown-menu .divider, .navbar-inverse .navbar-nav .open .sub-menu .divider, .nav-secondary .navbar-nav .open .sub-menu .divider, .site-header .nav-primary .navbar-nav .open .sub-menu .divider, .navbar-inverse .genesis-nav-menu .open .sub-menu .divider, .nav-secondary .genesis-nav-menu .open .sub-menu .divider, .site-header .nav-primary .genesis-nav-menu .open .sub-menu .divider {
+      background-color: #25691b; }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a, .nav-secondary .navbar-nav .open .dropdown-menu > li > a, .site-header .nav-primary .navbar-nav .open .dropdown-menu > li > a, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > li > a, .nav-secondary .genesis-nav-menu .open .dropdown-menu > li > a, .site-header .nav-primary .genesis-nav-menu .open .dropdown-menu > li > a, .navbar-inverse .navbar-nav .open .sub-menu > li > a, .nav-secondary .navbar-nav .open .sub-menu > li > a, .site-header .nav-primary .navbar-nav .open .sub-menu > li > a, .navbar-inverse .genesis-nav-menu .open .sub-menu > li > a, .nav-secondary .genesis-nav-menu .open .sub-menu > li > a, .site-header .nav-primary .genesis-nav-menu .open .sub-menu > li > a {
+      color: white; }
+      .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .nav-secondary .navbar-nav .open .dropdown-menu > li > a:hover, .site-header .nav-primary .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > li > a:hover, .nav-secondary .genesis-nav-menu .open .dropdown-menu > li > a:hover, .site-header .nav-primary .genesis-nav-menu .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .sub-menu > li > a:hover, .nav-secondary .navbar-nav .open .sub-menu > li > a:hover, .site-header .nav-primary .navbar-nav .open .sub-menu > li > a:hover, .navbar-inverse .genesis-nav-menu .open .sub-menu > li > a:hover, .nav-secondary .genesis-nav-menu .open .sub-menu > li > a:hover, .site-header .nav-primary .genesis-nav-menu .open .sub-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus, .nav-secondary .navbar-nav .open .dropdown-menu > li > a:focus, .site-header .nav-primary .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > li > a:focus, .nav-secondary .genesis-nav-menu .open .dropdown-menu > li > a:focus, .site-header .nav-primary .genesis-nav-menu .open .dropdown-menu > li > a:focus, .navbar-inverse .navbar-nav .open .sub-menu > li > a:focus, .nav-secondary .navbar-nav .open .sub-menu > li > a:focus, .site-header .nav-primary .navbar-nav .open .sub-menu > li > a:focus, .navbar-inverse .genesis-nav-menu .open .sub-menu > li > a:focus, .nav-secondary .genesis-nav-menu .open .sub-menu > li > a:focus, .site-header .nav-primary .genesis-nav-menu .open .sub-menu > li > a:focus {
         color: #fff;
-        background-color: transparent; }
-    .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .nav-secondary .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > .active > a, .nav-secondary .genesis-nav-menu .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .sub-menu > .active > a, .nav-secondary .navbar-nav .open .sub-menu > .active > a, .navbar-inverse .genesis-nav-menu .open .sub-menu > .active > a, .nav-secondary .genesis-nav-menu .open .sub-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .nav-secondary .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > .active > a:hover, .nav-secondary .genesis-nav-menu .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .sub-menu > .active > a:hover, .nav-secondary .navbar-nav .open .sub-menu > .active > a:hover, .navbar-inverse .genesis-nav-menu .open .sub-menu > .active > a:hover, .nav-secondary .genesis-nav-menu .open .sub-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus, .nav-secondary .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > .active > a:focus, .nav-secondary .genesis-nav-menu .open .dropdown-menu > .active > a:focus, .navbar-inverse .navbar-nav .open .sub-menu > .active > a:focus, .nav-secondary .navbar-nav .open .sub-menu > .active > a:focus, .navbar-inverse .genesis-nav-menu .open .sub-menu > .active > a:focus, .nav-secondary .genesis-nav-menu .open .sub-menu > .active > a:focus {
+        background-color: #25691b; }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .nav-secondary .navbar-nav .open .dropdown-menu > .active > a, .site-header .nav-primary .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > .active > a, .nav-secondary .genesis-nav-menu .open .dropdown-menu > .active > a, .site-header .nav-primary .genesis-nav-menu .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .sub-menu > .active > a, .nav-secondary .navbar-nav .open .sub-menu > .active > a, .site-header .nav-primary .navbar-nav .open .sub-menu > .active > a, .navbar-inverse .genesis-nav-menu .open .sub-menu > .active > a, .nav-secondary .genesis-nav-menu .open .sub-menu > .active > a, .site-header .nav-primary .genesis-nav-menu .open .sub-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .nav-secondary .navbar-nav .open .dropdown-menu > .active > a:hover, .site-header .nav-primary .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > .active > a:hover, .nav-secondary .genesis-nav-menu .open .dropdown-menu > .active > a:hover, .site-header .nav-primary .genesis-nav-menu .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .sub-menu > .active > a:hover, .nav-secondary .navbar-nav .open .sub-menu > .active > a:hover, .site-header .nav-primary .navbar-nav .open .sub-menu > .active > a:hover, .navbar-inverse .genesis-nav-menu .open .sub-menu > .active > a:hover, .nav-secondary .genesis-nav-menu .open .sub-menu > .active > a:hover, .site-header .nav-primary .genesis-nav-menu .open .sub-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus, .nav-secondary .navbar-nav .open .dropdown-menu > .active > a:focus, .site-header .nav-primary .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > .active > a:focus, .nav-secondary .genesis-nav-menu .open .dropdown-menu > .active > a:focus, .site-header .nav-primary .genesis-nav-menu .open .dropdown-menu > .active > a:focus, .navbar-inverse .navbar-nav .open .sub-menu > .active > a:focus, .nav-secondary .navbar-nav .open .sub-menu > .active > a:focus, .site-header .nav-primary .navbar-nav .open .sub-menu > .active > a:focus, .navbar-inverse .genesis-nav-menu .open .sub-menu > .active > a:focus, .nav-secondary .genesis-nav-menu .open .sub-menu > .active > a:focus, .site-header .nav-primary .genesis-nav-menu .open .sub-menu > .active > a:focus {
       color: #fff;
-      background-color: #090909; }
-    .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .nav-secondary .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > .disabled > a, .nav-secondary .genesis-nav-menu .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .sub-menu > .disabled > a, .nav-secondary .navbar-nav .open .sub-menu > .disabled > a, .navbar-inverse .genesis-nav-menu .open .sub-menu > .disabled > a, .nav-secondary .genesis-nav-menu .open .sub-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .nav-secondary .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > .disabled > a:hover, .nav-secondary .genesis-nav-menu .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .sub-menu > .disabled > a:hover, .nav-secondary .navbar-nav .open .sub-menu > .disabled > a:hover, .navbar-inverse .genesis-nav-menu .open .sub-menu > .disabled > a:hover, .nav-secondary .genesis-nav-menu .open .sub-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus, .nav-secondary .navbar-nav .open .dropdown-menu > .disabled > a:focus, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > .disabled > a:focus, .nav-secondary .genesis-nav-menu .open .dropdown-menu > .disabled > a:focus, .navbar-inverse .navbar-nav .open .sub-menu > .disabled > a:focus, .nav-secondary .navbar-nav .open .sub-menu > .disabled > a:focus, .navbar-inverse .genesis-nav-menu .open .sub-menu > .disabled > a:focus, .nav-secondary .genesis-nav-menu .open .sub-menu > .disabled > a:focus {
+      background-color: #25691b; }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .nav-secondary .navbar-nav .open .dropdown-menu > .disabled > a, .site-header .nav-primary .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > .disabled > a, .nav-secondary .genesis-nav-menu .open .dropdown-menu > .disabled > a, .site-header .nav-primary .genesis-nav-menu .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .sub-menu > .disabled > a, .nav-secondary .navbar-nav .open .sub-menu > .disabled > a, .site-header .nav-primary .navbar-nav .open .sub-menu > .disabled > a, .navbar-inverse .genesis-nav-menu .open .sub-menu > .disabled > a, .nav-secondary .genesis-nav-menu .open .sub-menu > .disabled > a, .site-header .nav-primary .genesis-nav-menu .open .sub-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .nav-secondary .navbar-nav .open .dropdown-menu > .disabled > a:hover, .site-header .nav-primary .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > .disabled > a:hover, .nav-secondary .genesis-nav-menu .open .dropdown-menu > .disabled > a:hover, .site-header .nav-primary .genesis-nav-menu .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .sub-menu > .disabled > a:hover, .nav-secondary .navbar-nav .open .sub-menu > .disabled > a:hover, .site-header .nav-primary .navbar-nav .open .sub-menu > .disabled > a:hover, .navbar-inverse .genesis-nav-menu .open .sub-menu > .disabled > a:hover, .nav-secondary .genesis-nav-menu .open .sub-menu > .disabled > a:hover, .site-header .nav-primary .genesis-nav-menu .open .sub-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus, .nav-secondary .navbar-nav .open .dropdown-menu > .disabled > a:focus, .site-header .nav-primary .navbar-nav .open .dropdown-menu > .disabled > a:focus, .navbar-inverse .genesis-nav-menu .open .dropdown-menu > .disabled > a:focus, .nav-secondary .genesis-nav-menu .open .dropdown-menu > .disabled > a:focus, .site-header .nav-primary .genesis-nav-menu .open .dropdown-menu > .disabled > a:focus, .navbar-inverse .navbar-nav .open .sub-menu > .disabled > a:focus, .nav-secondary .navbar-nav .open .sub-menu > .disabled > a:focus, .site-header .nav-primary .navbar-nav .open .sub-menu > .disabled > a:focus, .navbar-inverse .genesis-nav-menu .open .sub-menu > .disabled > a:focus, .nav-secondary .genesis-nav-menu .open .sub-menu > .disabled > a:focus, .site-header .nav-primary .genesis-nav-menu .open .sub-menu > .disabled > a:focus {
       color: #444;
       background-color: transparent; } }
-  .navbar-inverse .navbar-link, .nav-secondary .navbar-link {
-    color: #999999; }
-    .navbar-inverse .navbar-link:hover, .nav-secondary .navbar-link:hover {
+  .navbar-inverse .navbar-link, .nav-secondary .navbar-link, .site-header .nav-primary .navbar-link {
+    color: white; }
+    .navbar-inverse .navbar-link:hover, .nav-secondary .navbar-link:hover, .site-header .nav-primary .navbar-link:hover {
       color: #fff; }
 
 .breadcrumb {
@@ -3799,7 +3698,7 @@ a.badge:hover, a.badge:focus {
 
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #238C63;
+  color: #339126;
   background-color: #fff; }
 
 .nav-pills > li > a > .badge {
@@ -3819,15 +3718,15 @@ a.list-group-item.active > .badge,
     color: inherit; }
   .jumbotron p {
     line-height: 1.4; }
-  .container .jumbotron, .site-inner .jumbotron, .site-header .jumbotron, .nav-primary .wrap .jumbotron, .nav-secondary .wrap .jumbotron {
+  .container .jumbotron, .site-inner .jumbotron, .site-header > .wrap .jumbotron {
     border-radius: 6px; }
-  .jumbotron .container, .jumbotron .site-inner, .jumbotron .site-header, .jumbotron .nav-primary .wrap, .nav-primary .jumbotron .wrap, .jumbotron .nav-secondary .wrap, .nav-secondary .jumbotron .wrap {
+  .jumbotron .container, .jumbotron .site-inner, .jumbotron .site-header > .wrap {
     max-width: 100%; }
   @media screen and (min-width: 768px) {
     .jumbotron {
       padding-top: 48px;
       padding-bottom: 48px; }
-      .container .jumbotron, .site-inner .jumbotron, .site-header .jumbotron, .nav-primary .wrap .jumbotron, .nav-secondary .wrap .jumbotron {
+      .container .jumbotron, .site-inner .jumbotron, .site-header > .wrap .jumbotron {
         padding-left: 60px;
         padding-right: 60px; }
       .jumbotron h1,
@@ -3839,7 +3738,7 @@ a.list-group-item.active > .badge,
   padding: 4px;
   margin-bottom: 24px;
   line-height: 1.42857;
-  background-color: #F5F5F5;
+  background-color: #FDFFFD;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -3858,7 +3757,7 @@ a.list-group-item.active > .badge,
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #238C63; }
+  border-color: #339126; }
 
 .alert {
   padding: 15px;
@@ -5217,8 +5116,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 /* Menus */
 .nav-primary, .nav-secondary {
   border-radius: 0; }
-  .nav-primary .wrap li a, .nav-secondary .wrap li a {
-    font-weight: 400; }
+  .nav-primary li a, .nav-secondary li a {
+    font-weight: 400;
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out; }
 
 .nav-primary {
   margin-bottom: 0; }
@@ -5283,14 +5185,25 @@ article {
 /* Begin Customizations */
 .title-area {
   text-indent: -9999px; }
-  .title-area .site-title a {
-    background: url("images/logo.png");
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    margin: 0.5em 0 0 0;
-    padding: 1em;
-    display: block; }
+  .title-area .site-title {
+    margin: 0; }
+    .title-area .site-title a {
+      background: url("images/logo.png");
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      padding: 1.1em;
+      margin: 0.25em 0 0 0;
+      display: block;
+      position: relative;
+      top: 5px; }
   .title-area .site-description {
     margin-bottom: 0; }
+
+.site-header {
+  background: #339126;
+  border-bottom: 3px solid #25691b;
+  margin-bottom: 1em; }
+  .site-header .nav-primary {
+    border: 0; }
 
 /*# sourceMappingURL=style.css.map */
