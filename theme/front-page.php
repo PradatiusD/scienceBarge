@@ -7,6 +7,55 @@ function instafeed() {
 }
 
 
+function isotope_gallery() {
+	wp_enqueue_script('masonry-gallery', get_stylesheet_directory_uri(). '/js/masonry-gallery.js', array('masonry'),'1.0.0', true);
+
+	function get_bg_style($img_name) {
+		echo 'style="background-image:url('  . get_stylesheet_directory_uri(). '/images/' . $img_name. '.jpg)"';
+	}
+
+	ob_start();?>
+		<div id="masonry-container">
+		  <article class="item">
+		  	<div class="barge-img" <?php get_bg_style('team-gray');?>></div>
+		  </article>
+		  <article class="item">
+		  	<div class="barge-img"  <?php get_bg_style('plants-growing');?>></div>
+		  </article>
+		  <article class="item item-2x">
+		  	<div class="barge-img" <?php get_bg_style('growing-flora');?>></div>
+		  </article>
+		  <article class="item">
+		  	<div class="barge-img" <?php get_bg_style('solar-panels');?>></div>
+		  </article>
+		  <article class="item">
+		  	<div class="barge-img" <?php get_bg_style('old-science-barge');?>></div>
+		  </article>
+
+		  <!-- First row done -->
+		  <article class="item item-2x">
+		  	<div class="barge-img"  <?php get_bg_style('person-mending');?>></div>
+		  </article>
+		  <article class="item">
+		  	<div class="barge-img" <?php get_bg_style('swimming-mahi');?>></div>
+		  </article>
+		  <article class="item">
+		  	<div class="barge-img" <?php get_bg_style('haggman-bermingham');?>></div>
+		  </article>
+
+		  <article class="item">
+		  	<div class="barge-img" <?php get_bg_style('interested-crowd');?>></div>
+		  </article>
+		  <article class="item">
+		  	<div class="barge-img" <?php get_bg_style('ny-sci-barge');?>></div>
+		  </article>
+		</div>
+	<?php
+	echo ob_get_clean();
+}
+
+
+
 function do_custom_front_page () {
 
 
@@ -18,7 +67,9 @@ function do_custom_front_page () {
 
 		// include('google-map.php');
 		// instafeed();
+		isotope_gallery();
 		echo do_shortcode('[gravityform id="1" title="true" description="true"]');
+
 	?>
 	<?php
 	echo ob_get_clean();

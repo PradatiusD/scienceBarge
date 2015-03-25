@@ -5364,4 +5364,22 @@ article {
   margin-left: 0;
   padding-left: 0; }
 
+/* Homepage gallery */
+#masonry-container .item {
+  width: 25%;
+  height: 240px;
+  padding: 0;
+  margin: 0 0 10px 0px; }
+  #masonry-container .item.item-2x {
+    width: 50%;
+    height: 490px; }
+#masonry-container .barge-img {
+  width: 98%;
+  margin: 0 auto;
+  height: 100%;
+  background: rgba(255, 0, 0, 0.9);
+  background-size: cover;
+  background-position: center;
+  border-radius: 1em; }
+
 /*# sourceMappingURL=style.css.map */
