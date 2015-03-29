@@ -1,5 +1,6 @@
 // Pulled from https://github.com/DevinClark/angular-tweet-filter
 
+
 angular.module('twitterFilters', ['ngSanitize'])
   .filter('linkUsername', function() {
     return function(text) {
@@ -27,7 +28,6 @@ angular.module('twitterFilters', ['ngSanitize'])
 
 angular.module('twitter-client',['twitterFilters'])
 .controller('TwitterFeedController', ['$scope','$http', '$filter', function($scope, $http, $filter) {
-
 
   $scope.formatDate = function (dateString){
     var date = Date.parse(dateString);
@@ -57,3 +57,5 @@ angular.module('twitter-client',['twitterFilters'])
   };
 
 }]);
+
+angular.bootstrap(document.getElementById("twitterfeed"), ['twitter-client']);
