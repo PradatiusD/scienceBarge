@@ -78,7 +78,6 @@ function do_custom_front_page () {
   <?php 
 
     // include('google-map.php');
-    instafeed();
     isotope_gallery();?>
 
     <?php

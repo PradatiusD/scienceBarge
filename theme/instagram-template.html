@@ -4,10 +4,10 @@
     <article ng-repeat="post in feed">
 
       <header class="row">
-        <aside class="col-sm-3" style="padding-right:0px;">
+        <aside class="col-xs-2" style="padding-right:0px;">
           <img ng-src="{{post.user.profile_picture}}" class="img-responsive">      
         </aside>
-        <div class="col-sm-9">
+        <div class="col-xs-10">
           <h4 style="margin-top:0;">
             <a href="http://instagram.com/{{post.user.username}}">{{post.user.full_name}}</a><br>
             <small class="text-muted">@{{post.user.username}}</small>            
