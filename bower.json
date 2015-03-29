@@ -17,6 +17,7 @@
     "8406309": "https://gist.github.com/8406309.git",
     "bootstrap-sass": "~3.0.2",
     "bourbon": "~4.0.2",
-    "instafeed.js": "~1.3.2"
+    "instafeed.js": "~1.3.2",
+    "angular-tweet-filter": "*"
   }
 }

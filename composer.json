@@ -1,0 +1,15 @@
+{
+    "name": "PradaDesigners/scienceBarge",
+    "require": {
+        "ricardoper/twitteroauth": "~2.1"
+    },
+    "authors": [
+        {
+            "name": "PradatiusD",
+            "email": "danielprada2012@gmail.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": "theme/lib"
+    }
+}

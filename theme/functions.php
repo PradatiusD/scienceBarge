@@ -2,6 +2,7 @@
 //* Start the engine
 include_once( get_template_directory() . '/lib/init.php' );
 
+
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Miami Science Barge Child Theme' );
 define( 'CHILD_THEME_URL', 'http://github.com/PradatiusD/scienceBarge' );
@@ -47,3 +48,6 @@ add_action('genesis_after_content','genesis_get_sidebar_alt' );
 //* Reposition the primary navigation menu
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_header_right', 'genesis_do_nav' );
+
+// Add twitter php script
+include 'twitter.php';

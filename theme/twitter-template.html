@@ -1,0 +1,40 @@
+
+<aside ng-app="twitter-client">
+  <div ng-controller="TwitterFeedController" ng-init="fetchTwitterData()" class="twitter-feed">
+    
+  <header class="feed-header">
+    <h2><i class="fa fa-twitter"></i></h2>
+    <h5>
+      <strong>{{about.followers_count}} </strong> people following <a href="http://twitter.com/{{about.screen_name}}" target="_blank" class="link-color">Miami Science Barge</a> on Twitter.
+    </h5>
+  </header>
+  <hr>
+
+  <section class="feed-body">
+    <article ng-repeat="post in feed">
+
+      <div class="row">
+        <aside class="col-xs-2 text-center">
+          <img ng-src="{{post.user.profile_image_url}}" style="display:inline;" class="img-rounded img-responsive">
+        </aside>
+          
+        <div class="col-xs-10">
+          <h4 style="margin-top: 0;">
+            <a href="http://twitter.com/{{user.screen_name}}" target="_blank">
+              {{post.user.name}}
+            </a>
+            <small class="text-muted">@{{post.user.screen_name}}</small>
+          </h4>
+          <p style="margin-bottom:0;">
+            <span ng-bind-html="post.text | tweet"></span>
+            <br>
+          </p>
+          <h3 class="text-muted" style="margin-top:0;"><small>{{formatDate(post.created_at)}}</small></h3>
+        </div>
+      </div>
+      <hr>
+
+    </article>        
+  </section>
+  </div>
+</aside>

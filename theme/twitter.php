@@ -1,0 +1,33 @@
+<?php
+
+require 'lib/autoload.php';
+require 'config.php';
+use TwitterOAuth\Auth\SingleUserAuth;
+use TwitterOAuth\Serializer\ArraySerializer;
+date_default_timezone_set('UTC');
+
+$auth = new SingleUserAuth($twitter_credentials, new ArraySerializer());
+/**
+ * Returns a collection of the most recent Tweets posted by the user
+ * https://dev.twitter.com/docs/api/1.1/get/statuses/user_timeline
+ */
+$params = array(
+  'screen_name' => 'miascibarge',
+  'count' => 12,
+  'exclude_replies' => true
+);
+
+function twitter_feed () {
+  include 'twitter-template.html';
+  wp_enqueue_script('angular','//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js', array(), '1.3.14', true);
+  wp_enqueue_script('angular-sanitize','//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-sanitize.min.js',array('angular'),'1.3.15', true);
+  wp_enqueue_script('twitter-angular-client', get_stylesheet_directory_uri().'/js/twitter-client.js', array('angular', 'angular-sanitize'), '1.0.0', true);
+}
+
+if (isset($_GET['service'])) {
+  $response = $auth->get('statuses/user_timeline', $params);
+  echo json_encode($response);
+} else {
+
+  add_action('genesis_after_sidebar_widget_area','twitter_feed');
+}
