@@ -1,11 +1,5 @@
 <?php
 
-function instafeed() {
-  wp_enqueue_script('instafeed', get_stylesheet_directory_uri(). '/js/instafeed.min.js', array(),'1.3.2', true);
-  wp_enqueue_script('instafeed_consumer', get_stylesheet_directory_uri(). '/js/instaconsumer.js', array('instafeed'), '1.0.0',true);
-  echo '<div id="instafeed"></div>';  
-}
-
 
 function isotope_gallery() {
   wp_enqueue_script('masonry-gallery', get_stylesheet_directory_uri(). '/js/masonry-gallery.js', array('masonry'),'1.0.0', true);
@@ -84,7 +78,7 @@ function do_custom_front_page () {
   <?php 
 
     // include('google-map.php');
-    // instafeed();
+    instafeed();
     isotope_gallery();?>
 
     <?php

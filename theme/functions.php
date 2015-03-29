@@ -49,5 +49,21 @@ add_action('genesis_after_content','genesis_get_sidebar_alt' );
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_header_right', 'genesis_do_nav' );
 
+
+function instafeed() {
+  wp_enqueue_script('instafeed', get_stylesheet_directory_uri(). '/js/instafeed.min.js', array(),'1.3.2', true);
+  wp_enqueue_script('instafeed_consumer', get_stylesheet_directory_uri(). '/js/instaconsumer.js', array('instafeed'), '1.0.0',true);
+  ob_start();?>
+
+    <h5>From Instagram</h5>
+    <div id="instafeed"></div>
+
+  <?php
+  echo ob_get_clean();
+  echo '<div id="instafeed"></div>';
+}
+
+add_action('genesis_after_sidebar_widget_area','instafeed');
+
 // Add twitter php script
 include 'twitter.php';
