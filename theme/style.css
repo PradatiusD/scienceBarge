@@ -5386,4 +5386,13 @@ article.entry {
 a.link-color {
   color: #339126; }
 
+/* Twitter Instagram Sidebar Icons */
+.instagram-feed .fa, .twitter-feed .fa {
+  font-size: 2em;
+  margin-left: 5px; }
+.instagram-feed .text-muted a, .twitter-feed .text-muted a {
+  color: #999999; }
+  .instagram-feed .text-muted a:hover, .twitter-feed .text-muted a:hover {
+    color: #339126; }
+
 /*# sourceMappingURL=style.css.map */

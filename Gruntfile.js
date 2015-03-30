@@ -45,7 +45,7 @@ module.exports = function(grunt) {
         src: 'theme',
         dest: pckg.name,
         forceVerbose: true,
-        exclusions: ['theme/.DS_Store','theme/screenshot.png', 'theme/images'] // 'theme/lib',
+        exclusions: ['.DS_Store','screenshot.png','lib', 'images', 'hype.hyperesources','config.php'].map(function(file){return 'theme/'+file;})
       }
     }
   });

@@ -18,6 +18,7 @@
 $scienceBargeGreen: #339126
 $darkText: #333
 $whiteGray: #FDFFFD
+$gray-light: lighten(#000, 60%)
 
 
 $body-bg: $whiteGray
@@ -300,3 +301,14 @@ article.entry
 
 a.link-color
 	color: $scienceBargeGreen
+
+/* Twitter Instagram Sidebar Icons */
+.instagram-feed, .twitter-feed
+	.fa
+		font-size: 2em
+		margin-left: 5px
+
+	.text-muted a
+		color: $gray-light
+		&:hover
+			color: $scienceBargeGreen

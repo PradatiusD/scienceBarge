@@ -41,6 +41,12 @@ if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
 }
 
 
+function header_scripts () {
+  wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array(), '4.3.0');
+}
+
+add_action('wp_enqueue_scripts','header_scripts');
+
 // move Secondary Sidebar to .content-sidebar-wrap
 remove_action('genesis_after_content_sidebar_wrap','genesis_get_sidebar_alt');
 add_action('genesis_after_content','genesis_get_sidebar_alt' );
@@ -52,7 +58,6 @@ add_action( 'genesis_header_right', 'genesis_do_nav' );
 
 wp_register_script('angular','//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js', array(), '1.3.14', true);
 wp_register_script('angular-sanitize','//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-sanitize.min.js',array('angular'),'1.3.15', true);
-
 
 function instafeed() {
   wp_enqueue_script('instafeed', get_stylesheet_directory_uri(). '/js/instafeed.min.js', array(),'1.3.2', true);

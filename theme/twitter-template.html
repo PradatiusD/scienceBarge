@@ -4,7 +4,6 @@
   <div ng-controller="TwitterFeedController" ng-init="fetchTwitterData()" class="twitter-feed">
     
   <header class="feed-header">
-    <h2><i class="fa fa-twitter"></i></h2>
     <h5>
       <strong>{{about.followers_count}} </strong> people following <a href="http://twitter.com/{{about.screen_name}}" target="_blank" class="link-color">Miami Science Barge</a> on Twitter.
     </h5>
@@ -15,8 +14,11 @@
     <article ng-repeat="post in feed">
 
       <div class="row">
+
         <aside class="col-xs-2 text-center" style="padding-right:0;">
-          <img ng-src="{{post.user.profile_image_url}}" style="display:inline;" class="img-rounded img-responsive">
+          <a href="http://twitter.com/{{user.screen_name}}">
+            <i class="fa fa-twitter"></i>
+          </a>
         </aside>
           
         <div class="col-xs-10">
@@ -24,7 +26,11 @@
             <a href="http://twitter.com/{{user.screen_name}}" target="_blank">
               {{post.user.name}}
             </a>
-            <small class="text-muted">@{{post.user.screen_name}}</small>
+            <small class="text-muted">
+              <a href="http://twitter.com/{{user.screen_name}}">
+                @{{post.user.screen_name}}
+              </a>
+            </small>
           </h4>
           <p style="margin-bottom:0;">
             <span ng-bind-html="post.text | tweet"></span>
