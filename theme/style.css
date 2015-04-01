@@ -5272,6 +5272,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 .nav-primary {
   margin-bottom: 0; }
+  .nav-primary .fa {
+    font-size: 1.25em; }
 
 .genesis-nav-menu {
   margin-left: -12px; }

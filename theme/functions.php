@@ -69,3 +69,18 @@ add_action('genesis_after_sidebar_widget_area','instafeed');
 
 // Add twitter php script
 include 'twitter.php';
+
+
+function navigation_social_links( $menu, $args ) {
+  if ( 'primary' == $args->theme_location) {
+    ob_start();?>
+      <li><a href="https://www.facebook.com/miamisciencebarge" target="_blank"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="https://twitter.com/miascibarge" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="https://instagram.com/miascibarge/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+    <?php
+    $menu .= ob_get_clean();
+  }
+  return $menu;
+}
+
+add_filter( 'wp_nav_menu_items', 'navigation_social_links', 10, 2 );
