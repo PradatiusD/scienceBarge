@@ -26,6 +26,9 @@ add_theme_support( 'custom-background' );
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
 
+//* Remove Post Meta (Filed under: )
+remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+
 
 if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
   // For Debugging on Localhost
@@ -84,3 +87,57 @@ function navigation_social_links( $menu, $args ) {
 }
 
 add_filter( 'wp_nav_menu_items', 'navigation_social_links', 10, 2 );
+
+/*
+ * Add featured images conditionally
+ * ------------------------
+ * Goes through loop and adds a featured image if there is one.
+ * If there is afeatured image, the layout is split into a 4-8
+ * layout.
+ */
+
+function add_featured_image () {
+
+  $has_featured_image = strlen(get_the_post_thumbnail()) > 0;
+
+  ob_start();?>
+  
+  <?php if ($has_featured_image): ?>
+    <div class="row">
+      <aside class="col-md-4">
+        <?php the_post_thumbnail(); ?>
+      </aside>
+      <section class="col-md-8">
+  <?php endif; ?>
+      
+        <?php genesis_do_post_content();?>
+
+  <?php if ($has_featured_image): ?>
+      <section>
+    </div>
+  <?php endif; ?>
+  <hr>
+  <?php
+  echo ob_get_clean();
+}
+
+
+remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
+add_action('genesis_entry_content','add_featured_image');
+
+function add_org_name_and_title(){
+
+  $post_types = array('team-member','advisor');
+  
+  if (is_post_type_archive($post_types)){
+    ob_start();?>
+      <h5 class="text-muted">
+        <?php echo types_render_field('organization-name') . " – " . types_render_field('organizational-title');?>
+      </h5>
+    <?php
+    echo ob_get_clean();
+  }
+
+}
+
+add_action('genesis_entry_header','add_org_name_and_title');

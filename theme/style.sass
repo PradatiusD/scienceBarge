@@ -205,8 +205,6 @@ img.alignnone, .alignnone
 /* Post */
 
 article.entry
-	background: #FFF
-	padding: 1em 2em 1.5em 2em
 	@extend .col-md-12
 	margin: 1em 0
 
@@ -315,3 +313,10 @@ a.link-color
 		color: $gray-light
 		&:hover
 			color: $scienceBargeGreen
+
+/* Team Member */
+
+.post-type-archive-team-member, .post-type-archive-advisor
+	.content
+		.entry-meta
+			display: none

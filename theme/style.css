@@ -5323,8 +5323,6 @@ img.alignnone, .alignnone {
 
 /* Post */
 article.entry {
-  background: #FFF;
-  padding: 1em 2em 1.5em 2em;
   margin: 1em 0; }
 
 /* Footer */
@@ -5396,5 +5394,9 @@ a.link-color {
   color: #999999; }
   .instagram-feed .text-muted a:hover, .twitter-feed .text-muted a:hover {
     color: #339126; }
+
+/* Team Member */
+.post-type-archive-team-member .content .entry-meta, .post-type-archive-advisor .content .entry-meta {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
