@@ -62,16 +62,9 @@ add_action( 'genesis_header_right', 'genesis_do_nav' );
 wp_register_script('angular','//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js', array(), '1.3.14', true);
 wp_register_script('angular-sanitize','//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-sanitize.min.js',array('angular'),'1.3.15', true);
 
-function instafeed() {
-  wp_enqueue_script('instafeed', get_stylesheet_directory_uri(). '/js/instafeed.min.js', array(),'1.3.2', true);
-  wp_enqueue_script('instafeed_consumer', get_stylesheet_directory_uri(). '/js/instaconsumer.js', array('instafeed', 'angular','angular-sanitize'), '1.0.0',true);
-  include 'instagram-template.html';
-}
 
-add_action('genesis_after_sidebar_widget_area','instafeed');
-
-// Add twitter php script
-include 'twitter.php';
+// Add social feed php script
+include 'social-feed.php';
 
 
 function navigation_social_links( $menu, $args ) {
@@ -131,9 +124,11 @@ function add_org_name_and_title(){
   
   if (is_post_type_archive($post_types)){
     ob_start();?>
+
       <h5 class="text-muted">
         <?php echo types_render_field('organization-name') . " – " . types_render_field('organizational-title');?>
       </h5>
+
     <?php
     echo ob_get_clean();
   }

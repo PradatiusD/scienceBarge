@@ -17,9 +17,12 @@ $params = array(
   'exclude_replies' => true
 );
 
-function twitter_feed () {
-  include 'twitter-template.html';
-  wp_enqueue_script('twitter-angular-client', get_stylesheet_directory_uri().'/js/twitter-client.js', array('angular', 'angular-sanitize'), '1.0.0', true);
+
+function social_feed () {
+  include 'feed-template.html';
+  wp_enqueue_script('instafeed', get_stylesheet_directory_uri(). '/js/instafeed.min.js', array(),'1.3.2', true);
+  wp_enqueue_script('async', get_stylesheet_directory_uri(). '/js/async.js', array(),'0.9.2', true);
+  wp_enqueue_script('twitter-angular-client', get_stylesheet_directory_uri().'/js/social-client.js', array('angular', 'angular-sanitize', 'instafeed', 'async'), '1.0.0', true);
 }
 
 if (isset($_GET['service'])) {
@@ -27,5 +30,5 @@ if (isset($_GET['service'])) {
   echo json_encode($response);
 } else {
 
-  add_action('genesis_after_sidebar_widget_area','twitter_feed');
+  add_action('genesis_after_sidebar_widget_area','social_feed');
 }
