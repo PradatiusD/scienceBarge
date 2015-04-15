@@ -1,5 +1,15 @@
 <?php
 
+function homepage_render () {
+  ob_start();?>
+  
+  <img class="img-responsive" src="<?php echo get_stylesheet_directory_uri() . "/images/miami-science-barge-3D-render.png";?>" alt="" style="margin-top: -1em; margin-bottom: 1em;width: 100%;">
+  
+  <?php
+  echo ob_get_clean();
+}
+
+add_action('genesis_after_header', 'homepage_render');
 
 function isotope_gallery() {
   wp_enqueue_script('masonry-gallery', get_stylesheet_directory_uri(). '/js/masonry-gallery.js', array('masonry'),'1.0.0', true);
@@ -54,7 +64,7 @@ function do_custom_front_page () {
 
 
   ob_start(); ?>
-
+  
   <iframe src="<?php echo get_stylesheet_directory_uri()."/hype.html";?>" frameborder="0" style="width:100%; height: 425px; overflow:hidden;"></iframe>
 
 
