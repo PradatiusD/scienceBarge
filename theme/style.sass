@@ -49,311 +49,336 @@ $navbar-inverse-link-hover-bg: darken($scienceBargeGreen, 10%)
 @import "../bower_components/bourbon/dist/bourbon"
 
 body
-	font-weight: 400
+  font-weight: 400
 
 /* Layout Classes */
 
 .site-inner
-	@extend .container
+  @extend .container
 
 .content-sidebar-wrap
-	@extend .row
+  @extend .row
 
-	.content-sidebar &, .sidebar-content &
-		.content
-			@extend .col-md-9
-		.sidebar
-			@extend .col-md-3
+  .content-sidebar &, .sidebar-content &
+    .content
+      @extend .col-md-9
+    .sidebar
+      @extend .col-md-3
 
-	.sidebar-content &
-		.content
-			@extend .col-md-push-3
-		.sidebar
-			@extend .col-md-pull-9
+  .sidebar-content &
+    .content
+      @extend .col-md-push-3
+    .sidebar
+      @extend .col-md-pull-9
 
 
-	.content-sidebar-sidebar &, .sidebar-sidebar-content &, .sidebar-content-sidebar &
-		.content
-			@extend .col-md-6
-		.sidebar
-			@extend .col-md-3
+  .content-sidebar-sidebar &, .sidebar-sidebar-content &, .sidebar-content-sidebar &
+    .content
+      @extend .col-md-6
+    .sidebar
+      @extend .col-md-3
 
-	.sidebar-sidebar-content &
-		.content
-			@extend .col-md-push-6
-		.sidebar
-			@extend .col-md-pull-6
+  .sidebar-sidebar-content &
+    .content
+      @extend .col-md-push-6
+    .sidebar
+      @extend .col-md-pull-6
 
-	.sidebar-content-sidebar &
-		.content
-			@extend .col-md-push-3
-		.sidebar-primary
-			@extend .col-md-pull-6
+  .sidebar-content-sidebar &
+    .content
+      @extend .col-md-push-3
+    .sidebar-primary
+      @extend .col-md-pull-6
 
-	.full-width-content &
-		.content
-			@extend .col-md-12
+  .full-width-content &
+    .content
+      @extend .col-md-12
 
 /* Anchor type */
 a
-	+transition(color 0.3s ease-out)
-	&:hover
-		text-decoration: none
+  +transition(color 0.3s ease-out)
+  &:hover
+    text-decoration: none
 
 h1, h2, h3, h4, h5, h6
-	a
-		color: $darkText
-		&:hover
-			text-decoration: none
+  a
+    color: $darkText
+    &:hover
+      text-decoration: none
 
 /* Meta */
 
 .entry-meta
-	@extend .small
+  @extend .small
 
 .site-title
-	font-size: 1.7em
-	margin-bottom: 0.25em
+  font-size: 1.7em
+  margin-bottom: 0.25em
 
 .site-description
-	@extend .small
-	margin-top: 0
-	font-weight: 300
+  @extend .small
+  margin-top: 0
+  font-weight: 300
 
 /* Menus */
 
 .nav-primary, .nav-secondary
-	@extend .navbar
-	border-radius: 0
+  @extend .navbar
+  border-radius: 0
 
-	li
-		a
-			font-weight: 400
-			font-family: $headings-font-family
-			+transition(all 0.15s ease-out)
+  li
+    a
+      font-weight: 400
+      font-family: $headings-font-family
+      +transition(all 0.15s ease-out)
 
 .nav-primary
-	margin-bottom: 0
+  margin-bottom: 0
 
-	.fa
-		font-size: 1.25em
+  .fa
+    font-size: 1.25em
 
 .nav-secondary
-	@extend .navbar-inverse
+  @extend .navbar-inverse
 
 .genesis-nav-menu
-	@extend .nav
-	@extend .navbar-nav
-	margin-left: -12px
+  @extend .nav
+  @extend .navbar-nav
+  margin-left: -12px
 
 .menu-item-has-children
-	@extend .dropdown
+  @extend .dropdown
 
 .sub-menu
-	@extend .dropdown-menu
+  @extend .dropdown-menu
 
 // For menu on hover
 ul.nav > li.menu-item-has-children:hover > ul.sub-menu
-	display: block
+  display: block
 
 .sub-menu
-	margin-top: -1px !important
-	> li > a
-		padding: 1em
+  margin-top: -1px !important
+  > li > a
+    padding: 1em
 
-	
+  
 /* Image Alignment Classes */
 
 .aligncenter img
-	display: block
-	margin: 0 auto
+  display: block
+  margin: 0 auto
 
 .alignnone
-	display: inline-block
+  display: inline-block
 
 .alignleft
-	float: left
-	text-align: left
+  float: left
+  text-align: left
 
 .alignleft, img.alignleft, .wp-caption.alignleft
-	margin: 0 24px 24px 0
+  margin: 0 24px 24px 0
 
 .alignright
-	float: right
-	text-align: right
+  float: right
+  text-align: right
 
 .alignright, img.alignright, .wp-caption.alignright
-	margin: 0 0 24px 24px
+  margin: 0 0 24px 24px
 
 .alignleft, .alignnone, .alignright
-	max-width: 100%
+  max-width: 100%
 
 img.centered, .aligncenter
-	display: block
-	margin: 0 auto 24px
+  display: block
+  margin: 0 auto 24px
 
 img.alignnone, .alignnone
-	margin-bottom: 12px
+  margin-bottom: 12px
 
 .wp-caption-text
-	@extend .h6
+  @extend .h6
 
 .entry-content p.wp-caption-text
-	margin-bottom: 0
+  margin-bottom: 0
 
 
 /* Post */
 
 article.entry
-	@extend .col-md-12
-	margin: 1em 0
+  @extend .col-md-12
+  margin: 1em 0
 
-	img
-		@extend .img-responsive
+  img
+    @extend .img-responsive
 
 /* Footer */
 .site-footer
-	@extend .text-center
-	background: #FFF
-	padding: 1em 0em 0.5em 0
+  @extend .text-center
+  background: #FFF
+  padding: 1em 0em 0.5em 0
 
 
 /* Begin Customizations */
 .title-area
-	text-indent: -9999px
-	@extend .col-md-3
+  text-indent: -9999px
+  @extend .col-md-3
 
-	.site-title 
-		margin: 0
-		a
-			background: url("images/logo.png")
-			background-size: auto 100%
-			background-repeat: no-repeat
-			padding: 1.1em
-			margin: 0.25em 0 0 0
-			display: block
-			position: relative
-			top: 5px
+  .site-title 
+    margin: 0
+    a
+      background: url("images/logo.png")
+      background-size: auto 100%
+      background-repeat: no-repeat
+      padding: 1.1em
+      margin: 0.25em 0 0 0
+      display: block
+      position: relative
+      top: 5px
 
-	.site-description
-		margin-bottom: 0
+  .site-description
+    margin-bottom: 0
 
 .site-header
-	background: $scienceBargeGreen
-	border-bottom: 3px solid darken($scienceBargeGreen, 10%)
-	margin-bottom: 1em
+  background: $scienceBargeGreen
+  border-bottom: 3px solid darken($scienceBargeGreen, 10%)
+  margin-bottom: 1em
 
-	& > .wrap
-		@extend .container
+  & > .wrap
+    @extend .container
 
-	.header-widget-area
-		@extend .col-md-9
+  .header-widget-area
+    @extend .col-md-9
 
-	.nav-primary
-		@extend .navbar-right
-		@extend .navbar-inverse
-		border: 0
+  .nav-primary
+    @extend .navbar-right
+    @extend .navbar-inverse
+    border: 0
 
 /* Gravity forms */
 
 .gform_body
 
-	.ginput_full
-		@extend .row
+  .ginput_full
+    @extend .row
 
-	.ginput_left, .ginput_right
-		@extend .col-md-6
-		padding-left: 0
-		padding-right: 0
+  .ginput_left, .ginput_right
+    @extend .col-md-6
+    padding-left: 0
+    padding-right: 0
 
-	.medium
-		@extend .col-md-12
+  .medium
+    @extend .col-md-12
 
-	.gform_validation_container
-		display: none
+  .gform_validation_container
+    display: none
 
 .gform_button
-	@extend .btn-lg
+  @extend .btn-lg
 
 #input_1_2_6_container
-	margin-left: 0
-	padding-left: 0
+  margin-left: 0
+  padding-left: 0
 
 /* Homepage gallery */
 #masonry-container
-	.item
-		width: 25%
-		height: 240px
-		padding: 0
-		margin: 0 0 10px 0px
+  .item
+    width: 25%
+    height: 240px
+    padding: 0
+    margin: 0 0 10px 0px
 
-		&.item-2x
-			width: 50%
-			height: 240*2px + 10px
+    &.item-2x
+      width: 50%
+      height: 240*2px + 10px
 
-	.barge-img
-		width: 98%
-		margin: 0 auto
-		height: 100%
-		background: rgba($scienceBargeGreen, 0.3)
-		background-size: cover
-		background-position: center
-		border-radius: 1em
+  .barge-img
+    width: 98%
+    margin: 0 auto
+    height: 100%
+    background: rgba($scienceBargeGreen, 0.3)
+    background-size: cover
+    background-position: center
+    border-radius: 1em
 
 a.link-color
-	color: $scienceBargeGreen
+  color: $scienceBargeGreen
 
 /* Twitter Instagram Sidebar Icons */
 .social-feed
-	.fa
-		font-size: 2em
-		margin-left: 5px
+  .fa
+    font-size: 2em
+    margin-left: 5px
 
-	.text-muted a
-		color: $gray-light
-		&:hover
-			color: $scienceBargeGreen
+  .text-muted a
+    color: $gray-light
+    &:hover
+      color: $scienceBargeGreen
 
 /* Team Member */
 
 .post-type-archive-team-member, .post-type-archive-advisor
-	.content
-		.entry-meta
-			display: none
+  .content
+    .entry-meta
+      display: none
 
 
 /* Homepage */
-$circle-size: 200px
 
-.home .team-member
-	height: $circle-size
-	width: $circle-size
-	border-radius: $circle-size
-	margin: 0 auto
-	overflow: hidden
-	position: relative
-
-	img
-		width: 100%
-		@extend .img-responsive
-
-		&.karlisa-callwood
-			position: relative
-			bottom: 34px
-
-	a
-		opacity: 0
-		position: absolute
-		display: block
-		height: 100%
-		background: #008000
-		width: 100%
-		padding-top: 43%
-		color: #FFF
-		border-radius: $circle-size
-		z-index: 1000
-		+transition(opacity 0.15s ease-out)
+=face-circle($circle-size)
+  height: $circle-size
+  width: $circle-size
+  a, &
+    border-radius: $circle-size
 
 
-	&:hover a
-		opacity: 0.84
+.home
+
+  .team-member, .advisor
+    margin: 0 auto
+    overflow: hidden
+    position: relative
+
+    img
+      width: 100%
+      @extend .img-responsive
+
+      &.karlisa-callwood
+        position: relative
+        bottom: 34px
+
+    a
+      opacity: 0
+      position: absolute
+      display: block
+      height: 100%
+      background: #008000
+      width: 100%
+      color: #FFF
+      z-index: 1000
+      +transition(opacity 0.15s ease-out)
+
+      p
+        top: 50%
+        +transform(translateY(-50%))
+        position: relative
+
+    &:hover a
+      opacity: 0.84
+
+  .team-member
+    +face-circle(200px)
+    p
+      @extend .h3
+
+  .advisor
+    +face-circle(133px)
+    margin-top: 1em
+    margin-bottom: 1em
+    p
+      @extend .h5
+      padding-left: 0.5em
+      padding-right: 0.5em
+
+  .col-md-5-special
+    width: 19.4%
+    display: inline-block

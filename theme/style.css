@@ -296,7 +296,7 @@ a {
 img {
   vertical-align: middle; }
 
-.img-responsive, article.entry img, .home .team-member img {
+.img-responsive, article.entry img, .home .team-member img, .home .advisor img {
   display: block;
   max-width: 100%;
   height: auto; }
@@ -336,7 +336,7 @@ hr {
   border: 0; }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6, .wp-caption-text {
+.h1, .h2, .h3, .home .team-member p, .h4, .h5, .home .advisor p, .h6, .wp-caption-text {
   font-family: "Arvo", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.1;
@@ -366,16 +366,22 @@ h1, h2, h3, h4, h5, h6,
   .h1 .site-description, .h2 small,
   .h2 .small,
   .h2 .entry-meta,
-  .h2 .site-description, .h3 small,
+  .h2 .site-description, .h3 small, .home .team-member p small,
   .h3 .small,
+  .home .team-member p .small,
   .h3 .entry-meta,
-  .h3 .site-description, .h4 small,
+  .home .team-member p .entry-meta,
+  .h3 .site-description,
+  .home .team-member p .site-description, .h4 small,
   .h4 .small,
   .h4 .entry-meta,
-  .h4 .site-description, .h5 small,
+  .h4 .site-description, .h5 small, .home .advisor p small,
   .h5 .small,
+  .home .advisor p .small,
   .h5 .entry-meta,
-  .h5 .site-description, .h6 small, .wp-caption-text small,
+  .home .advisor p .entry-meta,
+  .h5 .site-description,
+  .home .advisor p .site-description, .h6 small, .wp-caption-text small,
   .h6 .small,
   .wp-caption-text .small,
   .h6 .entry-meta,
@@ -430,13 +436,13 @@ h1, .h1 {
 h2, .h2 {
   font-size: 25px; }
 
-h3, .h3 {
+h3, .h3, .home .team-member p {
   font-size: 22px; }
 
 h4, .h4 {
   font-size: 20px; }
 
-h5, .h5 {
+h5, .h5, .home .advisor p {
   font-size: 17px; }
 
 h6, .h6, .wp-caption-text {
@@ -5400,33 +5406,54 @@ a.link-color {
   display: none; }
 
 /* Homepage */
-.home .team-member {
-  height: 200px;
-  width: 200px;
-  border-radius: 200px;
+.home .team-member, .home .advisor {
   margin: 0 auto;
   overflow: hidden;
   position: relative; }
-  .home .team-member img {
+  .home .team-member img, .home .advisor img {
     width: 100%; }
-    .home .team-member img.karlisa-callwood {
+    .home .team-member img.karlisa-callwood, .home .advisor img.karlisa-callwood {
       position: relative;
       bottom: 34px; }
-  .home .team-member a {
+  .home .team-member a, .home .advisor a {
     opacity: 0;
     position: absolute;
     display: block;
     height: 100%;
     background: #008000;
     width: 100%;
-    padding-top: 43%;
     color: #FFF;
-    border-radius: 200px;
     z-index: 1000;
     -webkit-transition: opacity 0.15s ease-out;
     -moz-transition: opacity 0.15s ease-out;
     transition: opacity 0.15s ease-out; }
-  .home .team-member:hover a {
+    .home .team-member a p, .home .advisor a p {
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      position: relative; }
+  .home .team-member:hover a, .home .advisor:hover a {
     opacity: 0.84; }
+.home .team-member {
+  height: 200px;
+  width: 200px; }
+  .home .team-member a, .home .team-member {
+    border-radius: 200px; }
+.home .advisor {
+  height: 133px;
+  width: 133px;
+  margin-top: 1em;
+  margin-bottom: 1em; }
+  .home .advisor a, .home .advisor {
+    border-radius: 133px; }
+  .home .advisor p {
+    padding-left: 0.5em;
+    padding-right: 0.5em; }
+.home .col-md-5-special {
+  width: 19.4%;
+  display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */

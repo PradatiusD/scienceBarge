@@ -1,9 +1,13 @@
 <?php
 
 function homepage_render () {
+
+  $img_src = get_stylesheet_directory_uri() . "/images/miami-science-barge-3D-render.png";
+  $img_style = 'margin-top: -1em; margin-bottom: 1em;width: 100%;';
+
   ob_start();?>
   
-  <img class="img-responsive" src="<?php echo get_stylesheet_directory_uri() . "/images/miami-science-barge-3D-render.png";?>" alt="" style="margin-top: -1em; margin-bottom: 1em;width: 100%;">
+  <img class="img-responsive" src="<?php echo $img_src;?>" alt="" style="<?php echo $img_style; ?>">
   
   <?php
   echo ob_get_clean();
@@ -85,61 +89,72 @@ function isotope_gallery() {
   echo ob_get_clean();
 }
 
+function class_slug ($id) {
+  
+  $class  = get_the_title($id);
+  $class  = strtolower($class);
+  $class = str_replace(" ", "-", $class);
 
-function homepage_lead_team () {
+  return $class;
+}
 
-  $args = array(
-    'post_type' => 'team-member'
-  );
+function member_layout ($unit_class, $col_width) {
+  ?>
+  <article class="col-md-<?php echo $col_width?> text-center">
+    <div class="<?php echo $unit_class;?>">
+      <a href="<?php the_permalink(); ?>">
+        <p><?php the_title();?></p>
+      </a>
+      <?php 
+      $args = array(
+        'class'=> class_slug(get_the_ID())
+      );
 
-  function class_slug ($id) {
-    
-    $class  = get_the_title($id);
-    $class  = strtolower($class);
-    $class = str_replace(" ", "-", $class);
+      if (has_post_thumbnail()) {
+        the_post_thumbnail('medium', $args);      
+      } else {
+        echo "<img src='http://placehold.it/300x300&text=Coming+Soon'";
+      }
+      ?>
+    </div>
+  </article>
+  <?php
+}
 
-    return $class;
-  }
+function face_grid($post_type, $message, $col_width) {
 
-  $team_query = new WP_Query($args);
+  $query = new WP_Query(array(
+    'post_type' => $post_type
+  ));
   
   ob_start(); ?>
 
-    <p class="h1">The Lead Team</p>
+    <p class="h1 text-center"><?php echo $message;?></p>
     <section class="row">
       <?php
 
-      if ($team_query->have_posts()) {
-        while ($team_query->have_posts()) {
-          $team_query->the_post();
-          ?>
-          <article class="col-md-4 text-center">
-            <div class="team-member">
-              <a class="h4" href="<?php the_permalink(); ?>"><?php the_title();?></a>
-              <?php 
-              $args = array(
-                'class'=> class_slug(get_the_ID())
-              );
-              the_post_thumbnail('medium', $args); 
-              ?>              
-            </div>
-          </article>
-
-          <?php
+      if ($query->have_posts()) {
+        while ($query->have_posts()) {
+          $query->the_post();
+          member_layout($post_type, $col_width);
         }
       } else {
         // no posts found
       }?>
     </section>
     <br>
-
   <?php
-  /* Restore original Post Data */
-  wp_reset_postdata();
-
+  wp_reset_postdata(); // Restore original Post Data
   echo ob_get_clean();
 }
 
+function homepage_lead_team () {
+  face_grid('team-member','The Lead Team', 4);
+}
+
+function homepage_advisors () {
+  face_grid('advisor','Our Awesome Advisors', '5-special');
+}
 
 function homepage_gravity_form() {
   echo do_shortcode('[gravityform id="1" title="true" description="true"]');
