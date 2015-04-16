@@ -320,3 +320,40 @@ a.link-color
 	.content
 		.entry-meta
 			display: none
+
+
+/* Homepage */
+$circle-size: 200px
+
+.home .team-member
+	height: $circle-size
+	width: $circle-size
+	border-radius: $circle-size
+	margin: 0 auto
+	overflow: hidden
+	position: relative
+
+	img
+		width: 100%
+		@extend .img-responsive
+
+		&.karlisa-callwood
+			position: relative
+			bottom: 34px
+
+	a
+		opacity: 0
+		position: absolute
+		display: block
+		height: 100%
+		background: #008000
+		width: 100%
+		padding-top: 43%
+		color: #FFF
+		border-radius: $circle-size
+		z-index: 1000
+		+transition(opacity 0.15s ease-out)
+
+
+	&:hover a
+		opacity: 0.84

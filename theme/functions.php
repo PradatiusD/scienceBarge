@@ -136,3 +136,6 @@ function add_org_name_and_title(){
 }
 
 add_action('genesis_entry_header','add_org_name_and_title');
+
+// Add all functions used for homepage
+include_once('front-page-functions.php');
