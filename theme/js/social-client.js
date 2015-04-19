@@ -95,6 +95,8 @@ angular.module('social-client',['socialFilters'])
 
     ], function displayData (err, data) {
 
+      console.log(err, data);
+
       // Flatten the array
       data = data.reduce(function(a,b){return a.concat(b)});
 

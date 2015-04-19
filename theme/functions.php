@@ -139,3 +139,7 @@ add_action('genesis_entry_header','add_org_name_and_title');
 
 // Add all functions used for homepage
 include_once('front-page-functions.php');
+
+// Add all functions used for press coverage archive
+// and homepage
+include_once('press-coverage.php');

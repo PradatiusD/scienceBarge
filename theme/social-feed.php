@@ -27,8 +27,7 @@ function social_feed () {
 
 if (isset($_GET['service'])) {
   $response = $auth->get('statuses/user_timeline', $params);
-  echo json_encode($response);
+  wp_send_json($response);
 } else {
-
   add_action('genesis_after_sidebar_widget_area','social_feed');
 }
