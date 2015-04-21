@@ -316,7 +316,7 @@ a.link-color
 
 /* Team Member */
 
-.post-type-archive-team-member, .post-type-archive-advisor
+.post-type-archive-lead-team, .post-type-archive-advisor
   .content
     .entry-meta
       display: none
@@ -333,7 +333,7 @@ a.link-color
 
 .home
 
-  .team-member, .advisor
+  .lead-team, .advisor
     margin: 0 auto
     overflow: hidden
     position: relative
@@ -365,7 +365,7 @@ a.link-color
     &:hover a
       opacity: 0.84
 
-  .team-member
+  .lead-team
     +face-circle(200px)
     p
       @extend .h3
@@ -382,3 +382,23 @@ a.link-color
   .col-md-5-special
     width: 19.4%
     display: inline-block
+
+
+/* For the full width science gallery */
+
+.miami-science-barge-gallery
+
+  .entry-header
+    display: none
+
+  article.entry
+    margin: 0
+    padding-left: 0
+    padding-right: 0
+
+  .site-header
+    margin-bottom: 0
+
+  .site-inner
+    width: 100%
+    padding: 0

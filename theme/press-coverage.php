@@ -59,7 +59,7 @@ function press_coverage_title () {
 }
 
 function press_coverage_functions () {
-  if (is_post_type_archive('press-coverage')) {
+  if (is_post_type_archive('press')) {
 
     // Remove post meta data
     remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );

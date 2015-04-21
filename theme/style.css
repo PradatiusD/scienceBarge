@@ -296,7 +296,7 @@ a {
 img {
   vertical-align: middle; }
 
-.img-responsive, article.entry img, .home .team-member img, .home .advisor img {
+.img-responsive, article.entry img, .home .lead-team img, .home .advisor img {
   display: block;
   max-width: 100%;
   height: auto; }
@@ -336,7 +336,7 @@ hr {
   border: 0; }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .home .team-member p, .h4, .h5, .home .advisor p, .h6, .wp-caption-text {
+.h1, .h2, .h3, .home .lead-team p, .h4, .h5, .home .advisor p, .h6, .wp-caption-text {
   font-family: "Arvo", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.1;
@@ -366,13 +366,13 @@ h1, h2, h3, h4, h5, h6,
   .h1 .site-description, .h2 small,
   .h2 .small,
   .h2 .entry-meta,
-  .h2 .site-description, .h3 small, .home .team-member p small,
+  .h2 .site-description, .h3 small, .home .lead-team p small,
   .h3 .small,
-  .home .team-member p .small,
+  .home .lead-team p .small,
   .h3 .entry-meta,
-  .home .team-member p .entry-meta,
+  .home .lead-team p .entry-meta,
   .h3 .site-description,
-  .home .team-member p .site-description, .h4 small,
+  .home .lead-team p .site-description, .h4 small,
   .h4 .small,
   .h4 .entry-meta,
   .h4 .site-description, .h5 small, .home .advisor p small,
@@ -436,7 +436,7 @@ h1, .h1 {
 h2, .h2 {
   font-size: 25px; }
 
-h3, .h3, .home .team-member p {
+h3, .h3, .home .lead-team p {
   font-size: 22px; }
 
 h4, .h4 {
@@ -5402,20 +5402,20 @@ a.link-color {
     color: #339126; }
 
 /* Team Member */
-.post-type-archive-team-member .content .entry-meta, .post-type-archive-advisor .content .entry-meta {
+.post-type-archive-lead-team .content .entry-meta, .post-type-archive-advisor .content .entry-meta {
   display: none; }
 
 /* Homepage */
-.home .team-member, .home .advisor {
+.home .lead-team, .home .advisor {
   margin: 0 auto;
   overflow: hidden;
   position: relative; }
-  .home .team-member img, .home .advisor img {
+  .home .lead-team img, .home .advisor img {
     width: 100%; }
-    .home .team-member img.karlisa-callwood, .home .advisor img.karlisa-callwood {
+    .home .lead-team img.karlisa-callwood, .home .advisor img.karlisa-callwood {
       position: relative;
       bottom: 34px; }
-  .home .team-member a, .home .advisor a {
+  .home .lead-team a, .home .advisor a {
     opacity: 0;
     position: absolute;
     display: block;
@@ -5427,7 +5427,7 @@ a.link-color {
     -webkit-transition: opacity 0.15s ease-out;
     -moz-transition: opacity 0.15s ease-out;
     transition: opacity 0.15s ease-out; }
-    .home .team-member a p, .home .advisor a p {
+    .home .lead-team a p, .home .advisor a p {
       top: 50%;
       -webkit-transform: translateY(-50%);
       -moz-transform: translateY(-50%);
@@ -5435,12 +5435,12 @@ a.link-color {
       -o-transform: translateY(-50%);
       transform: translateY(-50%);
       position: relative; }
-  .home .team-member:hover a, .home .advisor:hover a {
+  .home .lead-team:hover a, .home .advisor:hover a {
     opacity: 0.84; }
-.home .team-member {
+.home .lead-team {
   height: 200px;
   width: 200px; }
-  .home .team-member a, .home .team-member {
+  .home .lead-team a, .home .lead-team {
     border-radius: 200px; }
 .home .advisor {
   height: 133px;
@@ -5455,5 +5455,18 @@ a.link-color {
 .home .col-md-5-special {
   width: 19.4%;
   display: inline-block; }
+
+/* For the full width science gallery */
+.miami-science-barge-gallery .entry-header {
+  display: none; }
+.miami-science-barge-gallery article.entry {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0; }
+.miami-science-barge-gallery .site-header {
+  margin-bottom: 0; }
+.miami-science-barge-gallery .site-inner {
+  width: 100%;
+  padding: 0; }
 
 /*# sourceMappingURL=style.css.map */

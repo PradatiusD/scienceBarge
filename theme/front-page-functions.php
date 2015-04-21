@@ -149,7 +149,7 @@ function face_grid($post_type, $message, $col_width) {
 }
 
 function homepage_lead_team () {
-  face_grid('team-member','The Lead Team', 4);
+  face_grid('lead-team','The Lead Team', 4);
 }
 
 function homepage_advisors () {

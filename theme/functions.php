@@ -120,7 +120,7 @@ add_action('genesis_entry_content','add_featured_image');
 
 function add_org_name_and_title(){
 
-  $post_types = array('team-member','advisor');
+  $post_types = array('lead-team','advisor');
   
   if (is_post_type_archive($post_types)){
     ob_start();?>
