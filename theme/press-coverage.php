@@ -1,5 +1,27 @@
 <?php
 
+function press_coverage_share() {
+
+  $share_url = types_render_field('news-source-url', array('output'=>'raw'));
+  $title = get_the_title();
+
+  $data_attr = 'data-url="'.$share_url.'"  data-text="'.$title.'"';
+
+  ob_start();
+  ?>
+  <aside class="sharrre-container">
+    <div class="twitter" <?php echo $data_attr;?> data-title="<i class='fa fa-twitter'></i> Tweets"></div>
+    <div class="facebook"<?php echo $data_attr;?> data-title="<i class='fa fa-facebook'></i> Likes"></div>    
+  </aside>
+  <?php
+  echo ob_get_clean();
+}
+
+function press_coverage_scripts () {
+  wp_enqueue_script('sharrre', get_stylesheet_directory_uri().'/js/jquery.sharrre.min.js', array('jquery'), '1.3.5', true);
+  wp_enqueue_script('sharrre-client', get_stylesheet_directory_uri().'/js/sharrre-client.js', array('sharrre'), '1.0.0', true);
+}
+
 
 function press_coverage_archive_body_content () {
 
@@ -64,6 +86,10 @@ function press_coverage_functions () {
     // Remove post meta data
     remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
 
+    // Add special share icons
+    add_action('genesis_entry_header', 'press_coverage_share', 12);
+    add_action('wp_enqueue_scripts','press_coverage_scripts');
+
     // Change title to correct title
     remove_action('genesis_entry_header', 'genesis_do_post_title');
     add_action('genesis_entry_header','press_coverage_title');
@@ -72,5 +98,6 @@ function press_coverage_functions () {
     add_action('genesis_entry_content', 'press_coverage_archive_body_content');
   }
 }
+
 
 add_action('pre_get_posts','press_coverage_functions');

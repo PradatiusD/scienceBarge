@@ -314,7 +314,7 @@ a.link-color
     &:hover
       color: $scienceBargeGreen
 
-/* Team Member */
+/* Team Member & Advisor */
 
 .post-type-archive-lead-team, .post-type-archive-advisor
   .content
@@ -402,3 +402,30 @@ a.link-color
   .site-inner
     width: 100%
     padding: 0
+
+/* For the sharing icons */
+.post-type-archive-press
+  .entry-header
+    position: relative
+
+.sharrre-container
+  text-align: right
+  position: absolute
+  right: 0
+  bottom: 0em
+
+  .sharrre
+    display: inline-block
+  .box
+    @extend .btn
+    @extend .btn-xs
+    @extend .btn-primary
+    background:  transparent
+    border-color: $scienceBargeGreen
+    &:hover
+      background: $scienceBargeGreen
+      a
+        color: white
+  
+  .count
+    padding-right: 3px
