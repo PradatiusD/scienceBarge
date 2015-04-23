@@ -33,7 +33,8 @@ function press_coverage_archive_body_content () {
     <?php the_excerpt();?>
     <footer class="text-right">
       <cite class="h5">
-        By <?php echo $author_name; ?>
+        By <?php echo $author_name; ?><br/>
+        <small><?php echo get_the_date();?></small>
       </cite>
     </footer>
   </blockquote>
@@ -48,10 +49,18 @@ function press_coverage_archive_body_content () {
 
 function press_coverage_title () {
   global $post;
+  ?>
 
-  // First add the link
+  <div class="row">
+    <figure class="col-sm-2">
+      <a href="<?php echo types_render_field('news-source-url',array('output'=>'raw'));?>">
+        <?php the_post_thumbnail('thumbnail');?>
+      </a>
+    </figure>
+    <section class="col-sm-10">
+  <?php
 
-  $params = array(
+ $params = array(
     "title" => get_the_title(),
     "target" => "_blank"
   );
@@ -78,6 +87,10 @@ function press_coverage_title () {
 
     echo '<span class="text-muted h4">From the '.$url.'</span>';
   }
+  ?>
+    </section>
+  </div>
+  <?php
 }
 
 function press_coverage_functions () {
@@ -85,6 +98,7 @@ function press_coverage_functions () {
 
     // Remove post meta data
     remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+    remove_action( 'genesis_entry_content', 'add_featured_image');
 
     // Add special share icons
     add_action('genesis_entry_header', 'press_coverage_share', 12);

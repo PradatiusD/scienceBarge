@@ -5500,7 +5500,16 @@ a.link-color {
 
 /* For the sharing icons */
 .post-type-archive-press .entry-header {
-  position: relative; }
+  position: relative;
+  min-height: 127px; }
+  .post-type-archive-press .entry-header h1 {
+    margin-top: 11px; }
+  .post-type-archive-press .entry-header .col-sm-2 {
+    padding-right: 0; }
+  .post-type-archive-press .entry-header figure img {
+    border: 2px solid #339126;
+    border-radius: 100%;
+    width: 100%; }
 
 .sharrre-container {
   text-align: right;
