@@ -88,7 +88,7 @@ angular.module('social-client',['socialFilters'])
           return item;
         });
 
-        callback(null, twitterData)
+        callback(null, twitterData);
       });
 
     }
@@ -98,7 +98,7 @@ angular.module('social-client',['socialFilters'])
       console.log(err, data);
 
       // Flatten the array
-      data = data.reduce(function(a,b){return a.concat(b)});
+      data = data.reduce(function(a,b){return a.concat(b);});
 
       // Sort by date
       data = data.sort(function(a,b) {
@@ -116,6 +116,25 @@ angular.module('social-client',['socialFilters'])
   });
 
 
+  function setFeedHeight() {
+    
+    // Query DOM elements
+    var $socialFeed = document.querySelector('#socialFeed');
+    var $content = document.querySelector('.content');
 
+    // Now turn to jqLite selectors
+    $socialFeed = angular.element($socialFeed);
+    $content = angular.element($content);
+
+    var contentHeight = $content[0].offsetHeight;
+
+    $socialFeed.css({
+      'overflow-y':'scroll',
+      'max-height': contentHeight + 'px',
+    });
+
+  }
+
+  setFeedHeight();
 
 }]);

@@ -14,13 +14,8 @@ function homepage_render () {
 }
 
 function hype_animation () {
-  ob_start();?>
-
-  <iframe src="<?php echo get_stylesheet_directory_uri()."/hype.html";?>" frameborder="0" style="width:100%; height: 425px; overflow:hidden;"></iframe>
-
-  <?php
-  echo ob_get_clean();
-
+  include('hype.php');
+  wp_enqueue_script('hype', get_stylesheet_directory_uri() . '/hype.hyperesources/hype_hype_generated_script.js', array(), '1.0.0',true);
 }
 
 
