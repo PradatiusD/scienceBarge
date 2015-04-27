@@ -82,7 +82,7 @@ add_action('genesis_entry_content','add_featured_image');
 
 function add_org_name_and_title(){
 
-  $post_types = array('lead-team','advisor');
+  $post_types = array('lead-team','advisors');
   
   if (is_post_type_archive($post_types)){
     ob_start();?>
@@ -103,9 +103,13 @@ add_action('genesis_entry_header','add_org_name_and_title');
 // Add social feed php script
 include_once('social-feed.php');
 
-// Add all functions used for homepage
-include_once('front-page-functions.php');
+// Add the functions needed for showing sponsors on homepaeg
+include_once('partners.php');
 
 // Add all functions used for press coverage archive
 // and homepage
 include_once('press-coverage.php');
+
+
+// Add all functions used for homepage
+include_once('front-page-functions.php');

@@ -13,6 +13,7 @@ add_action('genesis_loop',         'homepage_lead_team');
 add_action('genesis_loop',         'homepage_advisors');
 add_action('genesis_loop',         'isotope_gallery');
 add_action('genesis_loop',         'homepage_gravity_form');
+add_action('genesis_loop',         'barge_partners');
 genesis();
 
 

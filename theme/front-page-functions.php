@@ -148,7 +148,7 @@ function homepage_lead_team () {
 }
 
 function homepage_advisors () {
-  face_grid('advisor','Our Awesome Advisors', '5-special');
+  face_grid('advisors','Our Awesome Advisors', '5-special');
 }
 
 function homepage_gravity_form() {

@@ -48,6 +48,14 @@ $navbar-inverse-link-hover-bg: darken($scienceBargeGreen, 10%)
 @import "../bower_components/8406309/gravity form style fixing"
 @import "../bower_components/bourbon/dist/bourbon"
 
+@mixin filter( $var )
+  -webkit-filter: $var
+  -moz-filter: $var
+  -ms-filter: $var
+  -o-filter: $var
+  filter: $var
+
+
 body
   font-weight: 400
 
@@ -314,9 +322,9 @@ a.link-color
     &:hover
       color: $scienceBargeGreen
 
-/* Team Member & Advisor */
+/* Team Member & Advisors */
 
-.post-type-archive-lead-team, .post-type-archive-advisor
+.post-type-archive-lead-team, .post-type-archive-advisors
   .content
     .entry-meta
       display: none
@@ -333,7 +341,7 @@ a.link-color
 
 .home
 
-  .lead-team, .advisor
+  .lead-team, .advisors
     margin: 0 auto
     overflow: hidden
     position: relative
@@ -370,7 +378,7 @@ a.link-color
     p
       @extend .h3
 
-  .advisor
+  .advisors
     +face-circle(133px)
     margin-top: 1em
     margin-bottom: 1em
@@ -382,6 +390,23 @@ a.link-color
   .col-md-5-special
     width: 19.4%
     display: inline-block
+
+
+/* For Partner items */
+.partner-logos
+  img
+    +filter(grayscale(100%))
+    min-height: 100px
+    max-height: 130px
+    width: auto
+    display: inline-block
+    opacity: 0.6
+    padding: 1em
+    +transition(all 1.0s ease-out)
+    
+    &:hover
+      +filter(grayscale(0%))
+      opacity: 1
 
 
 /* For the full width science gallery */
