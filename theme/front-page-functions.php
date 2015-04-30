@@ -23,10 +23,10 @@ function homepage_quote () {
   ob_start(); ?>
   
 <div class="row">
-  <aside class="col-md-2">
-    <img src="<?php echo get_stylesheet_directory_uri()."/images/sachs.jpg";?>" class="img-circle">
+  <aside class="col-md-2 col-xs-3">
+    <img src="<?php echo get_stylesheet_directory_uri()."/images/sachs.jpg";?>" class="img-circle img-responsive">
   </aside>
-  <article class="col-md-10" style="  margin-top: 0;padding-top: 0;">
+  <article class="col-md-10 col-xs-9" style=" margin-top: 0;padding-top: 0;">
     <blockquote>
     <p class="h1">“The Science Barge is not only an invitation to ideas and learning, but to change.”</p>
     <footer>
@@ -95,7 +95,7 @@ function class_slug ($id) {
 
 function member_layout ($unit_class, $col_width) {
   ?>
-  <article class="col-md-<?php echo $col_width?> text-center">
+  <article class="col-xs-<?php echo $col_width?> text-center">
     <div class="<?php echo $unit_class;?>">
       <a href="<?php the_permalink(); ?>">
         <p><?php the_title();?></p>

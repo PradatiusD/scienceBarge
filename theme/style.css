@@ -5297,7 +5297,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 /* Menus */
 .nav-primary, .nav-secondary {
-  border-radius: 0; }
+  border-radius: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
   .nav-primary li a, .nav-secondary li a {
     font-weight: 400;
     font-family: "Arvo", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -5312,6 +5314,17 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 .genesis-nav-menu {
   margin-left: -12px; }
+  @media screen and (max-width: 768px) {
+    .genesis-nav-menu .social-nav {
+      display: none !important; } }
+
+.navbar-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-color: rgba(255, 255, 255, 0.8); }
+  .navbar-toggle .icon-bar {
+    background-color: rgba(255, 255, 255, 0.8); }
 
 ul.nav > li.menu-item-has-children:hover > ul.sub-menu, ul.genesis-nav-menu > li.menu-item-has-children:hover > ul.sub-menu {
   display: block; }
@@ -5471,6 +5484,15 @@ a.link-color {
   width: 200px; }
   .home .lead-team a, .home .lead-team {
     border-radius: 200px; }
+  @media screen and (max-width: 768px) {
+    .home .lead-team {
+      margin-bottom: 1em; } }
+  @media screen and (max-width: 600px) {
+    .home .lead-team {
+      height: 133px;
+      width: 133px; }
+      .home .lead-team a, .home .lead-team {
+        border-radius: 133px; } }
 .home .advisors {
   height: 133px;
   width: 133px;
@@ -5481,9 +5503,18 @@ a.link-color {
   .home .advisors p {
     padding-left: 0.5em;
     padding-right: 0.5em; }
-.home .col-md-5-special {
+  @media screen and (max-width: 715px) {
+    .home .advisors {
+      height: 100px;
+      width: 100px; }
+      .home .advisors a, .home .advisors {
+        border-radius: 100px; } }
+.home .col-xs-5-special {
   width: 19.4%;
   display: inline-block; }
+  @media screen and (max-width: 715px) {
+    .home .col-xs-5-special {
+      width: 32.333%; } }
 
 /* For Partner items */
 .partner-logos img {

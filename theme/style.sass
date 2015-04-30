@@ -45,6 +45,7 @@ $navbar-inverse-link-color: lighten($scienceBargeGreen, 66%)
 $navbar-inverse-link-hover-bg: darken($scienceBargeGreen, 10%)
 
 @import "../bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/bootstrap"
+@import "../bower_components/sass-mediaqueries/media-queries"
 @import "../bower_components/8406309/gravity form style fixing"
 @import "../bower_components/bourbon/dist/bourbon"
 
@@ -133,6 +134,7 @@ h1, h2, h3, h4, h5, h6
 .nav-primary, .nav-secondary
   @extend .navbar
   border-radius: 0
+  +backface-visibility(hidden)
 
   li
     a
@@ -154,11 +156,26 @@ h1, h2, h3, h4, h5, h6
   @extend .navbar-nav
   margin-left: -12px
 
+  .social-nav
+    +max-screen(768px)
+      display: none !important
+
+.navbar-toggle 
+  position: absolute
+  top: 0
+  right: 0
+  border-color: rgba(white, 0.8)
+
+  .icon-bar
+    background-color: rgba(white, 0.8)
+
 .menu-item-has-children
   @extend .dropdown
 
 .sub-menu
   @extend .dropdown-menu
+
+
 
 // For menu on hover
 ul.nav > li.menu-item-has-children:hover > ul.sub-menu
@@ -375,8 +392,12 @@ a.link-color
 
   .lead-team
     +face-circle(200px)
+    +max-screen(768px)
+      margin-bottom: 1em
     p
       @extend .h3
+    +max-screen(600px)
+      +face-circle(133px)
 
   .advisors
     +face-circle(133px)
@@ -387,9 +408,14 @@ a.link-color
       padding-left: 0.5em
       padding-right: 0.5em
 
-  .col-md-5-special
+    +max-screen(715px)
+      +face-circle(100px)
+
+  .col-xs-5-special
     width: 19.4%
     display: inline-block
+    +max-screen(715px)
+      width: 32.333%
 
 
 /* For Partner items */

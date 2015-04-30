@@ -19,29 +19,10 @@ add_action('wp_enqueue_scripts','header_scripts');
 remove_action('genesis_after_content_sidebar_wrap','genesis_get_sidebar_alt');
 add_action('genesis_after_content','genesis_get_sidebar_alt' );
 
-//* Reposition the primary navigation menu
-remove_action( 'genesis_after_header', 'genesis_do_nav' );
-add_action( 'genesis_header_right', 'genesis_do_nav' );
-
 
 wp_register_script('angular','//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js', array(), '1.3.14', true);
 wp_register_script('angular-sanitize','//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-sanitize.min.js',array('angular'),'1.3.15', true);
 
-
-
-function navigation_social_links( $menu, $args ) {
-  if ( 'primary' == $args->theme_location) {
-    ob_start();?>
-      <li><a href="https://www.facebook.com/miamisciencebarge" target="_blank"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="https://twitter.com/miascibarge" target="_blank"><i class="fa fa-twitter"></i></a></li>
-      <li><a href="https://instagram.com/miascibarge/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-    <?php
-    $menu .= ob_get_clean();
-  }
-  return $menu;
-}
-
-add_filter( 'wp_nav_menu_items', 'navigation_social_links', 10, 2 );
 
 /*
  * Add featured images conditionally
