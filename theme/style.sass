@@ -239,6 +239,7 @@ article.entry
 /* Footer */
 .site-footer
   @extend .text-center
+  display: none
   background: #FFF
   padding: 1em 0em 0.5em 0
 
@@ -493,3 +494,31 @@ a.link-color
   
   .count
     padding-right: 3px
+
+
+/* Footer Widgets */
+.footer-widgets
+  margin-top: 1em
+  border-top: 8px solid $scienceBargeGreen
+  padding-top: 1em
+  background: #F4F4F4
+  color: darken(#6B85C5, 66%)
+
+  .fa
+    font-size: 2.5em
+    margin-right: 0.5em
+    color: darken(#6B85C5, 66%)
+
+  .wrap
+    @extend .container
+
+  .widget-area
+    @extend .col-md-4
+
+  .widget_featured_partner_widget
+    p
+      @extend .small
+    img
+      @extend .img-responsive
+      margin: 1em 0
+      +filter(grayscale(50%))
