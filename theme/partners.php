@@ -8,8 +8,8 @@ function barge_partners () {
   $query = new WP_Query($args);
 
   if($query->have_posts()){
-    echo "<section class='partner-logos text-center'>";
-    echo "<p class='h1'>Our Genereous Partners</p>";
+    echo "<section class='partner-logos text-center' id='partners'>";
+    echo "<p class='h1 text-center'>Our Genereous Partners</p>";
 
       while($query->have_posts()){
         $query->the_post();

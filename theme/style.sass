@@ -45,6 +45,17 @@ $navbar-inverse-link-color: lighten($scienceBargeGreen, 66%)
 $navbar-inverse-link-hover-bg: darken($scienceBargeGreen, 10%)
 
 @import "../bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/bootstrap"
+
+@import "../bower_components/animate-sass/animate"
+
+$use-fadeInUp: true
+.animated
+  +animate-prefixer(animation-duration, $base-duration)
+  +animate-prefixer(animation-fill-mode, both)
+
+@import "../bower_components/animate-sass/animations/fade-enter/fadeInUp"
+
+
 @import "../bower_components/sass-mediaqueries/media-queries"
 @import "../bower_components/8406309/gravity form style fixing"
 @import "../bower_components/bourbon/dist/bourbon"
@@ -393,6 +404,7 @@ a.link-color
 
   .lead-team
     +face-circle(200px)
+    perspective: 1px
     +max-screen(768px)
       margin-bottom: 1em
     p
@@ -522,3 +534,20 @@ a.link-color
       @extend .img-responsive
       margin: 1em 0
       +filter(grayscale(50%))
+
+
+/* Homepage animation */
+
+.home
+  #homepage_quote, #hype_animation, #lead-team, #advisors, #isotope_gallery, #gform_wrapper_1, #partners
+    opacity: 0
+
+  p.text-center.h1
+    margin-top: 1.8em
+    margin-bottom: 1.2em
+
+  #gform_wrapper_1 .gform_title
+    @extend .h1
+    text-align: center
+    margin-bottom: 1em
+    margin-top: 1.5em

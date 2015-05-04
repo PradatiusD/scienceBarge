@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * Homepage Render
+ * -----------------
+ * Render of the science barge.  Eventually should be another Hype animation.
+ * 
+ */
+
 function homepage_render () {
 
   $img_src = get_stylesheet_directory_uri() . "/images/miami-science-barge-3D-render.png";
@@ -13,16 +20,34 @@ function homepage_render () {
   echo ob_get_clean();
 }
 
+
+/*
+ * Hype animation
+ * -----------------
+ * Electron spinning around the logo.
+ * 
+ */
+
 function hype_animation () {
-  include('hype.php');
+  echo "<section id='hype_animation'>";
+    include('hype.php');
+  echo "</section>";
   wp_enqueue_script('hype', get_stylesheet_directory_uri() . '/hype.hyperesources/hype_hype_generated_script.js', array(), '1.0.0',true);
 }
+
+
+/*
+ * Homepage Quote
+ * -----------------
+ * Will eventually become a series of quotes.
+ * 
+ */
 
 
 function homepage_quote () {
   ob_start(); ?>
   
-<div class="row">
+<div class="row" id="homepage_quote">
   <aside class="col-md-2 col-xs-3">
     <img src="<?php echo get_stylesheet_directory_uri()."/images/sachs.jpg";?>" class="img-circle img-responsive">
   </aside>
@@ -69,17 +94,19 @@ function isotope_gallery() {
   );
 
   ?>
-    <p class="h1">What we plan to build</p>
-    <div id="masonry-container">
-      <?php
-        for ($i=0; $i < count($masonry_images); $i++) { 
-          ?>
-            <article class="<?php echo $masonry_images[$i]['class']; ?>">
-              <div class="barge-img" <?php get_bg_style($masonry_images[$i]['image']);?>></div>
-            </article>
-          <?php
-        }?>
-    </div>
+    <section id="isotope_gallery">
+      <p class="h1 text-center">What we plan to build</p>
+      <div id="masonry-container">
+        <?php
+          for ($i=0; $i < count($masonry_images); $i++) { 
+            ?>
+              <article class="<?php echo $masonry_images[$i]['class']; ?>">
+                <div class="barge-img" <?php get_bg_style($masonry_images[$i]['image']);?>></div>
+              </article>
+            <?php
+          }?>
+      </div>
+    </section>
   <?php
   echo ob_get_clean();
 }
@@ -116,7 +143,7 @@ function member_layout ($unit_class, $col_width) {
   <?php
 }
 
-function face_grid($post_type, $message, $col_width) {
+function face_grid($post_type, $message, $col_width, $id) {
 
   $query = new WP_Query(array(
     'post_type' => $post_type
@@ -124,19 +151,23 @@ function face_grid($post_type, $message, $col_width) {
   
   ob_start(); ?>
 
-    <p class="h1 text-center"><?php echo $message;?></p>
-    <section class="row">
-      <?php
+    <div id="<?php echo $id;?>">
 
-      if ($query->have_posts()) {
-        while ($query->have_posts()) {
-          $query->the_post();
-          member_layout($post_type, $col_width);
-        }
-      } else {
-        // no posts found
-      }?>
-    </section>
+      <p class="h1 text-center"><?php echo $message;?></p>
+      <section class="row">
+        <?php
+
+        if ($query->have_posts()) {
+          while ($query->have_posts()) {
+            $query->the_post();
+            member_layout($post_type, $col_width);
+          }
+        } else {
+          // no posts found
+        }?>
+      </section>
+
+    </div>
     <br>
   <?php
   wp_reset_postdata(); // Restore original Post Data
@@ -144,11 +175,11 @@ function face_grid($post_type, $message, $col_width) {
 }
 
 function homepage_lead_team () {
-  face_grid('lead-team','The Lead Team', 4);
+  face_grid('lead-team','The Lead Team', 4, 'lead-team');
 }
 
 function homepage_advisors () {
-  face_grid('advisors','Our Awesome Advisors', '5-special');
+  face_grid('advisors','Our Awesome Advisors', '5-special', 'advisors');
 }
 
 function homepage_gravity_form() {
