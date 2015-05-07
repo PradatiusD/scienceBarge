@@ -23,7 +23,8 @@
 		'advisors',
 		'isotope_gallery',
 		'gform_wrapper_1',
-		'partners'
+		'partners',
+		'latest-news'
 	];
 
 	for (var i = 0; i < selectors.length; i++) {

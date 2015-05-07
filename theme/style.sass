@@ -39,7 +39,7 @@ $font-size-h4: ceil($font-size-base * 1.12)
 $font-size-h5: $font-size-base
 $font-size-h6: ceil($font-size-base * 0.85)
 
-$navbar-height: 118px
+$navbar-height: 130px
 $navbar-inverse-bg: $scienceBargeGreen
 $navbar-inverse-link-color: lighten($scienceBargeGreen, 66%)
 $navbar-inverse-link-hover-bg: darken($scienceBargeGreen, 10%)
@@ -535,12 +535,64 @@ a.link-color
       margin: 1em 0
       +filter(grayscale(50%))
 
+  .gform_widget
+
+    .gform_wrapper
+      @extend .row
+      margin-left: 0
+      margin-right: 0
+
+    .gfield_label
+      display: none !important
+
+    input.medium
+      width: 75% !important
+      height: 44px
+      float: left
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+
+    input.button
+      float: right
+      width: 100%
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+      padding-left: 0
+      padding-right: 0
+      text-align: center
+
+    .gform_footer.top_label
+      float: right
+      padding-top: 0
+      margin-top: 0
+      clear: initial
+      width: 25%
+
+.text-green
+  color: $scienceBargeGreen
 
 /* Homepage animation */
 
 .home
-  #homepage_quote, #hype_animation, #lead-team, #advisors, #isotope_gallery, #gform_wrapper_1, #partners
+
+  #hype_hype_container .HYPE_scene .HYPE_element_container:nth-child(1) .HYPE_element
+    top: 165px !important
+    left: 123px !important
+
+  #homepage_quote, #hype_animation, #lead-team, #advisors, #isotope_gallery, #gform_wrapper_1, #partners, #latest-news
     opacity: 0
+
+  #latest-news 
+    img
+      width: 66px
+      height: 66px
+      border-radius: 100%
+      margin-top: 1em
+      position: relative
+      left: 1.5em
+      bottom: 0.1em
+    hr
+      margin: 1em 0
 
   p.text-center.h1
     margin-top: 1.8em
@@ -551,3 +603,5 @@ a.link-color
     text-align: center
     margin-bottom: 1em
     margin-top: 1.5em
+
+

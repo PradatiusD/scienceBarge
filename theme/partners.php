@@ -48,7 +48,7 @@ class Featured_Partner_Widget extends WP_Widget {
   }
 
   /**
-   * Front-end display of widget.
+   * Front-end display of widget partners.
    *
    * @see WP_Widget::widget()
    *
@@ -71,7 +71,6 @@ class Featured_Partner_Widget extends WP_Widget {
     $random_number = rand(0, count($posts) - 1);
     $post = $posts[$random_number];
     $post_id = $post->ID;
-
 
     $post_meta = get_post_meta($post_id);
     if (isset($post_meta['wpcf-partnership-link'][0])) {

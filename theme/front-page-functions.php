@@ -185,3 +185,61 @@ function homepage_advisors () {
 function homepage_gravity_form() {
   echo do_shortcode('[gravityform id="1" title="true" description="true"]');
 }
+
+function latest_news () {
+
+  $args = array(
+      'post_type' => 'press',
+      'posts_per_page'=> 5
+  );
+
+  $query = new WP_Query($args);
+
+  ob_start(); 
+
+  ?>
+
+      <section id="latest-news">
+        <p class="h1 text-center">Latest News</p>
+        <?php
+
+        if ($query->have_posts()) {
+          while ($query->have_posts()) {
+            $query->the_post();
+
+            $news_source_url = types_render_field('news-source-url', array('output'=>'raw'));
+
+            ?>
+            <div class="row">
+              <figure class="col-sm-2 text-center">
+                <?php echo the_post_thumbnail('thumbnail', array(''));?>
+              </figure>
+              <article class="col-sm-10">
+                <h3>
+                  <a class="text-green" href="<?php echo $news_source_url;?>" target="_blank">
+                    <?php echo get_the_title(); ?>
+                  </a>
+                  <br>
+                  <small class="text-muted" >
+                    <?php 
+                      $human_time_diff = human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago';
+                      $author_name     = types_render_field('author-name');
+                      
+                      echo $human_time_diff . " by " .  $author_name;
+                    ?>
+                  </small>
+                </h3>                
+              </article>
+              <hr>
+            </div>
+            <?php
+          }
+        } else {
+          echo "no posts found";
+        }?>
+      </section>
+
+  <?php
+  wp_reset_postdata();
+  echo ob_get_clean();
+}
