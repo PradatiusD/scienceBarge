@@ -46,10 +46,15 @@ angular.module('social-client',['socialFilters'])
 
     function fetchInstagramFeed (callback) {
 
+      /*
+       * Generate with http://jelled.com/instagram/access-token
+       * https://instagram.com/oauth/authorize/?client_id=2c90c392eca943d8b4c5ba2a7e9f5fd6&redirect_uri=http://localhost&response_type=token
+       */
+
       new Instafeed({
         get: 'user',
         userId: 1774511928,
-        accessToken: '1774511928.2c90c39.680a9751b646476e82df1b5719e02261',
+        accessToken: '1774511928.2c90c39.ab7f09b287a14b51b7111f8778502ecc',
         resolution: 'standard_resolution',
         template: '',
         success: function(response) {
