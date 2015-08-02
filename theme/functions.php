@@ -1,6 +1,5 @@
 <?php
 
-
 include_once('core.php');
 
 //* Child theme (do not remove)
