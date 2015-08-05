@@ -36,9 +36,10 @@ if (!isset($_GET['calendar'])) {
 			$event_query->the_post();
 
 			$event_data = array(
-				"title"   => get_the_title(),
-				"content" => get_the_content(),
-				"data"    => get_post_custom()
+				"title"     => get_the_title(),
+				"content"   => get_the_content(),
+				"data"      => get_post_custom(),
+				"permalink" => get_permalink()
 			);
 
 			array_push($events, $event_data);
