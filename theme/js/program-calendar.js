@@ -2,9 +2,9 @@
 
   var options = {
     header: {
-      left: 'prev,next today',
+      left:   'prev,next today',
       center: 'title',
-      right: 'month,agendaWeek,agendaDay'
+      right:  'month, agendaWeek, agendaDay'
     },
     editable: false,
     events: []
@@ -14,12 +14,18 @@
 
   $.ajax(url).done(function (events) {
 
+    function getISODate(dateOutput) {
+      var unixTime = Number(dateOutput) * 1000;
+      var date = new Date(unixTime);
+      return date.toISOString();
+    }
+
     options.events = events.map(function (evt){
 
       console.log(evt);
 
-      var startTime = Date(Number(evt.data["wpcf-end-date-time"][0]));
-      var endTime   = Date(Number(evt.data["wpcf-start-date-time"][0]));
+      var startTime = getISODate(evt.data["wpcf-end-date-time"][0]);
+      var endTime   = getISODate(evt.data["wpcf-start-date-time"][0]);
 
       return {
         title: evt.title,
