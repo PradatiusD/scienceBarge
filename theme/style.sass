@@ -171,6 +171,12 @@ h1, h2, h3, h4, h5, h6
     +max-screen(991px)
       display: none !important
 
+  > li > a
+    +screen(769px, 991px)
+      font-size: 0.9em
+      padding-left: 0.75em
+      padding-right: 0.75em
+
 .navbar-toggle 
   position: absolute
   top: 0
@@ -271,9 +277,6 @@ article.entry
       display: block
       position: relative
       top: 5px
-      +screen(769px, 991px)
-        background-size: 100% auto
-        background-position: center bottom
 
   .site-description
     margin-bottom: 0
@@ -285,6 +288,7 @@ article.entry
 
   & > .wrap
     @extend .container
+    width: 100%
 
   .header-widget-area
     @extend .col-sm-9

@@ -5427,6 +5427,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   @media screen and (max-width: 991px) {
     .genesis-nav-menu .social-nav {
       display: none !important; } }
+  @media screen and (min-width: 769px) and (max-width: 991px) {
+    .genesis-nav-menu > li > a {
+      font-size: 0.9em;
+      padding-left: 0.75em;
+      padding-right: 0.75em; } }
 
 .navbar-toggle {
   position: absolute;
@@ -5503,10 +5508,6 @@ article.entry {
       display: block;
       position: relative;
       top: 5px; }
-      @media screen and (min-width: 769px) and (max-width: 991px) {
-        .title-area .site-title a {
-          background-size: 100% auto;
-          background-position: center bottom; } }
   .title-area .site-description {
     margin-bottom: 0; }
 
@@ -5514,6 +5515,8 @@ article.entry {
   background: #339126;
   border-bottom: 3px solid #25691b;
   margin-bottom: 1em; }
+  .site-header > .wrap {
+    width: 100%; }
   .site-header .nav-primary {
     border: 0; }
 
