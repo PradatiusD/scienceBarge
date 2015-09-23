@@ -121,11 +121,15 @@ function class_slug ($id) {
 }
 
 function member_layout ($unit_class, $col_width) {
+
+  $title = get_the_title();
+
+  $title = preg_replace('/\s+/', '</span> <span>', $title);
   ?>
   <article class="col-xs-<?php echo $col_width?> text-center">
     <div class="<?php echo $unit_class;?>">
       <a href="<?php the_permalink(); ?>">
-        <p><?php the_title();?></p>
+        <p><span><?php echo $title;?></span></p>
       </a>
       <?php 
       $args = array(

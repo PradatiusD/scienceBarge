@@ -81,7 +81,7 @@ angular.module('social-client',['socialFilters'])
         base = 'http://localhost/scienceBarge';
       }
 
-      var endpoint = '/wp-content/themes/scienceBarge/twitter.php?service=true';
+      var endpoint = '/wp-content/themes/scienceBarge/social-feed.php?service=true';
 
       var resource = base + endpoint;
 

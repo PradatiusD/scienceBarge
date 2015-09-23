@@ -15,22 +15,25 @@
  */
 
 // Colors
-$scienceBargeGreen: #339126
-$darkText: #333
-$whiteGray: #FDFFFD
+$primary:      #263C71 // blue
+$primary-soft: #8490B0 // soft blue 
+$secondary:    #64EF7E // bright green
+$darkText:     darken($primary, 3%) // dark gray
+$white:        #FFFFFF // white
 $gray-light: lighten(#000, 60%)
 
 
-$body-bg: $whiteGray
-$helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif
+$body-bg: $white
 
+// Typoography
+$helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif
 $font-family-sans-serif: "PT Sans", $helvetica
 $headings-font-weight: 400
 $headings-font-family: "Arvo", $helvetica
-
 $font-size-base: 17px
-$text-color: #333
-$link-color: $scienceBargeGreen
+
+$text-color: $darkText
+$link-color: darken($secondary, 20%)
 
 $font-size-h1: floor($font-size-base * 2)
 $font-size-h2: floor($font-size-base * 1.50)
@@ -39,13 +42,14 @@ $font-size-h4: ceil($font-size-base * 1.12)
 $font-size-h5: $font-size-base
 $font-size-h6: ceil($font-size-base * 0.85)
 
+$blockquote-border-color: $primary-soft
+
 $navbar-height: 130px
-$navbar-inverse-bg: $scienceBargeGreen
-$navbar-inverse-link-color: lighten($scienceBargeGreen, 66%)
-$navbar-inverse-link-hover-bg: darken($scienceBargeGreen, 10%)
+$navbar-inverse-bg: $primary
+$navbar-inverse-link-color: lighten($primary, 66%)
+$navbar-inverse-link-hover-bg: darken($primary, 10%)
 
 @import "../bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/bootstrap"
-
 @import "../bower_components/animate-sass/animate"
 
 $use-fadeInUp: true
@@ -114,10 +118,11 @@ body
     .content
       @extend .col-md-12
 
-/* Anchor type */
+/* Anchor Colors */
 a
-  +transition(color 0.3s ease-out)
+  +transition(color 0.5s ease-out)
   &:hover
+    color: $secondary
     text-decoration: none
 
 h1, h2, h3, h4, h5, h6
@@ -152,6 +157,8 @@ h1, h2, h3, h4, h5, h6
       font-weight: 400
       font-family: $headings-font-family
       +transition(all 0.15s ease-out)
+
+/* Navigation */
 
 .nav-primary
   margin-bottom: 0
@@ -253,7 +260,12 @@ article.entry
   img
     @extend .img-responsive
 
+  .entry-header
+    border-bottom: 4px solid $primary-soft
+    margin-bottom: 0.5em
+
 /* Footer */
+
 .site-footer
   @extend .text-center
   display: none
@@ -282,8 +294,8 @@ article.entry
     margin-bottom: 0
 
 .site-header
-  background: $scienceBargeGreen
-  border-bottom: 3px solid darken($scienceBargeGreen, 10%)
+  background: $primary
+  border-bottom: 3px solid darken($primary, 10%)
   margin-bottom: 1em
 
   & > .wrap
@@ -339,13 +351,13 @@ article.entry
     width: 98%
     margin: 0 auto
     height: 100%
-    background: rgba($scienceBargeGreen, 0.3)
+    background: rgba($primary, 0.3)
     background-size: cover
     background-position: center
     border-radius: 1em
 
 a.link-color
-  color: $scienceBargeGreen
+  color: $primary
 
 /* Twitter Instagram Sidebar Icons */
 .social-feed
@@ -356,7 +368,7 @@ a.link-color
   .text-muted a
     color: $gray-light
     &:hover
-      color: $scienceBargeGreen
+      color: $primary
 
 /* Team Member & Advisors */
 
@@ -378,7 +390,7 @@ a.link-color
 .home
 
   .lead-team, .advisors
-    margin: 0 auto
+    margin: 1em auto
     overflow: hidden
     position: relative
 
@@ -395,9 +407,9 @@ a.link-color
       position: absolute
       display: block
       height: 100%
-      background: #008000
+      background: $primary
       width: 100%
-      color: #FFF
+      color: $white
       z-index: 1000
       +transition(opacity 0.15s ease-out)
 
@@ -405,6 +417,9 @@ a.link-color
         top: 50%
         +transform(translateY(-50%))
         position: relative
+        line-height: 1.5em
+        span
+          border-bottom: 0.2em solid $secondary
 
     &:hover a
       opacity: 0.84
@@ -488,7 +503,7 @@ a.link-color
 
     figure
       img
-        border: 2px solid $scienceBargeGreen
+        border: 2px solid $primary
         border-radius: 100%
         width: 100%
 
@@ -505,9 +520,9 @@ a.link-color
     @extend .btn-xs
     @extend .btn-primary
     background:  transparent
-    border-color: $scienceBargeGreen
+    border-color: $primary
     &:hover
-      background: $scienceBargeGreen
+      background: $primary
       a
         color: white
   
@@ -518,7 +533,7 @@ a.link-color
 /* Footer Widgets */
 .footer-widgets
   margin-top: 1em
-  border-top: 8px solid $scienceBargeGreen
+  border-top: 8px solid $primary
   padding-top: 1em
   background: #F4F4F4
   color: darken(#6B85C5, 66%)
@@ -576,7 +591,7 @@ a.link-color
       width: 25%
 
 .text-green
-  color: $scienceBargeGreen
+  color: $primary
 
 /* Homepage animation */
 

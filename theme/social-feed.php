@@ -6,6 +6,9 @@ use TwitterOAuth\Auth\SingleUserAuth;
 use TwitterOAuth\Serializer\ArraySerializer;
 date_default_timezone_set('UTC');
 
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+
 $auth = new SingleUserAuth($twitter_credentials, new ArraySerializer());
 /**
  * Returns a collection of the most recent Tweets posted by the user
@@ -27,7 +30,9 @@ function social_feed () {
 
 if (isset($_GET['service'])) {
   $response = $auth->get('statuses/user_timeline', $params);
-  wp_send_json($response);
+  $response = json_encode($response);
+  header('Content-Type: application/json');
+  echo $response;
 } else {
   add_action('genesis_after_sidebar_widget_area','social_feed');
 }
