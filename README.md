@@ -12,3 +12,7 @@
   <a href="https://twitter.com/miascibarge" target="_blank"><i class="fa fa-twitter"></i></a>
   <a href="https://instagram.com/miascibarge/" target="_blank"><i class="fa fa-instagram"></i></a>
 </div>
+
+# PHP Errror
+
+<!-- curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); -->

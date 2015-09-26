@@ -1,7 +1,7 @@
 {
     "name": "PradaDesigners/scienceBarge",
     "require": {
-        "ricardoper/twitteroauth": "~2.1"
+        "ricardoper/twitteroauth": "2.1.3"
     },
     "authors": [
         {
