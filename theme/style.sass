@@ -145,6 +145,7 @@ h1, h2, h3, h4, h5, h6
   margin-top: 0
   font-weight: 300
 
+
 /* Menus */
 
 .nav-primary, .nav-secondary
@@ -157,6 +158,12 @@ h1, h2, h3, h4, h5, h6
       font-weight: 400
       font-family: $headings-font-family
       +transition(all 0.15s ease-out)
+      padding-left: 13px
+      padding-right: 13px
+
+      span:hover
+        border-bottom: 4px solid $secondary
+
 
 /* Navigation */
 
@@ -377,6 +384,12 @@ a.link-color
     .entry-meta
       display: none
 
+
+/* Press */
+
+.post-type-archive-press
+  .entry-header
+    border-bottom: none !important
 
 /* Homepage */
 

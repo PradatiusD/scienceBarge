@@ -5416,7 +5416,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     font-family: "Arvo", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-transition: all 0.15s ease-out;
     -moz-transition: all 0.15s ease-out;
-    transition: all 0.15s ease-out; }
+    transition: all 0.15s ease-out;
+    padding-left: 13px;
+    padding-right: 13px; }
+    .nav-primary li a span:hover, .nav-secondary li a span:hover {
+      border-bottom: 4px solid #64EF7E; }
 
 /* Navigation */
 .nav-primary {
@@ -5570,9 +5574,13 @@ a.link-color {
 .post-type-archive-lead-team .content .entry-meta, .post-type-archive-advisors .content .entry-meta {
   display: none; }
 
+/* Press */
+.post-type-archive-press .entry-header {
+  border-bottom: none !important; }
+
 /* Homepage */
 .home .lead-team, .home .advisors {
-  margin: 0 auto;
+  margin: 1em auto;
   overflow: hidden;
   position: relative; }
   .home .lead-team img, .home .advisors img {
