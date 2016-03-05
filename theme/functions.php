@@ -9,14 +9,14 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 
 function header_scripts () {
-  wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Arvo|PT+Sans:400,700,400italic', array(), CHILD_THEME_VERSION );
+  wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Arvo|PT+Sans:400,700,400italic', array(), CHILD_THEME_VERSION );
   wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array(), '4.3.0');
 }
 add_action('wp_enqueue_scripts','header_scripts');
 
 // move Secondary Sidebar to .content-sidebar-wrap
 remove_action('genesis_after_content_sidebar_wrap','genesis_get_sidebar_alt');
-add_action('genesis_after_content','genesis_get_sidebar_alt' );
+add_action('genesis_after_content',                'genesis_get_sidebar_alt');
 
 
 wp_register_script('angular','//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js', array(), '1.3.14', true);

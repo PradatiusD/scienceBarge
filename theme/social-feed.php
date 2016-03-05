@@ -22,10 +22,9 @@ $params = array(
 
 
 function social_feed () {
-  include 'feed-template.html';
-  wp_enqueue_script('instafeed', get_stylesheet_directory_uri(). '/js/instafeed.min.js', array(),'1.3.2', true);
-  wp_enqueue_script('async', get_stylesheet_directory_uri(). '/js/async.js', array(),'0.9.2', true);
-  wp_enqueue_script('social-angular-client', get_stylesheet_directory_uri().'/js/social-client.js', array('angular', 'angular-sanitize', 'instafeed', 'async'), '1.0.0', true);
+  include('feed-template.html');
+  wp_enqueue_script('instafeed',             get_stylesheet_directory_uri().'/js/instafeed.min.js', array(),'1.3.2', true);
+  wp_enqueue_script('social-angular-client', get_stylesheet_directory_uri().'/js/social-client.js', array('angular', 'angular-sanitize', 'instafeed'), '1.0.0', true);
 }
 
 if (isset($_GET['service'])) {

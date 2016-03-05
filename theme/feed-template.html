@@ -1,43 +1,9 @@
-
-
 <aside ng-app="social-client" id="socialFeed">
   <div ng-controller="SocialFeedController" class="social-feed">
     
     <section class="feed-body">
       <article ng-repeat="post in feed">
 
-
-        <!-- Begin Twitter Template -->
-
-        <div class="row" ng-if="post.source == 'twitter'">
-        
-          <aside class="col-xs-2 text-center" style="padding-right:0;">
-            <a href="http://twitter.com/{{post.user.screen_name}}">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </aside>
-            
-          <div class="col-xs-10">
-            <h4 style="margin-top: 0;">
-              <a href="http://twitter.com/{{post.user.screen_name}}" target="_blank">
-                {{post.user.name}}
-              </a>
-              <small class="text-muted">
-                <a href="http://twitter.com/{{post.user.screen_name}}">
-                  @{{post.user.screen_name}}
-                </a>
-              </small>
-            </h4>
-            <p style="margin-bottom:0;">
-              <span ng-bind-html="post.text | tweet"></span>
-              <br>
-            </p>
-            <h3 class="text-muted" style="margin-top:0;"><small>{{formatDate(post.date)}}</small></h3>
-          </div>
-
-        </div>
-
-        <!-- End Twitter Template -->
 
         <div ng-if="post.source == 'instagram'">
 

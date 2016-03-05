@@ -33,7 +33,7 @@ angular.module('socialFilters', ['ngSanitize'])
 // Documentation at http://instafeedjs.com/
 angular.module('social-client',['socialFilters'])
 
-.controller('SocialFeedController', ['$scope','$http', '$filter', function($scope, $http, $filter) {
+.controller('SocialFeedController', function($scope, $http, $filter, $q) {
 
   $scope.formatDate = function (dateString){
     var date = Date.parse(dateString);
@@ -41,85 +41,36 @@ angular.module('social-client',['socialFilters'])
     return date;
   };
 
+  /*
+   * Generate with http://jelled.com/instagram/access-token
+   * https://instagram.com/oauth/authorize/?client_id=2c90c392eca943d8b4c5ba2a7e9f5fd6&redirect_uri=http://localhost&response_type=token
+   */
 
-  async.parallel([
+  new Instafeed({
+    get: 'user',
+    userId: 1774511928,
+    accessToken: '1774511928.2c90c39.ab7f09b287a14b51b7111f8778502ecc',
+    resolution: 'standard_resolution',
+    template: '',
+    success: function(response) {
 
-    function fetchInstagramFeed (callback) {
-
-      /*
-       * Generate with http://jelled.com/instagram/access-token
-       * https://instagram.com/oauth/authorize/?client_id=2c90c392eca943d8b4c5ba2a7e9f5fd6&redirect_uri=http://localhost&response_type=token
-       */
-
-      new Instafeed({
-        get: 'user',
-        userId: 1774511928,
-        accessToken: '1774511928.2c90c39.ab7f09b287a14b51b7111f8778502ecc',
-        resolution: 'standard_resolution',
-        template: '',
-        success: function(response) {
-
-          response = response.data.map(function (item) {
-            item.source = 'instagram';
-            item.date   =  new Date(item.created_time*1000);
-            return item;
-          });
-
-          callback(null, response);
-        },
-      }).run();
-
-    },
-
-    function fetchTwitterData (callback) {
-
-      var base;
-
-      if (window.location.host !== 'localhost') {
-        base = window.location.origin;
-      } else {
-        base = 'http://localhost/scienceBarge';
-      }
-
-      var endpoint = '/wp-content/themes/scienceBarge/social-feed.php?service=true';
-
-      var resource = base + endpoint;
-
-      $http.get(resource).success(function(twitterData){
-
-        twitterData = twitterData.map(function (item) {
-          item.source = 'twitter';
-          item.date   = new Date(item.created_at);
-          return item;
-        });
-
-        callback(null, twitterData);
+      response = response.data.map(function (item) {
+        item.source = 'instagram';
+        item.date   =  new Date(item.created_time*1000);
+        return item;
       });
 
-    }
-
-    ], function displayData (err, data) {
-
-      console.log(err, data);
-
-      // Flatten the array
-      data = data.reduce(function(a,b){return a.concat(b);});
-
-      // Sort by date
-      data = data.sort(function(a,b) {
+      var data = response.sort(function(a,b) {
         if (a.date < b.date) return 1;
         if (a.date > b.date) return -1;
         return 0;
-
       });
 
-      console.log(data);
-
-      // Add to controller scope
-      $scope.feed = data;
-
-  });
-
+      $scope.$apply(function () {
+        $scope.feed = data;      
+      });
+    },
+  }).run();
 
   function setFeedHeight() {
     
@@ -129,7 +80,7 @@ angular.module('social-client',['socialFilters'])
 
     // Now turn to jqLite selectors
     $socialFeed = angular.element($socialFeed);
-    $content = angular.element($content);
+    $content =    angular.element($content);
 
     var contentHeight = $content[0].offsetHeight;
 
@@ -142,4 +93,4 @@ angular.module('social-client',['socialFilters'])
 
   setFeedHeight();
 
-}]);
+});
