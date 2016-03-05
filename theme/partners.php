@@ -61,14 +61,17 @@ class Featured_Partner_Widget extends WP_Widget {
       echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
     }
 
-    $query_args = array(
-      'post_type' => 'partner'
-    );
+    $query_args = array('post_type' => 'partner');
 
     $query = new WP_Query($query_args);
     $posts = $query->posts;
 
     $random_number = rand(0, count($posts) - 1);
+
+    if (!isset($posts[$random_number])) {
+      return;
+    }
+
     $post = $posts[$random_number];
     $post_id = $post->ID;
 
