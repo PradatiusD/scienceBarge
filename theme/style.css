@@ -269,7 +269,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Univers LT W01_45 Light1475944", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 17px;
   line-height: 1.42857;
   color: #223666;
@@ -339,8 +339,8 @@ hr {
 h1, h2, h3, h4, h5, h6,
 .h1,
 .home #gform_wrapper_1 .gform_title, .h2, .h3, .home .lead-team p, .h4, .h5, .home .advisors p, .h6, .wp-caption-text {
-  font-family: "Arvo", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: "Univers LT W01_65 Bold1475968", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
   line-height: 1.1;
   color: inherit; }
   h1 small,
@@ -5413,7 +5413,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   backface-visibility: hidden; }
   .nav-primary li a, .nav-secondary li a {
     font-weight: 400;
-    font-family: "Arvo", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-transition: all 0.15s ease-out;
     -moz-transition: all 0.15s ease-out;
     transition: all 0.15s ease-out;
@@ -5433,11 +5432,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   @media screen and (max-width: 991px) {
     .genesis-nav-menu .social-nav {
       display: none !important; } }
-  @media screen and (min-width: 769px) and (max-width: 991px) {
-    .genesis-nav-menu > li > a {
-      font-size: 0.9em;
-      padding-left: 0.75em;
-      padding-right: 0.75em; } }
+  .genesis-nav-menu > li > a {
+    font-family: "Univers LT W01_65 Bold1475968", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    @media screen and (min-width: 769px) and (max-width: 991px) {
+      .genesis-nav-menu > li > a {
+        font-size: 0.9em;
+        padding-left: 0.75em;
+        padding-right: 0.75em; } }
 
 .navbar-toggle {
   position: absolute;
@@ -5446,6 +5447,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   border-color: rgba(255, 255, 255, 0.8); }
   .navbar-toggle .icon-bar {
     background-color: rgba(255, 255, 255, 0.8); }
+
+.sub-menu {
+  font-family: "Univers LT W01_45 Light1475944", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 ul.nav > li.menu-item-has-children:hover > ul.sub-menu, ul.genesis-nav-menu > li.menu-item-has-children:hover > ul.sub-menu {
   display: block; }

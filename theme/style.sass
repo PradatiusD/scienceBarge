@@ -27,10 +27,12 @@ $body-bg: $white
 
 // Typoography
 $helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-family-sans-serif: "PT Sans", $helvetica
-$headings-font-weight: 400
-$headings-font-family: "Arvo", $helvetica
+
+$font-family-sans-serif: 'Univers LT W01_45 Light1475944', $helvetica
+$headings-font-weight: 700
+$headings-font-family: 'Univers LT W01_65 Bold1475968', $helvetica
 $font-size-base: 17px
+
 
 $text-color: $darkText
 $link-color: darken($secondary, 20%)
@@ -156,7 +158,6 @@ h1, h2, h3, h4, h5, h6
   li
     a
       font-weight: 400
-      font-family: $headings-font-family
       +transition(all 0.15s ease-out)
       padding-left: 13px
       padding-right: 13px
@@ -181,11 +182,13 @@ h1, h2, h3, h4, h5, h6
   @extend .navbar-nav
   margin-left: -12px
 
+
   .social-nav
     +max-screen(991px)
       display: none !important
 
   > li > a
+    font-family: $headings-font-family
     +screen(769px, 991px)
       font-size: 0.9em
       padding-left: 0.75em
@@ -205,6 +208,7 @@ h1, h2, h3, h4, h5, h6
 
 .sub-menu
   @extend .dropdown-menu
+  font-family: $font-family-sans-serif
 
 
 

@@ -9,7 +9,7 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 
 function header_scripts () {
-  wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Arvo|PT+Sans:400,700,400italic', array(), CHILD_THEME_VERSION );
+  wp_enqueue_style('fonts.com'   , '//fast.fonts.net/cssapi/59c6b193-28c7-421e-b0e2-2ef3f974c071.css',      array(), CHILD_THEME_VERSION);
   wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array(), '4.3.0');
 }
 add_action('wp_enqueue_scripts','header_scripts');
