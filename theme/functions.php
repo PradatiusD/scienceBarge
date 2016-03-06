@@ -35,49 +35,17 @@ function add_featured_image () {
 
   $has_featured_image = strlen(get_the_post_thumbnail()) > 0;
 
-  ob_start();?>
-  
-  <?php if ($has_featured_image): ?>
-    <div class="row">
-      <aside class="col-md-4">
-        <?php the_post_thumbnail(); ?>
-      </aside>
-      <section class="col-md-8">
-  <?php endif; ?>
-      
-        <?php genesis_do_post_content();?>
+  if ($has_featured_image) {
+    the_post_thumbnail();
+  }
 
-  <?php if ($has_featured_image): ?>
-      <section>
-    </div>
-  <?php endif; ?>
-  <hr>
-  <?php
-  echo ob_get_clean();
+  genesis_do_post_content();
+
 }
 
 
 remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
-add_action('genesis_entry_content','add_featured_image');
-
-function add_org_name_and_title(){
-
-  $post_types = array('lead-team','advisors');
-  
-  if (is_post_type_archive($post_types)){
-    ob_start();?>
-
-      <h5 class="text-muted">
-        <?php echo types_render_field('organization-name') . " – " . types_render_field('organizational-title');?>
-      </h5>
-
-    <?php
-    echo ob_get_clean();
-  }
-
-}
-
-add_action('genesis_entry_header','add_org_name_and_title');
+add_action('genesis_entry_content',     'add_featured_image');
 
 
 // Add social feed php script
@@ -90,6 +58,5 @@ include_once('partners.php');
 // and homepage
 include_once('press-coverage.php');
 
-
-// Add all functions used for homepage
-include_once('front-page-functions.php');
+// Archives
+include_once('team-archives.php');

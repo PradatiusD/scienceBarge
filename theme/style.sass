@@ -184,7 +184,7 @@ h1, h2, h3, h4, h5, h6
 
 
   .social-nav
-    +max-screen(991px)
+    +max-screen(1248px)
       display: none !important
 
   > li > a
@@ -379,21 +379,38 @@ a.link-color
   .entry-header
     border-bottom: none !important
 
-/* Homepage */
+/* Archives */
 
 =face-circle($circle-size)
   height: $circle-size
   width: $circle-size
+  overflow: hidden
   a, &
     border-radius: $circle-size
 
 
-.home
+h1.face-grid-title
+  border-bottom: 4px solid $primary-soft
+  padding-bottom: 5px
 
-  .lead-team, .advisors
+.face-grid
+  article
     margin: 1em auto
     overflow: hidden
     position: relative
+
+    div
+      +face-circle(200px)
+      perspective: 1px
+
+      +screen(666px, 1199px)
+        +face-circle(150px)
+      +screen(538px, 665px)
+        +face-circle(120px)
+      +screen(457px, 537px)
+        +face-circle(100px)
+      +max-screen(456px)
+        +face-circle(80px)
 
     img
       width: 100%
@@ -425,34 +442,14 @@ a.link-color
     &:hover a
       opacity: 0.84
 
-  .lead-team
-    +face-circle(200px)
-    perspective: 1px
-    +max-screen(768px)
-      margin-bottom: 1em
-    p
-      @extend .h3
-    +max-screen(600px)
-      +face-circle(133px)
 
-  .advisors
-    +face-circle(133px)
-    margin-top: 1em
-    margin-bottom: 1em
-    p
-      @extend .h5
-      padding-left: 0.5em
-      padding-right: 0.5em
-
-    +max-screen(715px)
-      +face-circle(100px)
-
-  .col-xs-5-special
-    width: 19.4%
-    display: inline-block
-    +max-screen(715px)
-      width: 32.333%
-
+/* Archives */
+.post-type-archive, .blog
+  .entry-content img
+    max-width: 220px
+    float: left
+    margin-right: 8px
+    margin-bottom: 5px
 
 /* For Partner items */
 .partner-logos
