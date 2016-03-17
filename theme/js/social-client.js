@@ -85,7 +85,7 @@ angular.module('social-client',['socialFilters'])
     var contentHeight = $content[0].offsetHeight;
 
     $socialFeed.css({
-      'overflow-y':'scroll',
+      'overflow':'hidden',
       'max-height': contentHeight + 'px',
     });
 

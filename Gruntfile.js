@@ -48,6 +48,19 @@ module.exports = function(grunt) {
         exclusions: ['.DS_Store','screenshot.png','lib', 'images', 'hype.hyperesources', 'config.php'].map(function (file){
           return 'theme/'+file;
         })
+      },
+      images: {
+        auth: {
+          host: 'pradadesigners.com',
+          port: 21,
+          authKey: 'key'
+        },
+        src: 'theme',
+        dest: pckg.name,
+        forceVerbose: true,
+        exclusions: ['.DS_Store','lib','hype.hyperesources'].map(function (file){
+          return 'theme/'+file;
+        })
       }
     }
   });
@@ -58,5 +71,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-ftp-deploy');
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('deploy', ['ftp-deploy']);
+  grunt.registerTask('deploy',    ['ftp-deploy:build']);
+  grunt.registerTask('deployAll', ['ftp-deploy:images']);
 };
