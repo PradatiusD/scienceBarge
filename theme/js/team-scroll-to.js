@@ -1,5 +1,13 @@
 (function ($) {
-  var $faces = $('.face-grid').find('article');
+  var $faces = $('.archive-img-grid').find('article');
+
+  function navigateTo (offset) {
+
+    $('html, body').animate({
+      scrollTop: offset
+    }, 1000);
+    return false;
+  }
 
   $faces.find('a').click(function (e) {
 
@@ -12,11 +20,13 @@
     var target = $(targetClass);
 
     if (target.length) {
-      $('html, body').animate({
-        scrollTop: target.offset().top
-      }, 1000);
-      return false;
+      navigateTo(target.offset().top);
     }
   });
+
+  $('.back-to-top').click(function (e) {
+    e.preventDefault();
+    navigateTo(0);
+  })
 
 })(jQuery);

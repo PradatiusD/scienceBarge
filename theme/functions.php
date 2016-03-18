@@ -59,4 +59,4 @@ include_once('partners.php');
 include_once('press-coverage.php');
 
 // Archives
-include_once('team-archives.php');
+include_once('custom-archives.php');

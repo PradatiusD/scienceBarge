@@ -49,7 +49,7 @@ class Archive {
                 </span>
             </p>
           </a>
-          <?php echo $img;?>          
+          <?php echo $img;?>     
         </div>
       </article>
       <?php
@@ -122,5 +122,18 @@ function add_org_name_and_title(){
 }
 
 add_action('genesis_entry_header','add_org_name_and_title');
+
+
+function back_to_top () {
+
+  global $archive_post_types;
+  $is_archive = is_post_type_archive($archive_post_types);
+
+  if($is_archive) {?>
+    <a href="#" class="back-to-top"><i class="fa fa-arrow-up"></i> Back to top</a>
+    <?php
+  }
+}
+add_action('genesis_entry_footer','back_to_top');
 
 ?>
