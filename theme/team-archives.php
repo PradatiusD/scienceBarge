@@ -1,10 +1,10 @@
 <?php
 
 /*
- * Team Archive
+ * Archive
  * ------------------- 
  */
-class Team_Archive {
+class Archive {
 
   public  $slug;
   private $posts;
@@ -14,18 +14,18 @@ class Team_Archive {
     $this->posts    = $wp_query->posts;
   }
 
-  function face_grid_wrap ($isOpenTag)  {
+  function image_grid_wrap ($isOpenTag)  {
     if ($isOpenTag) {
-      echo "<h1 class='face-grid-title'>".post_type_archive_title('Our ',false)."</h1>";
-      echo '<header class="face-grid row">';
+      echo "<h1 class='archive-img-grid-title'>".post_type_archive_title('Our ',false)."</h1>";
+      echo '<header class="archive-img-grid row">';
     } else {
       echo '</header>';
     }
   }
 
-  function face_grid () {
+  function image_grid () {
 
-    $this->face_grid_wrap(true);
+    $this->image_grid_wrap(true);
 
     foreach ($this->posts as $post) {
 
@@ -55,7 +55,7 @@ class Team_Archive {
       <?php
 
     } // End foreach
-    $this->face_grid_wrap(false);
+    $this->image_grid_wrap(false);
   }
 
   function get_image_class ($ID) {
@@ -69,20 +69,25 @@ class Team_Archive {
   }
 }
 
-$team_post_types = array('lead-team','advisors');
+$archive_post_types = array('lead-team','advisors','partner');
 
 function circle_headers () {
 
   global $wp_query;
-  global $team_post_types;
+  global $archive_post_types;
 
   $post_type  = get_post_type();
-  $is_archive = is_post_type_archive($team_post_types);
+  $is_archive = is_post_type_archive($archive_post_types);
+
+  if (!$is_archive) {
+    echo "<h1>test</h1>";
+    print_r($is_archive);
+  }
 
   if ($post_type && $is_archive) {
-    $archive = new Team_Archive($post_type, $wp_query);
+    $archive = new Archive($post_type, $wp_query);
     wp_enqueue_script('team-scroll-To', get_stylesheet_directory_uri() . '/js/team-scroll-to.js', array(), '1.0.0',true);
-    return $archive->face_grid();
+    return $archive->image_grid();
   }
 }
 
@@ -91,9 +96,9 @@ add_action('genesis_before_loop', 'circle_headers');
 
 
 function add_org_name_and_title(){
-  global $team_post_types;
+  global $archive_post_types;
 
-  $is_archive = is_post_type_archive($team_post_types);
+  $is_archive = is_post_type_archive($archive_post_types);
 
   if ($is_archive){
     $org_name  = types_render_field('organization-name');
