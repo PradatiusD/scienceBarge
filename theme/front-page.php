@@ -18,9 +18,10 @@ function homepage_render () {
     $default_image_src = get_stylesheet_directory_uri()."/images/miami-science-barge-3D-render.png";
     $image_class = 'img-responsive '.$image_attr["class"];
 
-    echo '<img class="'.$image_class.'" src="'.$default_image_src.'">';
-
+    $image = '<img class="'.$image_class.'" src="'.$default_image_src.'">';
   }
+
+  echo $image;
 }
 
 
