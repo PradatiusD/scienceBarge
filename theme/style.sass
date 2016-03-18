@@ -545,7 +545,13 @@ h1.face-grid-title
     @extend .container
 
   .widget-area
-    @extend .col-md-4
+    &.footer-widgets-1
+      @extend .col-sm-4
+    &.footer-widgets-2
+      @extend .col-sm-8
+    &.footer-widgets-3
+      display: none
+
 
   .widget_featured_partner_widget
     p
@@ -596,6 +602,12 @@ h1.face-grid-title
 /* Homepage animation */
 
 .home
+
+  .barge-render
+    margin-top: -1em
+    margin-bottom: -1.2em
+    width: 100%
+
 
   #hype_hype_container .HYPE_scene .HYPE_element_container:nth-child(1) .HYPE_element
     top: 165px !important

@@ -742,7 +742,7 @@ pre {
   .row:after, .content-sidebar-wrap:after, .gform_body .ginput_full:after, .footer-widgets .gform_widget .gform_wrapper:after {
     clear: both; }
 
-.col-xs-12, .col-sm-12, .col-md-12, .full-width-content .content-sidebar-wrap .content, article.entry, .gform_body .medium, .col-lg-12, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-9, .col-sm-9, .site-header .header-widget-area, .col-md-9, .content-sidebar .content-sidebar-wrap .content, .sidebar-content .content-sidebar-wrap .content, .col-lg-9, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-6, .col-sm-6, .col-md-6, .content-sidebar-sidebar .content-sidebar-wrap .content, .sidebar-sidebar-content .content-sidebar-wrap .content, .sidebar-content-sidebar .content-sidebar-wrap .content, .gform_body .ginput_left, .gform_body .ginput_right, .col-lg-6, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-4, .col-sm-4, .col-md-4, .footer-widgets .widget-area, .col-lg-4, .col-xs-3, .col-sm-3, .title-area, .col-md-3, .content-sidebar .content-sidebar-wrap .sidebar, .sidebar-content .content-sidebar-wrap .sidebar, .content-sidebar-sidebar .content-sidebar-wrap .sidebar, .sidebar-sidebar-content .content-sidebar-wrap .sidebar, .sidebar-content-sidebar .content-sidebar-wrap .sidebar, .col-lg-3, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 {
+.col-xs-12, .col-sm-12, .col-md-12, .full-width-content .content-sidebar-wrap .content, article.entry, .gform_body .medium, .col-lg-12, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-9, .col-sm-9, .site-header .header-widget-area, .col-md-9, .content-sidebar .content-sidebar-wrap .content, .sidebar-content .content-sidebar-wrap .content, .col-lg-9, .col-xs-8, .col-sm-8, .footer-widgets .widget-area.footer-widgets-2, .col-md-8, .col-lg-8, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-6, .col-sm-6, .col-md-6, .content-sidebar-sidebar .content-sidebar-wrap .content, .sidebar-sidebar-content .content-sidebar-wrap .content, .sidebar-content-sidebar .content-sidebar-wrap .content, .gform_body .ginput_left, .gform_body .ginput_right, .col-lg-6, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-4, .col-sm-4, .footer-widgets .widget-area.footer-widgets-1, .col-md-4, .col-lg-4, .col-xs-3, .col-sm-3, .title-area, .col-md-3, .content-sidebar .content-sidebar-wrap .sidebar, .sidebar-content .content-sidebar-wrap .sidebar, .content-sidebar-sidebar .content-sidebar-wrap .sidebar, .sidebar-sidebar-content .content-sidebar-wrap .sidebar, .sidebar-content-sidebar .content-sidebar-wrap .sidebar, .col-lg-3, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -905,7 +905,7 @@ pre {
   margin-left: 100%; }
 
 @media (min-width: 768px) {
-  .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .site-header .header-widget-area, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .title-area, .col-sm-2, .col-sm-1 {
+  .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .site-header .header-widget-area, .col-sm-8, .footer-widgets .widget-area.footer-widgets-2, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .footer-widgets .widget-area.footer-widgets-1, .col-sm-3, .title-area, .col-sm-2, .col-sm-1 {
     float: left; }
 
   .col-sm-1 {
@@ -917,7 +917,7 @@ pre {
   .col-sm-3, .title-area {
     width: 25%; }
 
-  .col-sm-4 {
+  .col-sm-4, .footer-widgets .widget-area.footer-widgets-1 {
     width: 33.33333%; }
 
   .col-sm-5 {
@@ -929,7 +929,7 @@ pre {
   .col-sm-7 {
     width: 58.33333%; }
 
-  .col-sm-8 {
+  .col-sm-8, .footer-widgets .widget-area.footer-widgets-2 {
     width: 66.66667%; }
 
   .col-sm-9, .site-header .header-widget-area {
@@ -1061,7 +1061,7 @@ pre {
   .col-sm-offset-12 {
     margin-left: 100%; } }
 @media (min-width: 992px) {
-  .col-md-12, .full-width-content .content-sidebar-wrap .content, article.entry, .gform_body .medium, .col-md-11, .col-md-10, .col-md-9, .content-sidebar .content-sidebar-wrap .content, .sidebar-content .content-sidebar-wrap .content, .col-md-8, .col-md-7, .col-md-6, .content-sidebar-sidebar .content-sidebar-wrap .content, .sidebar-sidebar-content .content-sidebar-wrap .content, .sidebar-content-sidebar .content-sidebar-wrap .content, .gform_body .ginput_left, .gform_body .ginput_right, .col-md-5, .col-md-4, .footer-widgets .widget-area, .col-md-3, .content-sidebar .content-sidebar-wrap .sidebar, .sidebar-content .content-sidebar-wrap .sidebar, .content-sidebar-sidebar .content-sidebar-wrap .sidebar, .sidebar-sidebar-content .content-sidebar-wrap .sidebar, .sidebar-content-sidebar .content-sidebar-wrap .sidebar, .col-md-2, .col-md-1 {
+  .col-md-12, .full-width-content .content-sidebar-wrap .content, article.entry, .gform_body .medium, .col-md-11, .col-md-10, .col-md-9, .content-sidebar .content-sidebar-wrap .content, .sidebar-content .content-sidebar-wrap .content, .col-md-8, .col-md-7, .col-md-6, .content-sidebar-sidebar .content-sidebar-wrap .content, .sidebar-sidebar-content .content-sidebar-wrap .content, .sidebar-content-sidebar .content-sidebar-wrap .content, .gform_body .ginput_left, .gform_body .ginput_right, .col-md-5, .col-md-4, .col-md-3, .content-sidebar .content-sidebar-wrap .sidebar, .sidebar-content .content-sidebar-wrap .sidebar, .content-sidebar-sidebar .content-sidebar-wrap .sidebar, .sidebar-sidebar-content .content-sidebar-wrap .sidebar, .sidebar-content-sidebar .content-sidebar-wrap .sidebar, .col-md-2, .col-md-1 {
     float: left; }
 
   .col-md-1 {
@@ -1073,7 +1073,7 @@ pre {
   .col-md-3, .content-sidebar .content-sidebar-wrap .sidebar, .sidebar-content .content-sidebar-wrap .sidebar, .content-sidebar-sidebar .content-sidebar-wrap .sidebar, .sidebar-sidebar-content .content-sidebar-wrap .sidebar, .sidebar-content-sidebar .content-sidebar-wrap .sidebar {
     width: 25%; }
 
-  .col-md-4, .footer-widgets .widget-area {
+  .col-md-4 {
     width: 33.33333%; }
 
   .col-md-5 {
@@ -5721,6 +5721,8 @@ h1.face-grid-title {
     font-size: 2.5em;
     margin-right: 0.5em;
     color: black; }
+  .footer-widgets .widget-area.footer-widgets-3 {
+    display: none; }
   .footer-widgets .widget_featured_partner_widget img {
     max-height: 150px;
     width: auto;
@@ -5760,6 +5762,10 @@ h1.face-grid-title {
   color: #263C71; }
 
 /* Homepage animation */
+.home .barge-render {
+  margin-top: -1em;
+  margin-bottom: -1.2em;
+  width: 100%; }
 .home #hype_hype_container .HYPE_scene .HYPE_element_container:nth-child(1) .HYPE_element {
   top: 165px !important;
   left: 123px !important; }

@@ -23,7 +23,7 @@ module.exports = function(grunt) {
     copy: {
       main: {
         src: '**',
-        dest: '../themes/'+pckg.name,
+        dest: '/Applications/MAMP/htdocs/scienceBarge/wp-content/themes/themes/'+pckg.name,
         cwd: 'theme/',
         expand: true
       }
