@@ -5778,6 +5778,17 @@ h1.archive-img-grid-title {
 .text-green {
   color: #263C71; }
 
+.footer-widgets-3 {
+  position: relative; }
+  .footer-widgets-3 h4 {
+    text-align: right;
+    margin-right: 60px; }
+  .footer-widgets-3 a {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    width: 75px; }
+
 /* Homepage animation */
 .home .barge-render {
   margin-top: -1em;
@@ -5803,5 +5814,11 @@ h1.archive-img-grid-title {
   text-align: center;
   margin-bottom: 1em;
   margin-top: 1.5em; }
+
+/* Full Calendar Template */
+.fc-event-container .fc-disabled {
+  background-color: #eee;
+  color: #555;
+  border-color: #D5D5D5; }
 
 /*# sourceMappingURL=style.css.map */

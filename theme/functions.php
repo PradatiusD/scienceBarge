@@ -35,17 +35,30 @@ function add_featured_image () {
 
   $has_featured_image = strlen(get_the_post_thumbnail()) > 0;
 
+  $is_partner = is_post_type_archive("partner");
+  $permalink  = get_the_permalink();
+
   if ($has_featured_image) {
-    the_post_thumbnail();
+  	if ($is_partner) { echo '<a href="'.$permalink.'">'; }
+	    the_post_thumbnail();
+		if ($is_partner) { echo '</a>';}
   }
 
   genesis_do_post_content();
-
 }
 
 
 remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
 add_action('genesis_entry_content',     'add_featured_image');
+
+
+add_filter('wpseo_opengraph_image', 'global_og_image');
+
+// Requires global image to be set
+function global_og_image($image) {
+	$image = get_stylesheet_directory_uri().'/images/og-image.png';
+	return $image;
+}
 
 
 // Add social feed php script

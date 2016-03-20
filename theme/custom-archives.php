@@ -79,11 +79,6 @@ function circle_headers () {
   $post_type  = get_post_type();
   $is_archive = is_post_type_archive($archive_post_types);
 
-  if (!$is_archive) {
-    echo "<h1>test</h1>";
-    print_r($is_archive);
-  }
-
   if ($post_type && $is_archive) {
     $archive = new Archive($post_type, $wp_query);
     wp_enqueue_script('team-scroll-To', get_stylesheet_directory_uri() . '/js/team-scroll-to.js', array(), '1.0.0',true);

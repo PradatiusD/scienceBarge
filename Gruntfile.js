@@ -5,6 +5,22 @@ module.exports = function(grunt) {
 
   var sassFile = 'theme/style.sass';
 
+  function createDeployConfig (exclusions) {
+    return {
+      auth: {
+        host: 'pradadesigners.com',
+        port: 21,
+        authKey: 'key'
+      },
+      src: 'theme',
+      dest: pckg.name,
+      forceVerbose: true,
+      exclusions: exclusions.map(function (file){
+        return 'theme/'+file;
+      })
+    }
+  }
+
   grunt.initConfig({
     pkg: pckg,
     watch: {
@@ -36,32 +52,8 @@ module.exports = function(grunt) {
       }
     },
     'ftp-deploy': {
-      build: {
-        auth: {
-          host: 'pradadesigners.com',
-          port: 21,
-          authKey: 'key'
-        },
-        src: 'theme',
-        dest: pckg.name,
-        forceVerbose: true,
-        exclusions: ['.DS_Store','screenshot.png','lib', 'images', 'hype.hyperesources', 'config.php'].map(function (file){
-          return 'theme/'+file;
-        })
-      },
-      images: {
-        auth: {
-          host: 'pradadesigners.com',
-          port: 21,
-          authKey: 'key'
-        },
-        src: 'theme',
-        dest: pckg.name,
-        forceVerbose: true,
-        exclusions: ['.DS_Store','lib','hype.hyperesources'].map(function (file){
-          return 'theme/'+file;
-        })
-      }
+      build: createDeployConfig(['.DS_Store','screenshot.png','lib', 'images', 'hype.hyperesources', 'config.php']),
+      images: createDeployConfig(['.DS_Store','lib','hype.hyperesources'])
     }
   });
 
@@ -71,6 +63,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-ftp-deploy');
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('deploy',    ['ftp-deploy:build']);
-  grunt.registerTask('deployAll', ['ftp-deploy:images']);
+  grunt.registerTask('deploy', ['ftp-deploy:build']);
+  grunt.registerTask('images', ['ftp-deploy:images']);
 };

@@ -16,3 +16,6 @@
 # PHP Errror
 
 <!-- curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); -->
+
+
+https://developers.facebook.com/tools/debug/
