@@ -31,16 +31,20 @@ add_theme_support('genesis-footer-widgets', 3);
 //* Remove Post Meta (Example Filed under: )
 remove_action('genesis_entry_footer', 'genesis_post_meta');
 
-
 //* Add Bootstrap powered navigation JavaScript
 wp_enqueue_script('bootstrap-dropdown', get_stylesheet_directory_uri() . '/js/bootstrap-transition-collapse.js', array('jquery'), '3.3.4', true);
 
 
+//* Add Bootstrap powered navigation JavaScript
+wp_enqueue_script('paypal', get_stylesheet_directory_uri() . '/js/paypal.js', array('jquery'), '1.0.0', true);
+
+
 //* Add Social links to navigation
 
-function navigation_social_links( $menu, $args ) {
+function navigation_social_links_and_donate( $menu, $args ) {
   if ( 'primary' == $args->theme_location) {
     ob_start();?>
+      <li id="donate-button" class="menu-item"><a href="#" target="_blank">Donate</a></li>
       <li class="social-nav"><a href="https://www.facebook.com/miamisciencebarge" target="_blank"><i class="fa fa-facebook"></i></a></li>
       <li class="social-nav"><a href="https://twitter.com/miascibarge" target="_blank"><i class="fa fa-twitter"></i></a></li>
       <li class="social-nav"><a href="https://instagram.com/miascibarge/" target="_blank"><i class="fa fa-instagram"></i></a></li>
@@ -50,7 +54,7 @@ function navigation_social_links( $menu, $args ) {
   return $menu;
 }
 
-add_filter( 'wp_nav_menu_items', 'navigation_social_links', 10, 2 );
+add_filter( 'wp_nav_menu_items', 'navigation_social_links_and_donate', 10, 2 );
 
 
 //* Add button to open and close social links
