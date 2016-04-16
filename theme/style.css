@@ -5527,12 +5527,18 @@ article.entry {
   .site-header .nav-primary {
     border: 0; }
 
-/* Gravity forms */
+/* Gravity forms  Alterations */
 .gform_body .ginput_left, .gform_body .ginput_right {
   padding-left: 0;
   padding-right: 0; }
 .gform_body .gform_validation_container {
   display: none; }
+.gform_body .gfield_radio input {
+  background: none;
+  box-shadow: none;
+  position: relative;
+  margin-top: 0px !important;
+  bottom: 4px; }
 
 #input_1_2_6_container {
   margin-left: 0;
@@ -5778,11 +5784,16 @@ h1.archive-img-grid-title {
 .text-green {
   color: #263C71; }
 
+/* A Program of */
 .footer-widgets-3 {
   position: relative; }
   .footer-widgets-3 h4 {
     text-align: right;
-    margin-right: 60px; }
+    margin-right: 60px;
+    text-transform: lowercase;
+    font-family: "Univers LT W01_45 Light1475944", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px; }
   .footer-widgets-3 a {
     position: absolute;
     top: -10px;
@@ -5819,6 +5830,12 @@ h1.archive-img-grid-title {
 .fc-event-container .fc-disabled {
   background-color: #eee;
   color: #555;
-  border-color: #D5D5D5; }
+  border-color: #D5D5D5;
+  cursor: not-allowed; }
+.fc-event-container .fc-available {
+  cursor: pointer;
+  background-color: #546695; }
+.fc-event-container .fc-activity {
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

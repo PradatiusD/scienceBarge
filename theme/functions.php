@@ -36,11 +36,17 @@ function add_featured_image () {
   $has_featured_image = strlen(get_the_post_thumbnail()) > 0;
 
   $is_partner = is_post_type_archive("partner");
-  $permalink  = get_the_permalink();
+  $permalink  = get_permalink();
 
   if ($has_featured_image) {
-  	if ($is_partner) { echo '<a href="'.$permalink.'">'; }
+
+  	if ($is_partner) {
+      $partner_url = types_render_field('partnership-link', array("raw"=>"true"));
+      $permalink   = $partner_url ? $partner_url : $permalink;
+      echo '<a href="'.$permalink.'" target="_blank">'; 
+    }
 	    the_post_thumbnail();
+
 		if ($is_partner) { echo '</a>';}
   }
 

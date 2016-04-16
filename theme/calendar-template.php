@@ -26,26 +26,31 @@ if (!isset($_GET['calendar'])) {
 	genesis();
 
 } else {
-  $args = array('post_type' => 'events');
-	$event_query = new WP_Query($args);
-	$events = array();
 
-	if ($event_query->have_posts()) { 
-		while ($event_query->have_posts()) { 
+  $args = array(
+  	'post_type' => array('events','bookings')
+  );
 
-			$event_query->the_post();
+	$activities_query = new WP_Query($args);
+	$activities = array();
 
-			$event_data = array(
+	if ($activities_query->have_posts()) { 
+
+		while ($activities_query->have_posts()) { 
+
+			$activities_query->the_post();
+
+			$activity = array(
 				"title"     => get_the_title(),
 				"content"   => get_the_content(),
 				"data"      => get_post_custom(),
 				"permalink" => get_permalink()
 			);
 
-			array_push($events, $event_data);
+			array_push($activities, $activity);
 		}
 	}
 
-	wp_send_json($events);
+	wp_send_json($activities);
 	wp_reset_postdata();
 }

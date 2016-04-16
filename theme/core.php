@@ -44,7 +44,7 @@ wp_enqueue_script('paypal', get_stylesheet_directory_uri() . '/js/paypal.js', ar
 function navigation_social_links_and_donate( $menu, $args ) {
   if ( 'primary' == $args->theme_location) {
     ob_start();?>
-      <li id="donate-button" class="menu-item"><a href="#" target="_blank">Donate</a></li>
+      <li id="donate-button" class="menu-item"><a href="#" target="_blank">Support us</a></li>
       <li class="social-nav"><a href="https://www.facebook.com/miamisciencebarge" target="_blank"><i class="fa fa-facebook"></i></a></li>
       <li class="social-nav"><a href="https://twitter.com/miascibarge" target="_blank"><i class="fa fa-twitter"></i></a></li>
       <li class="social-nav"><a href="https://instagram.com/miascibarge/" target="_blank"><i class="fa fa-instagram"></i></a></li>

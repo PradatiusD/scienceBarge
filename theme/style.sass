@@ -321,7 +321,7 @@ article.entry
     @extend .navbar-inverse
     border: 0
 
-/* Gravity forms */
+/* Gravity forms  Alterations */
 
 .gform_body
 
@@ -338,6 +338,13 @@ article.entry
 
   .gform_validation_container
     display: none
+
+  .gfield_radio input
+    background: none
+    box-shadow: none
+    position: relative
+    margin-top: 0px !important
+    bottom: 4px
 
 .gform_button
   @extend .btn-lg
@@ -613,13 +620,18 @@ h1.archive-img-grid-title
   color: $primary
 
 
+/* A Program of */
+
 .footer-widgets-3
   position: relative
 
   h4
     text-align: right
     margin-right: 60px
-
+    text-transform: lowercase
+    font-family: $font-family-sans-serif
+    font-weight: 400
+    font-size: 15px
   a
     position: absolute
     top: -10px
@@ -664,7 +676,17 @@ h1.archive-img-grid-title
 
 
 /* Full Calendar Template */
-.fc-event-container .fc-disabled
-  background-color: #eee
-  color: #555
-  border-color: #D5D5D5
+.fc-event-container 
+
+  .fc-disabled
+    background-color: #eee
+    color: #555
+    border-color: #D5D5D5
+    cursor: not-allowed
+
+  .fc-available
+    cursor: pointer
+    background-color: #546695
+
+  .fc-activity
+    cursor: pointer

@@ -22,9 +22,6 @@ https://developers.facebook.com/tools/debug/
 
 Donation
 Any Be able 
-
-Open on Tuesdays
-A program off cappsi twi lowercase
 font smaller
 Put name
 
