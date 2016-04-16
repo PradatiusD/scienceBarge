@@ -122,7 +122,7 @@
           permalink: "#"
         }
 
-        e.permalink = this.requestFormURL + "?dor=" + this.today.format('MM/DD/YY')+ "&preferred_dates="+ moment(e.start).format('MM/DD/YY h:mma');
+        e.permalink = this.requestFormURL + "?dor=" + this.today.format('MM/DD/YYYY')+ "&preferred_dates="+ moment(e.start).format('MM/DD/YY h:mma');
 
         openDates.push(e);
 
