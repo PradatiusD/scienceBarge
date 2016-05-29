@@ -11,9 +11,10 @@ module.exports = function(grunt) {
   function createDeployConfig (exclusions) {
     return {
       auth: {
-        host: 'pradadesigners.com',
+        host: process.env.FTP_HOST,
         port: 21,
-        authKey: 'key'
+        username: process.env.FTP_USERNAME,
+        password: process.env.FTP_PASSWORD
       },
       src: 'theme',
       dest: pckg.name,

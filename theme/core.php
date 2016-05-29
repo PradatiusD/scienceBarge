@@ -26,7 +26,11 @@ add_theme_support('genesis-responsive-viewport');
 add_theme_support('custom-background');
 
 //* Add support for 3-column footer widgets
-add_theme_support('genesis-footer-widgets', 3);
+add_theme_support('genesis-footer-widgets', 4);
+
+
+// Remove Secondary Navigation
+add_theme_support( 'genesis-menus', array( 'primary' => __( 'Primary Navigation Menu', 'genesis' ) ) );
 
 //* Remove Post Meta (Example Filed under: )
 remove_action('genesis_entry_footer', 'genesis_post_meta');
