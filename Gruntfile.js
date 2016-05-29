@@ -1,3 +1,6 @@
+require('dotenv').config();
+var path = require('path');
+
 module.exports = function(grunt) {
 
   var assets = grunt.file.readJSON('bower.json');
@@ -39,7 +42,7 @@ module.exports = function(grunt) {
     copy: {
       main: {
         src: '**',
-        dest: '/Applications/MAMP/htdocs/scienceBarge/wp-content/themes/themes/'+pckg.name,
+        dest: path.join(process.env.WP_THEMES_DIR, pckg.name),
         cwd: 'theme/',
         expand: true
       }

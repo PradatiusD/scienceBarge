@@ -1,8 +1,11 @@
-*.DS_Store
-assets/*.*pg
 bower_components
 node_modules
+
+*.DS_Store
 .sass-cache
-/vendor/
-.ftppass
+
+.env
+
+assets/*.*pg
 theme/config.php
+theme/style.css.map

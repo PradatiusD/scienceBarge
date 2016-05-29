@@ -17,7 +17,7 @@
 // Colors
 $primary:      #263C71 // blue
 $primary-soft: #8490B0 // soft blue 
-$secondary:    #64EF7E // bright green
+$secondary:    #345195 // blue
 $darkText:     darken($primary, 3%) // dark gray
 $white:        #FFFFFF // white
 $gray-light: lighten(#000, 60%)
@@ -122,16 +122,14 @@ body
 
 /* Anchor Colors */
 a
+  text-decoration: underline
   +transition(color 0.5s ease-out)
   &:hover
     color: $secondary
-    text-decoration: none
 
 h1, h2, h3, h4, h5, h6
   a
     color: $darkText
-    &:hover
-      text-decoration: none
 
 /* Meta */
 
@@ -157,13 +155,15 @@ h1, h2, h3, h4, h5, h6
 
   li
     a
+      text-decoration: none
       font-weight: 400
       +transition(all 0.15s ease-out)
       padding-left: 13px
       padding-right: 13px
 
-      span:hover
-        border-bottom: 4px solid $secondary
+  li:hover
+    span
+      border-bottom: 4px solid white
 
 
 /* Navigation */
@@ -357,7 +357,8 @@ article.entry
 a.link-color
   color: $primary
 
-/* Twitter Instagram Sidebar Icons */
+
+/* Instagram Sidebar Icons */
 
 .logged-in .sidebar.sidebar-primary .widget_text
   display: none
@@ -371,6 +372,10 @@ a.link-color
     color: $gray-light
     &:hover
       color: $primary
+
+.feed-body header a
+  text-decoration: none
+
 
 /* Team Member & Advisors */
 
