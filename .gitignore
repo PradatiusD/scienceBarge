@@ -1,6 +1,5 @@
 *.DS_Store
-assets/*.jpg
-assets/*.png
+assets/*.*pg
 bower_components
 node_modules
 .sass-cache
