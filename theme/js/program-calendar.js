@@ -104,7 +104,7 @@
 
       // Check if a Regular Trip Date
       var day = timeStart.format("dddd");
-      var allowedDays = ['Wednesday','Thursday','Friday'];
+      var allowedDays = ['Tuesday','Wednesday','Thursday','Friday'];
       var isRegularBusinessDay = (allowedDays.indexOf(day) > -1);
 
       // Check if no other events
@@ -122,7 +122,7 @@
           permalink: "#"
         }
 
-        e.permalink = this.requestFormURL + "?dor=" + this.today.format('MM/DD/YYYY')+ "&preferred_dates="+ moment(e.start).format('MM/DD/YY h:mma');
+        e.permalink = this.requestFormURL; //+ "?dor=" + this.today.format('MM/DD/YYYY')+ "&preferred_dates="+ moment(e.start).format('MM/DD/YY h:mma');
 
         openDates.push(e);
 
