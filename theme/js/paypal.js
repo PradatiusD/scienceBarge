@@ -7,7 +7,7 @@
 		}
 	});
 
-	var $donateLink = $("#donate-button");
+	var $donateLink = $(".donate-button");
 
 	if(!$donationForm) {
 		$donateLink.remove();		
