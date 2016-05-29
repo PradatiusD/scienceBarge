@@ -67,6 +67,20 @@ function global_og_image($image) {
 }
 
 
+// Remove post date info unless it is a blog post
+
+add_filter( 'genesis_post_info', 'sp_post_info_filter' );
+function sp_post_info_filter($post_info) {
+
+  if (get_post_type() == 'post') {
+    $post_info = '[post_date] by [post_author_posts_link] [post_comments] [post_edit]';
+  } else {
+    $post_info = '';  
+  }
+
+  return $post_info;
+}
+
 // Add social feed php script
 include_once('social-feed.php');
 
